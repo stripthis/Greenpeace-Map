@@ -9,7 +9,8 @@
 theMap = AVENZA.embedViewer(
   'map','960','450',
   {
-    baseURL:'swf',
+    baseURL:'data',
+    viewerBaseURL: 'swf/avenza',
     initialZoom:100,
     initialPanX:000,
     initialPanY:100,
