@@ -28,7 +28,7 @@ theMap = AVENZA.embedViewer(
     }
   }
 );
-    
+
 function init() {
   var m = theMap.element();
   var show = true;
@@ -42,7 +42,7 @@ function init() {
     });
     if (window.addEventListener) {
       m.addEventListener("mousemove", onMouseMove, false);
-    } 
+    }
     else if (window.attachEvent) { // IE
       m.attachEvent("onmousemove", onMouseMove);
     }
@@ -65,13 +65,13 @@ function onMouseMove (event) {
     $("#popup").css("top", event.pageY+20);
     $("#popup").css("left", event.pageX+20);
     $("#popup").css("visibility", "visible");
-    $("#popup .name").html(f.attributes.name);   
+    $("#popup .name").html(f.attributes.name);
     $("#popup .stopid").html(f.attributes.stopid);
     $("#popup .latitude").html(f.attributes.latitude);
     $("#popup .longitude").html(f.attributes.longitude);
     // $("#popup .accesible").html(f.attributes.accessible);
     // $("#popup .sundayonly").html(f.attributes.sundayonly);
-    // $("#popup .trapezeid").html(f.attributes.trapezeid); 
+    // $("#popup .trapezeid").html(f.attributes.trapezeid);
   } else {
     $("#popup").css("visibility", "hidden");
   }
