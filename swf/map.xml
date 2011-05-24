@@ -1,0 +1,20 @@
+
+<map>
+
+  <layer SWFFile="map_L1.swf" depth="1" name="Orangutan" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L2.swf" depth="2" name="Tiger" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L3.swf" depth="3" name="Primary" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L4.swf" depth="4" name="Secondary" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L5.swf" depth="5" name=">4m" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L6.swf" depth="6" name="2-4m" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L7.swf" depth="7" name="0-2m" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L8.swf" depth="8" name="map_L8.swf"/>
+
+</map>

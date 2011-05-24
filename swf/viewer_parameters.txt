@@ -1,0 +1,7 @@
+{
+				panWidget:false,
+				overviewWidget:false,
+				searchWidget:false,
+				useUncompressedMapData:true,
+				useCentroidForCallouts:true
+}
