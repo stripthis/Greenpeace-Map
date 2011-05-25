@@ -1,20 +1,34 @@
 
 <map>
 
-  <layer SWFFile="map_L1.swf" depth="1" name="Orangutan" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L1.swf" depth="1" name="APP mills big icon" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L2.swf" depth="2" name="Tiger" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L2.swf" depth="2" name="APP mills zoomed" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L3.swf" depth="3" name="Primary" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L3.swf" depth="3" name="Kerumutan" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L4.swf" depth="4" name="Secondary" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L4.swf" depth="4" name="Bukit Tiga Puluh" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L5.swf" depth="5" name=">4m" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L5.swf" depth="5" name="tnbt" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L6.swf" depth="6" name="2-4m" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L6.swf" depth="6" name="map_L6.swf"/>
 
-  <layer SWFFile="map_L7.swf" depth="7" name="0-2m" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L7.swf" depth="7" name="Tiger habitat big" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L8.swf" depth="8" name="map_L8.swf"/>
+  <layer SWFFile="map_L8.swf" depth="8" name="Tiger habitat zoomed" userToggle="true" visible="false"/>
+
+  <layer SWFFile="map_L9.swf" depth="9" name="APP expansion" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L10.swf" depth="10" name="Primary" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L11.swf" depth="11" name="Secondary" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L12.swf" depth="12" name="Peatland" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L13.swf" depth="13" name="2-4m" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L14.swf" depth="14" name="0-2m" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L15.swf" depth="15" name="map_L15.swf"/>
 
 </map>
