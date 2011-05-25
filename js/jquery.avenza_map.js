@@ -120,7 +120,7 @@ AvenzaMap.prototype.getLayers = function() {
   var layers = [];
   $('layer', this.xml).each(function() {
     var layer = AvenzaLayer.create({
-      map: self.map,
+      map: self,
       xmlElement: this
     });
     layers.push(layer);
@@ -144,8 +144,10 @@ function AvenzaLayer() {
   this.map = null;
   this.xmlElement = null;
 
+  this.alpha = 100;
   this.name = null;
   this.visible = null;
+  this.highlighted = false;
 }
 
 AvenzaLayer.create = function(options) {
@@ -177,8 +179,30 @@ AvenzaLayer.prototype.toggle = function() {
   this._updateVisibility();
 };
 
+AvenzaLayer.prototype.toggleHighlight = function() {
+  var layers = this.map.getLayers();
+  var self = this;
+
+  this.highlighted = !this.highlighted;
+
+  $(layers).each(function() {
+    if (!self.highlighted && this !== self) {
+      this.setAlpha(1);
+    }
+
+    if (self.highlighted && this !== self) {
+      this.setAlpha(0.1);
+    }
+  });
+};
+
+AvenzaLayer.prototype.setAlpha = function(alpha) {
+  this.alpha = alpha;
+  this.map.map.setAlpha(this.name, this.alpha);
+};
+
 AvenzaLayer.prototype._updateVisibility = function() {
-  this.map.setVisible(this.name, this.visible);
+  this.map.map.setVisible(this.name, this.visible);
 };
 
 })(jQuery);
