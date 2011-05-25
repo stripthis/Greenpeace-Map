@@ -28,8 +28,14 @@
   <script type="text/javascript" src="js/swfobject.js"></script>
   <script type="text/javascript" src="js/avenza.js"></script>
   <script type="text/javascript" src="js/event_emitter.js"></script>
+  <script type="text/javascript" src="js/jquery.tmpl.js"></script>
   <script type="text/javascript" src="js/jquery.avenza_map.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script id="layer_template" type="text/x-jquery-tmpl">
+    {{if visible }}
+    <li><span>${name}</span></li>
+    {{/if}}
+  </script>
 </head>
 <body>
 <div id="container">
@@ -58,11 +64,8 @@
   </div>
   <div class="layer nav">
     <div id="map-layer">
-      <ul>
-        <li><h3>Habitat</h3></li>
-        <li><span class="select" id="orangutan">Orangutan</span></li>
-        <li><span class="select" id="tiger">Tigers</span></li>
-     </ul>
+      <ul class="js_layers">
+      </ul>
     </div>
   </div>
 </div>

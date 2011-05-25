@@ -8,9 +8,8 @@ $(function() {
   });
 
   map.on('load.xml', function() {
-    var layers = map.getLayers();
-    $(layers).each(function() {
-      console.log(this.name);
-    });
+    $('#layer_template')
+      .tmpl(map.getLayers())
+      .appendTo('.js_layers');
   });
 });
