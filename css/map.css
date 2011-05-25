@@ -62,7 +62,13 @@ object {
 .layer.nav ul li{
   padding:0;
   margin:2px;
+  color: #555;
 }
+
+.layer.nav .active{
+  color: #fff;
+}
+
 .layer.nav span {
   cursor:pointer;
   background:#000;

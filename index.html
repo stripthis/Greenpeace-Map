@@ -33,7 +33,7 @@
   <script type="text/javascript" src="js/main.js"></script>
   <script id="layer_template" type="text/x-jquery-tmpl">
     {{if visible }}
-    <li data-layer="${ name }" class="js_layer"><span>${name}</span></li>
+    <li data-layer="${ name }" class="${ visible ? 'active' : '' } js_layer"><span>${name}</span></li>
     {{/if}}
   </script>
 </head>

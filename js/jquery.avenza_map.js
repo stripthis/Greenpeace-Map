@@ -188,6 +188,7 @@ AvenzaLayer.prototype.toggleHighlight = function() {
   $(layers).each(function() {
     if (!self.highlighted && this !== self) {
       this.setAlpha(1);
+      this._updateVisibility();
     }
 
     if (self.highlighted && this !== self) {
