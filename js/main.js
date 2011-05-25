@@ -12,4 +12,9 @@ $(function() {
       .tmpl(map.getLayers())
       .appendTo('.js_layers');
   });
+
+  $('.js_layers').delegate('li', 'click', function() {
+    var layer = map.getLayer($(this).data('layer'));
+    layer.toggle();
+  });
 });

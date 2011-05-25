@@ -22,6 +22,7 @@ function AvenzaMap() {
   this.url = null;
   this.view = {};
   this.map = null;
+  this._layers = null;
 
   this.mapLoaded = false;
   this.xml = null;
@@ -110,6 +111,10 @@ AvenzaMap.prototype.getSize = function() {
 };
 
 AvenzaMap.prototype.getLayers = function() {
+  if (this._layers) {
+    return this._layers;
+  }
+
   var self = this;
 
   var layers = [];
@@ -121,7 +126,17 @@ AvenzaMap.prototype.getLayers = function() {
     layers.push(layer);
   });
 
-  return layers;
+  return this._layers = layers;
+};
+
+AvenzaMap.prototype.getLayer = function(name) {
+  var layers = this.getLayers();
+  for (var i = 0; i < layers.length; i++) {
+    var layer = layers[i];
+    if (layer.name === name) {
+      return layer;
+    }
+  }
 };
 
 
@@ -144,7 +159,7 @@ AvenzaLayer.create = function(options) {
 
 AvenzaLayer.prototype._initialize = function() {
   this.name = $(this.xmlElement).attr('name');
-  this.visible = $(this.xmlElement).attr('visible');
+  this.visible = $(this.xmlElement).attr('visible') === 'true';
 };
 
 AvenzaLayer.prototype.hide = function() {
