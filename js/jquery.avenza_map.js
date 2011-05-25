@@ -108,6 +108,61 @@ AvenzaMap.prototype.getSize = function() {
   };
 };
 
+AvenzaMap.prototype.getLayers = function() {
+  var self = this;
 
+  var layers = [];
+  $('layer', this.xml).each(function() {
+    var layer = AvenzaLayer.create({
+      map: self.map,
+      xmlElement: this
+    });
+    layers.push(layer);
+  });
+
+  return layers;
+};
+
+
+function AvenzaLayer() {
+  this.map = null;
+  this.xmlElement = null;
+
+  this.name = null;
+  this.visible = null;
+}
+
+AvenzaLayer.create = function(options) {
+  var avenzaLayer = new AvenzaLayer();
+
+  $.extend(avenzaLayer, options);
+  avenzaLayer._initialize();
+
+  return avenzaLayer;
+};
+
+AvenzaLayer.prototype._initialize = function() {
+  this.name = $(this.xmlElement).attr('name');
+  this.visible = $(this.xmlElement).attr('visible');
+};
+
+AvenzaLayer.prototype.hide = function() {
+  this.visible = false;
+  this._updateVisibility();
+};
+
+AvenzaLayer.prototype.show = function() {
+  this.visible = true;
+  this._updateVisibility();
+};
+
+AvenzaLayer.prototype.toggle = function() {
+  this.visible = !this.visible;
+  this._updateVisibility();
+};
+
+AvenzaLayer.prototype._updateVisibility = function() {
+  this.map.setVisible(this.name, this.visible);
+};
 
 })(jQuery);

@@ -6,7 +6,10 @@ $(function() {
       initialPanY: 100
     },
     onSuccess: function() {
-      console.log('success');
+      var layers = map.getLayers();
+      $(layers).each(function() {
+        console.log(this.name);
+      });
     },
     onError: function(err) {
       throw err;
