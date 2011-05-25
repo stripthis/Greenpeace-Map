@@ -8,8 +8,8 @@ $(function() {
     onSuccess: function() {
       console.log('success');
     },
-    onError: function() {
-
+    onError: function(err) {
+      throw err;
     }
   });
 

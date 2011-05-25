@@ -16,11 +16,15 @@ $.fn.avenzaMap = function(options) {
 
 function AvenzaMap() {
   this.$element = null;
+
   this.url = null;
   this.view = {};
   this.map = null;
-  this.xml = {};
+
   this.mapLoaded = false;
+  this.xml = null;
+  this.json = null;
+
   this.onSuccess = function() {};
   this.onError = function() {};
 };
@@ -51,7 +55,8 @@ AvenzaMap.create = function(options) {
 
 AvenzaMap.prototype._initialize = function() {
   this._embedd();
-  this._loadMapXml();
+  this._load(this.url + '/map.xml', 'xml');
+  this._load(this.url + '/map.json', 'json');
 };
 
 AvenzaMap.prototype._embedd = function() {
@@ -70,23 +75,22 @@ AvenzaMap.prototype._embedd = function() {
   );
 };
 
-AvenzaMap.prototype._loadMapXml = function() {
+
+AvenzaMap.prototype._load = function(url, variable) {
   var self = this;
-  var url = this.url + '/map.xml';
 
-  $.get(url, function(xml, status) {
-    if (status !== 'success') {
-      self._error(new Error(status + ': could not load: ' + url));
-      return;
-    }
-
-    self.xml = xml;
+  var request = $.get(url, function(response) {
+    self[variable] = response;
     self._checkIfLoaded();
+  });
+
+  request.error(function(response, status) {
+    self._error(new Error(status + ': could not load: ' + url));
   });
 };
 
 AvenzaMap.prototype._checkIfLoaded = function() {
-  if (!this.mapLoaded || !this.xml) {
+  if (!this.mapLoaded || !this.xml || !this.json) {
     return;
   }
 
