@@ -15,6 +15,8 @@ $.fn.avenzaMap = function(options) {
 };
 
 function AvenzaMap() {
+  EventEmitter.call(this);
+
   this.$element = null;
 
   this.url = null;
@@ -24,10 +26,8 @@ function AvenzaMap() {
   this.mapLoaded = false;
   this.xml = null;
   this.json = null;
-
-  this.onSuccess = function() {};
-  this.onError = function() {};
 };
+AvenzaMap.prototype = EventEmitter.prototype;
 
 AvenzaMap.VIEW_DEFAULTS = {
   viewerBaseURL: 'swf/avenza',
@@ -81,6 +81,7 @@ AvenzaMap.prototype._load = function(url, variable) {
 
   var request = $.get(url, function(response) {
     self[variable] = response;
+    self.emit('load.' + variable);
     self._checkIfLoaded();
   });
 
@@ -94,11 +95,11 @@ AvenzaMap.prototype._checkIfLoaded = function() {
     return;
   }
 
-  this.onSuccess();
+  this.emit('ready');
 };
 
 AvenzaMap.prototype._error = function(err) {
-  this.onError(err);
+  this.emit('error');
 };
 
 AvenzaMap.prototype.getSize = function() {
