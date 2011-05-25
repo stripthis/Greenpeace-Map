@@ -9,6 +9,12 @@ body {
   border:5px solid #777;
   width:960px;
 }
+
+#map{
+  width: 960px;
+  height: 450px;
+}
+
 ul {
   list-style-type:none;
 }
