@@ -29,6 +29,17 @@ theMap = AVENZA.embedViewer(
   }
 );
 
+$.get('data/map.xml', function(map) {
+  $('layer', map).each(function() {
+    var $layer = $(this);
+    if ($(this).attr('visible') !== 'true') {
+      return;
+    }
+
+    console.log($layer.attr('name'));
+  });
+});
+
 function init() {
   var m = theMap.element();
   var show = true;
