@@ -9,7 +9,7 @@
 theMap = AVENZA.embedViewer(
   'map','960','450',
   {
-    baseURL:'data',
+    baseURL:'data/sumatra',
     viewerBaseURL: 'swf/avenza',
     initialZoom:100,
     initialPanX:000,
@@ -28,17 +28,6 @@ theMap = AVENZA.embedViewer(
     }
   }
 );
-
-$.get('data/map.xml', function(map) {
-  $('layer', map).each(function() {
-    var $layer = $(this);
-    if ($(this).attr('visible') !== 'true') {
-      return;
-    }
-
-    console.log($layer.attr('name'));
-  });
-});
 
 function init() {
   var m = theMap.element();
@@ -65,6 +54,18 @@ function init() {
     });
 
   }
+
+$.get('data/sumatra/map.xml', function(map) {
+  $('layer', map).each(function() {
+    var $layer = $(this);
+    if ($(this).attr('visible') !== 'true') {
+      return;
+    }
+
+    var name = $layer.attr('name');
+    theMap.setVisible(name, true);
+  });
+});
 }
 
 function onMouseMove (event) {
