@@ -46,7 +46,6 @@ object {
 .callout {
   position:absolute;
   width: 200px;
-  height: 200px;
   background: #FFF;
   border:1px solid #CCC;
   padding:5px;
