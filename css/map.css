@@ -63,6 +63,8 @@ object {
   padding:0;
   margin:2px;
   color: #555;
+  float: left;
+  clear: both;
 }
 
 .layer.nav .active{
