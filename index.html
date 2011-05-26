@@ -44,6 +44,15 @@
     <li data-layer="${ name }" class="${ visible ? 'active' : '' } js_layer"><span>${name}</span></li>
     {{/if}}
   </script>
+
+  <script id="callout_template" class="popup" type="text/x-jquery-tmpl">
+    <div class="callout">
+      <strong>Name:</strong><span class="name">Empty</span><br/>
+      <strong>ID:</strong><span class="stopid">Empty</span><br/>
+      <strong>Latitude:</strong><span class="latitude">Empty</span><br/>
+      <strong>Longitude:</strong><span class="longitude">Empty</span><br/>
+    </div>
+  </script>
 </head>
 <body>
 <div id="container">
@@ -62,12 +71,6 @@
         <li><span id="sulawesi">Sulawesi</span></li>
         <li><span id="kalimantan">Kalimantan</span></li> -->
       </ul>
-    </div>
-    <div id="popup">
-      <strong>Name:</strong><span class="name">Empty</span><br/>
-      <strong>ID:</strong><span class="stopid">Empty</span><br/>
-      <strong>Latitude:</strong><span class="latitude">Empty</span><br/>
-      <strong>Longitude:</strong><span class="longitude">Empty</span><br/>
     </div>
   </div>
   <div class="layer nav">

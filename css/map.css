@@ -43,15 +43,13 @@ object {
   outline:none;
 }
 
-#popup {
+.callout {
   position:absolute;
-  top: -100px;
-  left: 100px;
   width: 200px;
+  height: 200px;
   background: #FFF;
   border:1px solid #CCC;
   padding:5px;
-  visibility:hidden;
 }
 .layer.nav {
   width:960px;

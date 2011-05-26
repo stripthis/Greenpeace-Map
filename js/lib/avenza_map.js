@@ -16,6 +16,7 @@ function AvenzaMap() {
   EventEmitter.call(this);
 
   this.$element = null;
+  this.$callout = null;
 
   this.url = null;
   this.view = {};
@@ -56,6 +57,11 @@ AvenzaMap.prototype._initialize = function() {
   this._embedd();
   this._load(this.url + '/map.xml', 'xml');
   this._load(this.url + '/map.json', 'json');
+
+  var self = this;
+  $(window).mousemove(function(e) {
+    self._handleMouseMove(e);
+  });
 };
 
 AvenzaMap.prototype._embedd = function() {
@@ -87,6 +93,26 @@ AvenzaMap.prototype._load = function(url, variable) {
   request.error(function(response, status) {
     self._error(new Error(status + ': could not load: ' + url));
   });
+};
+
+AvenzaMap.prototype._handleMouseMove = function(e) {
+  var callout = this.map.retrieve(AVENZA.FEATURE);
+
+  if (this.$callout) {
+    this.$callout.remove();
+  }
+
+  if (!callout || !callout.attributes) {
+    return;
+  }
+
+  this.$callout = $('#callout_template')
+    .tmpl()
+    .appendTo('body')
+    .css({
+      left: (e.pageX + 20) + 'px',
+      top: (e.pageY + 20) + 'px'
+    });
 };
 
 AvenzaMap.prototype._checkIfLoaded = function() {
