@@ -107,7 +107,7 @@ AvenzaMap.prototype._handleMouseMove = function(e) {
   }
 
   this.$callout = $('#callout_template')
-    .tmpl()
+    .tmpl(callout)
     .appendTo('body')
     .css({
       left: (e.pageX + 20) + 'px',
