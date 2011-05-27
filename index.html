@@ -34,6 +34,7 @@
   <!-- lib -->
   <script type="text/javascript" src="js/lib/avenza_map.js"></script>
   <script type="text/javascript" src="js/lib/avenza_layer.js"></script>
+  <script type="text/javascript" src="js/lib/avenza_place.js"></script>
 
   <!-- main -->
   <script type="text/javascript" src="js/main.js"></script>
@@ -41,8 +42,12 @@
   <!-- templates -->
   <script id="layer_template" type="text/x-jquery-tmpl">
     {{if visible }}
-    <li data-layer="${ name }" class="${ visible ? 'active' : '' } js_layer"><span>${name}</span></li>
+    <li data-name="${ name }" class="${ visible ? 'active' : '' } js_layer"><span>${name}</span></li>
     {{/if}}
+  </script>
+
+  <script id="place_template" type="text/x-jquery-tmpl">
+    <li data-name="${ name }" class="js_place"><span>${name}</span></li>
   </script>
 
   <script id="callout_template" class="popup" type="text/x-jquery-tmpl">
@@ -62,12 +67,7 @@
       </p>
     </div>
     <div class="main nav">
-      <ul>
-        <li><span id="indonesia" class="home">Indonesia</span></li>
-        <li><span id="sumatra">Sumatra</span></li>
-<!--        <li><span id="java">Java</span></li>
-        <li><span id="sulawesi">Sulawesi</span></li>
-        <li><span id="kalimantan">Kalimantan</span></li> -->
+      <ul class="js_places">
       </ul>
     </div>
   </div>

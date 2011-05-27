@@ -13,9 +13,16 @@ $(function() {
       .appendTo('.js_layers');
   });
 
+  map.on('load.json', function() {
+    var places = map.getPlaces();
+    $('#place_template')
+      .tmpl(places)
+      .appendTo('.js_places');
+  });
+
   $('.js_layers')
     .delegate('li', 'click', function() {
-      var layer = map.getLayer($(this).data('layer'));
+      var layer = map.getLayer($(this).data('name'));
       layer.toggle();
 
       if ($(this).is('.active')) {
@@ -25,7 +32,13 @@ $(function() {
       }
     })
     .delegate('li', 'hover', function() {
-      var layer = map.getLayer($(this).data('layer'));
+      var layer = map.getLayer($(this).data('name'));
       layer.toggleHighlight();
+    });
+
+  $('.js_places')
+    .delegate('li', 'click', function() {
+      var place = map.getPlace($(this).data('name'));
+      place.panTo();
     });
 });
