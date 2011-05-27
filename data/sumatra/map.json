@@ -1,1 +1,8 @@
-{"foo": "bar"}
+{
+  "callouts": {
+    "This is a test": {
+      "title": "Das ist ein Test",
+      "content": "Das ist unser content"
+    }
+  }
+}

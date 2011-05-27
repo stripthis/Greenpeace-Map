@@ -80,7 +80,6 @@ AvenzaMap.prototype._embedd = function() {
   );
 };
 
-
 AvenzaMap.prototype._load = function(url, variable) {
   var self = this;
 
@@ -106,6 +105,8 @@ AvenzaMap.prototype._handleMouseMove = function(e) {
     return;
   }
 
+  callout = this._getTranslation(callout);
+
   this.$callout = $('#callout_template')
     .tmpl(callout)
     .appendTo('body')
@@ -113,6 +114,15 @@ AvenzaMap.prototype._handleMouseMove = function(e) {
       left: (e.pageX + 20) + 'px',
       top: (e.pageY + 20) + 'px'
     });
+};
+
+AvenzaMap.prototype._getTranslation = function(callout) {
+  var translatedCallout = this.json.callouts[callout.title];
+  if (translatedCallout) {
+    return translatedCallout;
+  }
+
+  return callout;
 };
 
 AvenzaMap.prototype._checkIfLoaded = function() {
@@ -124,7 +134,7 @@ AvenzaMap.prototype._checkIfLoaded = function() {
 };
 
 AvenzaMap.prototype._error = function(err) {
-  this.emit('error');
+  this.emit('error', err);
 };
 
 AvenzaMap.prototype.getSize = function() {
