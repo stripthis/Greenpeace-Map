@@ -22,6 +22,7 @@ function AvenzaMap() {
   this.view = {};
   this.map = null;
   this._layers = null;
+  this._places = null;
 
   this.mapLoaded = false;
   this.xml = null;
@@ -43,7 +44,7 @@ AvenzaMap.VIEW_DEFAULTS = {
 };
 
 AvenzaMap.create = function(options) {
-  var avenzaMap = new AvenzaMap();
+  var avenzaMap = new this();
 
   $.extend(avenzaMap, options);
   avenzaMap.view = $.extend({}, AvenzaMap.VIEW_DEFAULTS, avenzaMap.view);
@@ -81,14 +82,14 @@ AvenzaMap.prototype._embedd = function() {
   );
 };
 
-AvenzaMap.prototype._load = function(url, variable) {
+AvenzaMap.prototype._load = function(url, type) {
   var self = this;
 
   var request = $.get(url, function(response) {
-    self[variable] = response;
-    self.emit('load.' + variable);
+    self[type] = response;
+    self.emit('load.' + type);
     self._checkIfLoaded();
-  });
+  }, type);
 
   request.error(function(response, status) {
     self._error(new Error(status + ': could not load: ' + url));
@@ -143,6 +144,35 @@ AvenzaMap.prototype.getSize = function() {
     width: this.$element.width(),
     height: this.$element.height()
   };
+};
+
+AvenzaMap.prototype.getPlaces = function() {
+  if (this._places) {
+    return this._places;
+  }
+
+  var self = this;
+  var places = [];
+  $(this.json.places).each(function() {
+    var place = AvenzaPlace.create({
+      map: self,
+      json: this
+    });
+    places.push(place);
+  });
+
+  return this._places = places;
+};
+
+AvenzaMap.prototype.getPlace = function(name) {
+  var places = this.getPlaces();
+
+  for (var i = 0; places.length; i++) {
+    var place = places[i];
+    if (place.name === name) {
+      return place;
+    }
+  }
 };
 
 AvenzaMap.prototype.getLayers = function() {
