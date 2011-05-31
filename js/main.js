@@ -30,10 +30,6 @@ $(function() {
       } else {
         $(this).addClass('active');
       }
-    })
-    .delegate('li', 'hover', function() {
-      var layer = map.getLayer($(this).data('name'));
-      layer.toggleHighlight();
     });
 
   $('.js_places')

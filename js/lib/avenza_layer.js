@@ -37,24 +37,6 @@ AvenzaLayer.prototype.toggle = function() {
   this._updateVisibility();
 };
 
-AvenzaLayer.prototype.toggleHighlight = function() {
-  var layers = this.map.getLayers();
-  var self = this;
-
-  this.highlighted = !this.highlighted;
-
-  $(layers).each(function() {
-    if (!self.highlighted && this !== self) {
-      this.setAlpha(1);
-      this._updateVisibility();
-    }
-
-    if (self.highlighted && this !== self) {
-      this.setAlpha(0.1);
-    }
-  });
-};
-
 AvenzaLayer.prototype.setAlpha = function(alpha) {
   this.alpha = alpha;
   this.map.map.setAlpha(this.name, this.alpha);
