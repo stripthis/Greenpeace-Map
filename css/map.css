@@ -1,80 +1,218 @@
-
+/**
+ * Map.css
+ * @updated 2011-05-31
+ */
 body {
-  background-color:#333;
   font-family: helvetica, arial, verdana, sans-serif;
-}
-.map-holder {
-  margin:auto;
-  background-color:#FFF;
-  border:5px solid #777;
-  width:960px;
+  margin:0;
+  padding:0;
 }
 
-#map{
-  width: 960px;
-  height: 450px;
+/* reset */
+#map-container * {
+  padding:0;
+  margin:0;
 }
-
-ul {
+#map-container ul {
   list-style-type:none;
 }
-.main.nav ul {
-  /*float:left;*/
+/* Universal clearfix hack */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+/* layout */
+body{
+  background:#FCFCFC url(../images/fakeheader.png) center top repeat-x;
+  padding-top:87px;
+}
+#map-container-holder {
+  background:#FCFCFC;
+  height: 100%;
+}
+#map-container {
+  margin:auto;
+  background-color:#FFF;
+  width:960px;
+  padding:5px 0 50px 0;
+  -moz-box-shadow: 0 0 10px #888;
+  -webkit-box-shadow: 0 0 10px #888;
+  box-shadow: 0 0 10px #888;
+  height: 100%;
+}
+#map-container #title-holder,
+#map-container #main-nav-holder {
+  float:left;
+  width:185px;
+  height:50px;
+}
+#map-container #main-nav-holder {
+  width:750px;
+}
+#map{
+  width:920px;
+  height:500px;
+  margin:auto 20px;
+}
+#map-layers {
   position:absolute;
-  top:10px;
-  padding:5px;
-  margin:0;
-  background:#777;
-}
-.main.nav ul li{
-  display:inline;
-  padding:5px;
-}
-.main.nav span{
-  cursor:pointer;
-  color:#FFF;
-  font-weight:bold;
-}
-.main.nav span:hover{
-  color:#CFF;
-}
-/* Bug Fix, outline border on embedded map */
-object {
-  outline:none;
+  margin-top:100px;
+  height:495px;
+  width:170px;
+  margin-left:3px;
+  padding-left:5px;
 }
 
+/* top */
+#map-container #map-header {
+  padding:10px;  
+}
+#map-container h1 span{
+  display:none;
+}
+#map-container h1 {
+  width:180px;
+  height:40px;
+  background: transparent url(../images/sinarmas.png) center center no-repeat;
+  margin-left:10px;
+}
+
+/* nav */
+#map-container .nav.main ul li,
+#map-container .nav.main ul {
+  float:left;
+}
+#map-container .nav.main ul li a{
+  float:left;
+  padding:5px 10px;
+  margin:3px 0 0 5px;
+/*  color:#EC2227;
+  border:1px solid #EC2227;*/
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+  font-size:16px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+}
+#map-container .nav.main ul li a.active,
+#map-container .nav.main ul li a:hover{
+  background:#EC2227;
+  color:#FFF;
+}
+#map-container .level2 {
+  display:none;
+}
+
+/* main content map */
+#map-layers {
+  position:absolute;
+  /*top:50px;*/
+  background:transparent url(../images/opacity75.png) 0 0 repeat; /*todo ie6 */
+  height:496px;
+  width:180px;
+  margin-top:42px;
+  margin-left:22px;
+  padding:0;
+  border-right:2px solid #CCC;
+}
+#map-layers li h3{
+  font-size:14px;
+  padding:10px 5px 2px 7px;
+}
+#map-layers li span{
+  font-size:13px;
+  display:block;
+  cursor:pointer;
+  width:166px;
+  color:#000;
+  font-weight:bold;
+  padding:1px 2px 1px 12px;
+  margin-top:1px;
+}
+/* opac50 #f5f9f8, opac75 #f5f9f8 */
+#map-layers .forest.primary.active span {
+  background:#4D917B;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#4D917B)); 
+  background: -moz-linear-gradient(left,#f5f9f8,#4d917b);
+}
+#map-layers .forest.secondary.active span {
+  background:#b9dacc;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#B9DACC));
+  background: -moz-linear-gradient(left,#f5f9f8,#B9DACC);
+}
+#map-layers .peatland.p02m.active span {
+  background:#CFAB7A;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#CFAB7A));
+  background: -moz-linear-gradient(left,#f5f9f8,#CFAB7A);
+}
+#map-layers .peatland.p24m.active span {
+  background:#A16A1A;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#A16A1A));
+  background: -moz-linear-gradient(left,#f5f9f8,#A16A1A);
+}
+#map-layers .peatland.p40m.active span {
+  background:#5F4D22;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#5F4D22));
+  background: -moz-linear-gradient(left,#f5f9f8,#5F4D22);
+}
+#map-layers .habitat.tiger.active span {
+  background:#F37224;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#F37224));
+  background: -moz-linear-gradient(left,#f5f9f8,#F37224);
+}
+#map-layers .habitat.orangutan.active span {
+  background:#f34424;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#F34424));
+  background: -moz-linear-gradient(left,#f5f9f8,#F34424);
+}
+#map-layers .concession.active span {
+  background:#EC2227;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#EC2227));
+  background: -moz-linear-gradient(left,#F5F9F8,#EC2227);
+}
+#map-layers .spacer {
+  margin-top:15px;
+  border-bottom:2px solid #CCC;
+}
+#map-layers .spacer span {
+  display:none;
+}
+#map {
+  border:2px solid #CCC;
+}
+/* callout */
 .callout {
   position:absolute;
-  width: 200px;
-  background: #FFF;
+  width:200px;
+  background:#FFF;
   border:1px solid #CCC;
   padding:5px;
 }
-.layer.nav {
-  width:960px;
-  margin:auto;
-  color:#FFF;
-}
-.layer.nav h3,
-.layer.nav ul li{
-  padding:0;
-  margin:2px;
-  color: #555;
-  float: left;
-  clear: both;
-}
 
-.layer.nav .active{
-  color: #fff;
+/* content */
+#map-container #content-holder {
+  background: transparent url(../images/deforestation.png) left center no-repeat;
+  padding-left:215px;
+  padding-top:0px;
 }
-
-.layer.nav span {
-  cursor:pointer;
-  background:#000;
-  width:150px;
-  padding:5px;
-  display:block;
+#map-container h2 {
+  font-size:22px;
+  margin-top:5px;
 }
-.layer.nav span:hover {
-  background:#111;
+#map-container p {
+  font-size:13px;
+  padding-right:25px;
 }

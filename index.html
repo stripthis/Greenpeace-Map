@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Map Test 1 | Greenpeace International</title>
-
   <!--
            __   _  __   __     __    ___   _____      __     __       __     __
          /'_ `\/\`'__\/'__`\ /'__`\/' _ `\/\  __`\  /'__`\ /'__`\   /'__`\ /'__`\
@@ -13,11 +12,10 @@
            \_/__/                             \/_/   peace & love!                    _(\)
 
   -->
-
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="copyright" content="Copyright 2011 - Greenpeace International" />
   <meta name="description" content="Greenpeace exists because this fragile Earth deserves a voice. It needs solutions. It needs change. It needs action. " />
-  <meta name="keywords" content="greenpeace, peace & love" />
+  <meta name="keywords" content="greenpeace, forest, sinar mas, app, indonesia" />
   <meta name="robots" content="noindex,nofollow" />
 
   <link href="img/favicon.ico" type="image/x-icon" rel="icon"/>
@@ -53,7 +51,61 @@
   </script>
 </head>
 <body>
-<div id="container">
+<!-- Section Container -->
+<div id="map-container-holder">
+<div id="map-container">
+<div id="map-header">
+  <!-- titles -->
+  <div id="title-holder">
+    <h1><span class="sinarmas logo">Sinar Mass Under Investigation</span></h1>
+  </div>
+
+  <!-- section navigation -->
+  <div id="main-nav-holder">
+    <div class="main nav">
+      <ul class="level1">
+        <li><a href="#">The Risks</a></li>
+        <li>
+          <a href="#" class="active">SMG/APP</a>
+          <ul class="level2">
+           <li><a href="#">Bukit Tigapuluh</a></li>
+           <li><a href="#">Kermutan</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Toy Sector</a></li>
+        <li><a href="#">Solutions</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="map-content">
+  <!-- layers -->
+  <div class="layer nav">
+    <div id="map-layers">
+      <ul class="js_layers">
+        <li><h3>Case Studies</h3></li>
+        <li data-layer="1" class="concession active js_layer"><span>Overview</span></li>
+        <li data-layer="1" class="concession js_layer"><span>Bukit Tigapuluh</span></li>
+        <li data-layer="2" class="concession js_layer"><span>Kermutan</span></li>
+        <li class="spacer"><span>Layers</span><li>
+        <li><h3>Pulp Concessions</h3></li>
+        <li data-layer="APP expansion" class="concession active js_layer"><span>APP expansion</span></li>
+        <li><h3>Forest</h3></li>
+        <li data-layer="Primary" class="forest primary active js_layer"><span>Primary</span></li>
+        <li data-layer="Secondary" class="forest secondary active js_layer"><span>Secondary</span></li>
+        <li><h3>Peat</h3></li>
+        <li data-layer="0-2m" class="peatland p02m active js_layer"><span>0-2m</span></li>
+        <li data-layer="2-4m" class="peatland p24m active js_layer"><span>2-4m</span></li>
+        <li data-layer="Peatland" class="peatland p40m active js_layer"><span>> 4m</span></li>
+        <li><h3>Annimal Habitat</li>
+        <li data-layer="Tiger habitat zoomed" class="habitat tiger js_layer"<span>Tiger</span></li>
+        <li data-layer="orangutan" class="habitat orangutan js_layer"<span>Oran-gutan</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- flash map -->
   <div class="map-holder">
     <div id="map">
       <p>
@@ -61,22 +113,17 @@
         <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>
       </p>
     </div>
-    <div class="main nav">
-      <ul>
-        <li><span id="indonesia" class="home">Indonesia</span></li>
-        <li><span id="sumatra">Sumatra</span></li>
-<!--        <li><span id="java">Java</span></li>
-        <li><span id="sulawesi">Sulawesi</span></li>
-        <li><span id="kalimantan">Kalimantan</span></li> -->
-      </ul>
-    </div>
   </div>
-  <div class="layer nav">
-    <div id="map-layer">
-      <ul class="js_layers">
-      </ul>
-    </div>
+
+  <div id="content-holder">
+    <h2><span class="app deforestation">How APP is toying with extinction</span></h2>
+    <p>
+      A new investigative report from Greenpeace, 'How APP is toying with extinction', shows how major brands like Bob, Biloute and Bilette are fueling climate change and pushing Sumatran tigers and orang-utans towards the brink of extinction.
+    </p>
   </div>
+
+</div>
+</div>
 </div>
 </body>
 </html>

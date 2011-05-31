@@ -35,6 +35,7 @@ AvenzaMap.VIEW_DEFAULTS = {
   searchWidget: false,
   layerWidget: false,
   overviewWidget: false,
+  zoomWidget:false,
   zoomMin:150,
   zoomMax:3000,
   useCentroidForCallouts:true,

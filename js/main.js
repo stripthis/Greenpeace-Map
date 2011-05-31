@@ -2,14 +2,16 @@ $(function() {
   var map = $('#map').avenzaMap({
     url: 'data/sumatra',
     view: {
-      initialPanX: 70,
-      initialPanY: 100
+      initialPanX: 10,
+      initialPanY: 80,
+      zoomMin:138,
+      zoomMax:2000
     }
   });
 
   map.on('load.xml', function() {
     $('#layer_template')
-      .tmpl(map.getLayers())
+      //.tmpl(map.getLayers())
       .appendTo('.js_layers');
   });
 
@@ -26,6 +28,6 @@ $(function() {
     })
     .delegate('li', 'hover', function() {
       var layer = map.getLayer($(this).data('layer'));
-      layer.toggleHighlight();
+//      layer.toggleHighlight();
     });
 });
