@@ -24,7 +24,7 @@ $(function() {
 
   $('.js_layers')
     .delegate('li', 'click', function() {
-      var layer = map.getLayer($(this).data('name'));
+      var layer = map.getLayer($(this).data('layer'));
       layer.toggle();
 
       if ($(this).is('.active')) {
@@ -32,15 +32,11 @@ $(function() {
       } else {
         $(this).addClass('active');
       }
-    })
-    .delegate('li', 'hover', function() {
-      var layer = map.getLayer($(this).data('layer'));
-//      layer.toggleHighlight();
     });
 
   $('.js_places')
     .delegate('li', 'click', function() {
-      var place = map.getPlace($(this).data('name'));
+      var place = map.getPlace($(this).data('layer'));
       place.panTo();
     });
 });
