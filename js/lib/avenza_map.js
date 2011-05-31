@@ -81,14 +81,14 @@ AvenzaMap.prototype._embedd = function() {
   );
 };
 
-AvenzaMap.prototype._load = function(url, variable) {
+AvenzaMap.prototype._load = function(url, type) {
   var self = this;
 
   var request = $.get(url, function(response) {
-    self[variable] = response;
-    self.emit('load.' + variable);
+    self[type] = response;
+    self.emit('load.' + type);
     self._checkIfLoaded();
-  });
+  }, type);
 
   request.error(function(response, status) {
     self._error(new Error(status + ': could not load: ' + url));
