@@ -1,221 +1,154 @@
-/**
- * @preserve EventEmitter v1.1.2
- *
- * Copyright 2011, Oliver Caldwell (flowdev.co.uk)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * https://github.com/Wolfy87/EventEmitter
- */
+(function(exports) {
+  var process = { EventEmitter: function() {} };
+  
+  if (typeof Array.isArray !== "function"){
+    Array.isArray = function(obj){ return Object.prototype.toString.call(obj) === "[object Array]" };
+  }
+  
+  if (!Array.prototype.indexOf){
+    Array.prototype.indexOf = function(item){
+        for ( var i = 0, length = this.length; i < length; i++ ) {
+            if ( this[ i ] === item ) {
+                return i;
+            }
+        }
 
-// Initialise the class
-function EventEmitter() {
-	// Initialise the storage variables
-	this._events = {};
-	this._listeners = [];
-	this._maxListeners = 10;
-}
+        return -1;
+    };
+  }
+  
+  // Begin wrap of nodejs implementation of EventEmitter
 
-/**
- * Converts an event name to a RegExp pattern
- *
- * @param {String} name Name of the event
- *
- * @return {String} RegExp pattern
- */
-EventEmitter.prototype._convertNameToRegExp = function(name) {
-	return name.replace(/\./g, '\\.').replace(/\*\\\./g, '[\\w\\-]+\\.').replace(/\*$/gi, '.+');
-};
+  var EventEmitter = exports.EventEmitter = process.EventEmitter;
 
-/**
- * Adds a listener for a specified event
- *
- * @param {String} name Name of the event
- * @param {Function} listener Run when the event is emitted
- * @param {Boolean} once If true, the listener will only be run once, use EventEmitter.once instead, this is mainly for internal use
- */
-EventEmitter.prototype.addListener = function(name, listener, once) {
-	// Grab the index of the listener
-	var index = this._listeners.length;
-	
-	// Emit the newListener event
-	this.emit('newListener', name, listener);
-	
-	// Add the listener
-	this._listeners.push({
-		listener: listener,
-		once: (once) ? true : false
-	});
-	
-	// Convert event name to RegExp
-	name = this._convertNameToRegExp(name);
-	
-	// Add the event to the events object if required
-	if(typeof this._events[name] === 'undefined') {
-		this._events[name] = [];
-	}
-	
-	// Add the listeners index to the event
-	this._events[name].push(index);
-	
-	// Check if we have exceeded the max listeners
-	if(this._events[name].length === this._maxListeners) {
-		// We have, let the developer know
-		console.log('Maximum number of listeners (' + this._maxListeners + ') reached for the "' + name + '" event!');
-	}
-};
+  var isArray = Array.isArray;
 
-/**
- * Adds a listener for a specified event (alias of EventEmitter.addListener)
- *
- * @param {String} name Name of the event
- * @param {Function} listener Run when the event is emitted
- * @param {Boolean} once If true, the listener will only be run once, use EventEmitter.once instead, this is mainly for internal use
- */
-EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+  EventEmitter.prototype.emit = function(type) {
+    // If there is no 'error' event listener then throw.
+    if (type === 'error') {
+      if (!this._events || !this._events.error ||
+          (isArray(this._events.error) && !this._events.error.length))
+      {
+        if (arguments[1] instanceof Error) {
+          throw arguments[1]; // Unhandled 'error' event
+        } else {
+          throw new Error("Uncaught, unspecified 'error' event.");
+        }
+        return false;
+      }
+    }
 
-/**
- * Adds a listener for a specified event that will only be called once
- *
- * @param {String} name Name of the event
- * @param {Function} listener Run when the event is emitted
- */
-EventEmitter.prototype.once = function(name, listener) {
-	this.addListener(name, listener, true);
-};
+    if (!this._events) return false;
+    var handler = this._events[type];
+    if (!handler) return false;
 
-/**
- * Removes a listener for a specified event
- *
- * @param {String} name Name of the event
- * @param {Function} listener Reference to the listener function
- */
-EventEmitter.prototype.removeListener = function(name, listener) {
-	// Initialise any required variables
-	var i = null,
-		indexes = null;
-	
-	// Convert event name to RegExp
-	name = this._convertNameToRegExp(name);
-	
-	// Make sure the event exists
-	if(this._events[name] instanceof Array) {
-		// Grab the listeners indexes
-		indexes = this._events[name];
-		
-		// Loop through all of the indexes
-		for(i = 0; i < indexes.length; i++) {
-			// Check if we have found the listener
-			if(this._listeners[indexes[i]].listener === listener) {
-				// It is, remove it and return
-				indexes.splice(i, 1);
-			}
-		}
-	}
-};
+    if (typeof handler == 'function') {
+      switch (arguments.length) {
+        // fast cases
+        case 1:
+          handler.call(this);
+          break;
+        case 2:
+          handler.call(this, arguments[1]);
+          break;
+        case 3:
+          handler.call(this, arguments[1], arguments[2]);
+          break;
+        // slower
+        default:
+          var args = Array.prototype.slice.call(arguments, 1);
+          handler.apply(this, args);
+      }
+      return true;
 
-/**
- * Removes all the listeners for a specified event
- *
- * @param {String} name Name of the event
- */
-EventEmitter.prototype.removeAllListeners = function(name) {
-	name = this._convertNameToRegExp(name);
-	this._events[name] = [];
-};
+    } else if (isArray(handler)) {
+      var args = Array.prototype.slice.call(arguments, 1);
 
+      var listeners = handler.slice();
+      for (var i = 0, l = listeners.length; i < l; i++) {
+        listeners[i].apply(this, args);
+      }
+      return true;
 
-/**
- * Sets the max number of listeners before a message is displayed
- * If it is set to 0 then there is no limit
- *
- * @param {Number} n Max number of listeners before a message is displayed
- */
-EventEmitter.prototype.setMaxListeners = function(n) {
-	this._maxListeners = n;
-};
+    } else {
+      return false;
+    }
+  };
 
-/**
- * Returns an array of listeners for the specified event
- *
- * @param {String} name Name of the event
- * @param {Boolean} checkOnce Mainly for internal use, but if true, it will check if the once flag is set on the listener and remove it if it is
- * @returns {Array} An array of the assigned listeners
- */
-EventEmitter.prototype.listeners = function(name, checkOnce) {
-	// Initialise any required variables
-	var eventRegExp = null,
-		i = null,
-		built = [],
-		l = null;
-	
-	// Loop through each event RegExp
-	for(eventRegExp in this._events) {
-		// If the event RegExp matches the event name
-		if(name.match(new RegExp('^'+eventRegExp+'$')) && this._events[eventRegExp] instanceof Array) {
-			// Grab the listeners indexes
-			indexes = this._events[eventRegExp];
-			
-			// Loop through all of the indexes
-			for(i = 0; i < indexes.length; i++) {
-				// Grab the listener
-				l = this._listeners[indexes[i]];
-				
-				if(checkOnce) {
-					if(l.once) {
-						// Add it to the array
-						built.push(l.listener);
+  // EventEmitter is defined in src/node_events.cc
+  // EventEmitter.prototype.emit() is also defined there.
+  EventEmitter.prototype.addListener = function(type, listener) {
+    if ('function' !== typeof listener) {
+      throw new Error('addListener only takes instances of Function');
+    }
 
-						// Remove the reference
-						this._events[eventRegExp].splice(i, 1);
-					}
-					else {
-						// Add it to the array
-						built.push(l.listener);
-					}
-				}
-				else {
-					// Add it to the array
-					built.push(l.listener);
-				}
-			}
-		}
-	}
-	
-	// Return the found listeners
-	return built;
-};
+    if (!this._events) this._events = {};
 
-/**
- * Emits the specified event with optional arguments
- *
- * @param {String} name Name of the event to be emitted
- * @param {Mixed} An argument to be passed to the listeners, you can have as many of these as you want
- */
-EventEmitter.prototype.emit = function(name) {
-	// Initialise any required variables
-	var i = null,
-		args = Array.prototype.slice.call(arguments),
-		listeners = this.listeners(name, true);
-	
-	// Check if there are no listeners for the event
-	if(listeners.length === 0) {
-		// If it is an error event, throw an exception
-		// Otherwise, return false
-		if(name === 'error') {
-			throw 'unspecifiedErrorEvent';
-		}
-		else {
-			return false;
-		}
-	}
-	
-	// Splice out the first argument
-	args.splice(0, 1);
-	
-	// Loop through the listeners
-	for(i = 0; i < listeners.length; i++) {
-		// Call the function
-		listeners[i].apply(null, args);
-	}
-	
-	return true;
-};
+    // To avoid recursion in the case that type == "newListeners"! Before
+    // adding it to the listeners, first emit "newListeners".
+    this.emit('newListener', type, listener);
+
+    if (!this._events[type]) {
+      // Optimize the case of one listener. Don't need the extra array object.
+      this._events[type] = listener;
+    } else if (isArray(this._events[type])) {
+      // If we've already got an array, just append.
+      this._events[type].push(listener);
+    } else {
+      // Adding the second element, need to change to array.
+      this._events[type] = [this._events[type], listener];
+    }
+
+    return this;
+  };
+
+  EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+  EventEmitter.prototype.once = function(type, listener) {
+    var self = this;
+    self.on(type, function g() {
+      self.removeListener(type, g);
+      listener.apply(this, arguments);
+    });
+  };
+
+  EventEmitter.prototype.removeListener = function(type, listener) {
+    if ('function' !== typeof listener) {
+      throw new Error('removeListener only takes instances of Function');
+    }
+
+    // does not use listeners(), so no side effect of creating _events[type]
+    if (!this._events || !this._events[type]) return this;
+
+    var list = this._events[type];
+
+    if (isArray(list)) {
+      var i = list.indexOf(listener);
+      if (i < 0) return this;
+      list.splice(i, 1);
+      if (list.length == 0)
+        delete this._events[type];
+    } else if (this._events[type] === listener) {
+      delete this._events[type];
+    }
+
+    return this;
+  };
+
+  EventEmitter.prototype.removeAllListeners = function(type) {
+    // does not use listeners(), so no side effect of creating _events[type]
+    if (type && this._events && this._events[type]) this._events[type] = null;
+    return this;
+  };
+
+  EventEmitter.prototype.listeners = function(type) {
+    if (!this._events) this._events = {};
+    if (!this._events[type]) this._events[type] = [];
+    if (!isArray(this._events[type])) {
+      this._events[type] = [this._events[type]];
+    }
+    return this._events[type];
+  };
+
+  // End nodejs implementation
+}((typeof exports === 'undefined') ? window : exports));
