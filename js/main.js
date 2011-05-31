@@ -32,18 +32,15 @@ $(function() {
       } else {
         $(this).addClass('active');
       }
-<<<<<<< HEAD
     })
     .delegate('li', 'hover', function() {
       var layer = map.getLayer($(this).data('layer'));
 //      layer.toggleHighlight();
-=======
     });
 
   $('.js_places')
     .delegate('li', 'click', function() {
       var place = map.getPlace($(this).data('name'));
       place.panTo();
->>>>>>> a35143a9508e01d9891952ea8ec3e070139a9187
     });
 });
