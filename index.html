@@ -57,8 +57,7 @@
 </head>
 <body>
 <!-- Section Container -->
-<div id="map-container-holder">
-<div id="map-container">
+<div id="map-container" style="clear:both;">
 <div id="map-header">
   <!-- titles -->
   <div id="title-holder">
@@ -95,17 +94,20 @@
         <li data-layer="2" class="concession js_layer"><span>Kermutan</span></li>
         <li class="spacer"><span>Layers</span><li>
         <li><h3>Pulp Concessions</h3></li>
-        <li data-layer="APP expansion" class="concession active js_layer"><span>APP expansion</span></li>
+        <li data-layer="Uncertain Status" class="concession active js_layer"><span>Uncertain Status</span></li>
+        <li data-layer="Targetted 2007" class="concession active js_layer"><span>Targetted 2007</span></li>
+        <li data-layer="Aquired to 2007" class="concession active js_layer"><span>Acquired to 2007</span></li>
+        <li data-layer="Aquired between 2007-09" class="concession active js_layer"><span>Acquired between 2007-09</span></li>
         <li><h3>Forest</h3></li>
-        <li data-layer="Primary" class="forest primary active js_layer"><span>Primary</span></li>
-        <li data-layer="Secondary" class="forest secondary active js_layer"><span>Secondary</span></li>
-        <li><h3>Peat</h3></li>
-        <li data-layer="0-2m" class="peatland p02m active js_layer"><span>0-2m</span></li>
-        <li data-layer="2-4m" class="peatland p24m active js_layer"><span>2-4m</span></li>
-        <li data-layer="Peatland" class="peatland p40m active js_layer"><span>> 4m</span></li>
-        <li><h3>Annimal Habitat</li>
-        <li data-layer="Tiger habitat zoomed" class="habitat tiger js_layer"<span>Tiger</span></li>
-        <li data-layer="orangutan" class="habitat orangutan js_layer"<span>Oran-gutan</span></li>
+        <li data-layer="Primary Forest" class="forest primary active js_layer"><span>Primary</span></li>
+        <li data-layer="Secondary Forest" class="forest secondary active js_layer"><span>Secondary</span></li>
+        <li><h3>Peatland</h3></li>
+        <li data-layer="0-2 metre Peat" class="peatland p02m active js_layer"><span>0-2 metre peat</span></li>
+        <li data-layer="2-4 metre Peat" class="peatland p24m active js_layer"><span>2-4 metre peat</span></li>
+        <li data-layer=">4 metre Peat" class="peatland p40m active js_layer"><span>> 4 metre peat</span></li>
+        <li><h3>Annimal Habitat</h3></li>
+        <li data-layer="Tiger" class="habitat tiger js_layer"<span>Tiger</span></li>
+        <li data-layer="Orangutan" class="habitat orangutan js_layer"<span>Oran-gutan</span></li>
       </ul>
     </div>
   </div>
@@ -119,15 +121,55 @@
       </p>
     </div>
   </div>
+</div>
 
-  <div id="content-holder">
+<div class="content-holder">
+  <!-- Quick Facts -->
+  <div class="content quick facts clearfix">
     <h2><span class="app deforestation">How APP is toying with extinction</span></h2>
     <p>
-      A new investigative report from Greenpeace, 'How APP is toying with extinction', shows how major brands like Bob, Biloute and Bilette are fueling climate change and pushing Sumatran tigers and orang-utans towards the brink of extinction.
+      A new investigative report from Greenpeace, 'How APP is toying with extinction', 
+      shows how major brands like Bob, Biloute and Bilette are fueling climate change 
+      and pushing Sumatran tigers and orang-utans towards the brink of extinction.
     </p>
   </div>
+  <!-- Detailed Facts -->
+  <div class="content detailed facts clearfix">
+    <div id="slides">
+      <div class="nav secondary">
+      <ul class="level1">
+        <li><a href="#" class="active">Peat</a></li>
+        <li><a href="#">Habitat</a></li>
+        <li><a href="#">Concessions</a></li>
+      </ul>
+      </div>
+      <div class="slide-content-holder">
+        <h3>Peatland</h3>
+        <div class="image right">
+           <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/db/TOMS_indonesia_smog_lrg.jpg/800px-TOMS_indonesia_smog_lrg.jpg" width="150px"/>
+           <span class="copyright">Photo (c) Greenpeace/Wikipedia</span>
+           <span class="caption">Smoke and ozone pollution from Indonesian fires, 1997.</span>
+        </div>
+        <p class="clearfix">
+          Peat, or turf, is an accumulation of partially decayed vegetation matter or histosol. 
+          Peat forms in wetland bogs, moors, muskegs, pocosins, mires, and peat swamp forests. 
+          Peat is harvested as an important source of fuel in certain parts of the world. 
+          By volume, there are about 4 trillion m³ of peat in the world covering a total of 
+          around 2% of global land area (about 3 million km²), containing about 8 billion 
+          terajoules of energy.[1]<br/><br/>
+          Peat has a high carbon content and can burn under low moisture conditions. Once ignited by the presence of a heat source (e.g. a wildfire penetrating the subsurface), it smolders. These smoldering fires can burn undetected for very long periods of time (months, years and even centuries) propagating in a creeping fashion through the underground peat layer. Peat fires are emerging as a global threat with significant economic, social and ecological impacts. Recent burning of peat bogs in Indonesia, with their large and deep growths containing more than 50 billion tons of carbon, has contributed to increases in world carbon dioxide levels. Peat deposits in Southeast Asia could be destroyed by 2040.[19][20]
+          In North America, peat fires have a returning cycle (70–130 years) depending on the recolonization by Black Spruce (Picea mariana). Once a fire has burnt through the area normally hollows in the peat are burnt out, and hummocks are desiccated but can contribute to Sphagnum recolonization.[23]
+          <br><br>
+In June 2002, the United Nations Development Programme launched the Wetlands Ecosystem and Tropical Peat Swamp Forest Rehabilitation Project. This project was targeted to last for 5 years until 2007 and brings together the efforts of various non-government organisations.
 
-</div>
+In November 2002, the International Peat Society and the International Mire Conservation Group (IMCG) published guidelines on the "Wise Use of Mires and Peatlands — Backgrounds and Principles including a framework for decision-making". The aim of this publication is to develop mechanisms that can balance the conflicting demands on the global peatland heritage, to ensure its wise use to meet the needs of humankind.
+
+In June 2008, the International Peat Society published the book "Peatlands and Climate Change", summarizing the currently available knowledge on the topic.
+        </p>
+      </div>
+    </div>
+  </div>
+
 </div>
 </div>
 </body>

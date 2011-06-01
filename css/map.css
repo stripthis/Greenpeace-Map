@@ -89,14 +89,14 @@ body{
 }
 
 /* nav */
-#map-container .nav.main ul li,
-#map-container .nav.main ul {
+#map-container .nav ul li,
+#map-container .nav ul {
   float:left;
 }
-#map-container .nav.main ul li a{
+#map-container .nav ul li a{
   float:left;
   padding:5px 10px;
-  margin:3px 0 0 5px;
+  margin:3px 0 0 10px;
 /*  color:#EC2227;
   border:1px solid #EC2227;*/
   color:#000;
@@ -107,8 +107,8 @@ body{
   border-radius: 3px;
 
 }
-#map-container .nav.main ul li a.active,
-#map-container .nav.main ul li a:hover{
+#map-container .nav ul li a.active,
+#map-container .nav ul li a:hover{
   background:#EC2227;
   color:#FFF;
 }
@@ -144,14 +144,14 @@ body{
 }
 /* opac50 #f5f9f8, opac75 #f5f9f8 */
 #map-layers .forest.primary.active span {
-  background:#4D917B;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#4D917B)); 
-  background: -moz-linear-gradient(left,#f5f9f8,#4d917b);
+  background:#609b61;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#609b61)); 
+  background: -moz-linear-gradient(left,#f5f9f8,#609b61);
 }
 #map-layers .forest.secondary.active span {
-  background:#b9dacc;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#B9DACC));
-  background: -moz-linear-gradient(left,#f5f9f8,#B9DACC);
+  background:#8bcb8b;
+  background: -webkit-gradient(linear, left top, right top, from(#F5F9F8), to(#8bcb8b));
+  background: -moz-linear-gradient(left,#f5f9f8,#8bcb8b);
 }
 #map-layers .peatland.p02m.active span {
   background:#CFAB7A;
@@ -203,16 +203,37 @@ body{
 }
 
 /* content */
-#map-container #content-holder {
-  background: transparent url(../images/deforestation.png) left center no-repeat;
-  padding-left:215px;
+#map-container .content.quick.facts {
+  background: transparent url(../images/deforestation.png) left 0 no-repeat;
+  padding-left:200px;
   padding-top:0px;
 }
-#map-container h2 {
+#map-container .content.detailed.facts {
+  /*float:left;
+  clear:both;*/
+}
+#map-container .content h2,
+#map-container .content h3 {
   font-size:22px;
   margin-top:5px;
+  padding:10px 25px 5px 25px;
+  clear:both;
 }
-#map-container p {
+#map-container .content p {
   font-size:13px;
-  padding-right:25px;
+  padding:0 25px;
+}
+#map-container .content .image.left {
+  float:left;
+}
+#map-container .content .image.right {
+  float:right;
+  width:150px;
+  margin:0 25px;
+  font-size:10px;
+  background:#F1F1F1;
+  padding:10px;
+}
+#map-container .nav.secondary {
+  margin:15px;
 }
