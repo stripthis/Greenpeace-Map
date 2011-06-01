@@ -1,9 +1,42 @@
 
 <map>
 
-  <layer SWFFile="map_L1.swf" depth="1" name="map_L1.swf"/>
+  <layer SWFFile="map_L1.swf" depth="1" name="Acquired to end 2006" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L2.swf" depth="2" name="Bukit Tigapuluh" userToggle="true" visible="true">
+  <layer SWFFile="map_L2.swf" depth="2" name="Uncertain status" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L3.swf" depth="3" name="Acquired 2007-2009" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L4.swf" depth="4" name="Targetted 2007" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L5.swf" depth="5" name="map_L5.swf">
+    <feature ctrX="384.128" ctrY="259.983" extH="32.65" extW="44.25" extX="362.00" extY="243.66">
+      <polygon direction="cw">
+        <coords>405.8,275.8 362.5,275.8 362.5,244.2 405.8,244.2 405.8,275.8 </coords>
+      </polygon>
+      <attributes>
+        <col name="Id">2</col>
+        <col name="Landscape">Buktit Tigapuluh</col>
+      </attributes>
+      <webtag autoSize="false" height="300" width="400">
+        <title><![CDATA[Case Study 2: Bukit Tigapuluh]]></title>
+      </webtag>
+    </feature>
+    <feature ctrX="404.492" ctrY="227.12" extH="16.79" extW="21.89" extX="393.49" extY="218.78">
+      <polygon direction="cw">
+        <coords>394.0,219.3 414.9,219.3 414.9,235.1 394.0,235.1 394.0,219.3 </coords>
+      </polygon>
+      <attributes>
+        <col name="Id">1</col>
+        <col name="Landscape">Kerumutan Swamp Forest</col>
+      </attributes>
+      <webtag autoSize="false" height="300" width="400">
+        <title><![CDATA[Case Study One: Kerumutan]]></title>
+      </webtag>
+    </feature>
+  </layer>
+
+  <layer SWFFile="map_L6.swf" depth="6" name="Bukit Tigapuluh" userToggle="true" visible="true">
     <feature ctrX="371.41" ctrY="259.088" extH="0.92" extW="1.21" extX="370.81" extY="258.63">
       <polygon>
         <coords>371.3,258.6 371.5,258.6 371.5,258.6 371.5,258.6 371.5,258.6 371.6,258.6 371.6,258.6 371.6,258.6 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.6,258.7 371.7,258.7 371.7,258.7 371.7,258.7 371.7,258.7 371.7,258.7 371.7,258.7 371.7,258.7 371.7,258.7 371.7,258.7 371.7,258.8 371.8,258.8 371.8,258.8 371.8,258.8 371.8,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 371.9,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.8 372.0,258.9 372.0,258.9 372.0,258.9 372.0,258.9 372.0,258.9 372.0,258.9 372.0,259.4 372.0,259.4 372.0,259.4 372.0,259.4 372.0,259.4 372.0,259.4 372.0,259.4 372.0,259.4 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 372.0,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.9,259.5 371.8,259.5 371.8,259.5 371.8,259.5 371.8,259.5 371.0,259.5 371.0,259.5 371.0,259.5 371.0,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.9,259.5 370.8,259.5 370.8,259.5 370.8,259.5 370.8,259.5 370.8,259.5 370.8,259.5 370.8,259.5 370.8,259.4 370.8,259.4 370.8,259.4 370.8,259.4 370.8,259.4 370.8,259.4 370.8,259.4 370.8,259.4 370.8,258.9 370.8,258.9 370.8,258.9 370.8,258.9 370.8,258.9 370.8,258.9 370.8,258.8 370.8,258.8 370.8,258.8 370.8,258.8 370.8,258.8 370.8,258.8 370.8,258.8 370.8,258.8 370.8,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 370.9,258.8 371.0,258.8 371.0,258.8 371.0,258.8 371.0,258.8 371.1,258.8 371.1,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.7 371.2,258.6 371.3,258.6 371.3,258.6 371.3,258.6 371.3,258.6 371.3,258.6 371.3,258.6 </coords>
@@ -11,6 +44,7 @@
       <attributes>
         <col name="KmlStyleUrl">#photoSpot</col>
         <col name="Image">B30_TMA_ForestEdge.jpg</col>
+        <col name="Id">0</col>
         <col name="KmlDescription">&lt;div align='left'&gt;&lt;b&gt;2010-08-05 09:02:29&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&gt;&lt;img src='PT TMA.album/studio.data/size_full/_MG_9677.JPG' width='320' height='213' /&gt;&lt;br/&gt;&lt;span style='font-size:10px; line-height:150%; color:#999999'&gt;_MG_9677.JPG&lt;/span&gt;&lt;/d</col>
       </attributes>
       <webtag autoSize="true" height="300" width="400">
@@ -25,6 +59,7 @@
       <attributes>
         <col name="KmlStyleUrl">#photoSpot</col>
         <col name="Image">B30_TMA_Forest.jpg</col>
+        <col name="Id">0</col>
         <col name="KmlDescription">&lt;div align='left'&gt;&lt;b&gt;2010-08-05 09:00:08&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&gt;&lt;img src='PT TMA.album/studio.data/size_full/_MG_9635.JPG' width='320' height='213' /&gt;&lt;br/&gt;&lt;span style='font-size:10px; line-height:150%; color:#999999'&gt;_MG_9635.JPG&lt;/span&gt;&lt;/d</col>
       </attributes>
       <webtag autoSize="true" height="300" width="400">
@@ -39,6 +74,7 @@
       <attributes>
         <col name="KmlStyleUrl">#photoSpot</col>
         <col name="Image">B30_TMA_TreeCrops.jpg</col>
+        <col name="Id">0</col>
         <col name="KmlDescription">&lt;div align='left'&gt;&lt;b&gt;2010-08-05 08:58:40&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&gt;&lt;img src='PT TMA.album/studio.data/size_full/_MG_9607.JPG' width='320' height='213' /&gt;&lt;br/&gt;&lt;span style='font-size:10px; line-height:150%; color:#999999'&gt;_MG_9607.JPG&lt;/span&gt;&lt;/d</col>
       </attributes>
       <webtag autoSize="true" height="300" width="400">
@@ -53,6 +89,7 @@
       <attributes>
         <col name="KmlStyleUrl">#photoSpot</col>
         <col name="Image">B30_RHM_ForestRoad.jpg</col>
+        <col name="Id">0</col>
         <col name="KmlDescription">&lt;div align='left'&gt;&lt;b&gt;2010-08-05 08:44:10&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&gt;&lt;img src='PT RHM.album/studio.data/size_full/_MG_9573.JPG' width='320' height='213' /&gt;&lt;br/&gt;&lt;span style='font-size:10px; line-height:150%; color:#999999'&gt;_MG_9573.JPG&lt;/span&gt;&lt;/d</col>
       </attributes>
       <webtag autoSize="true" height="300" width="400">
@@ -67,6 +104,7 @@
       <attributes>
         <col name="KmlStyleUrl">#photoSpot</col>
         <col name="Image">B30_Artelindo_Forest.jpg</col>
+        <col name="Id">0</col>
         <col name="KmlDescription">&lt;div align='left'&gt;&lt;b&gt;2010-08-05 09:40:50&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&gt;&lt;img src='PT Artelindo.album/studio.data/size_full/_MG_0086.JPG' width='320' height='213' /&gt;&lt;br/&gt;&lt;span style='font-size:10px; line-height:150%; color:#999999'&gt;_MG_0086.JPG&lt;/sp</col>
       </attributes>
       <webtag autoSize="true" height="300" width="400">
@@ -82,6 +120,7 @@
       <attributes>
         <col name="KmlStyleUrl">#photoSpot</col>
         <col name="Image">B30_Artelindo_Hills.jpg</col>
+        <col name="Id">0</col>
         <col name="KmlDescription">&lt;div align='left'&gt;&lt;b&gt;2010-08-05 09:32:49&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&gt;&lt;img src='PT Artelindo.album/studio.data/size_full/_MG_0031.JPG' width='320' height='213' /&gt;&lt;br/&gt;&lt;span style='font-size:10px; line-height:150%; color:#999999'&gt;_MG_0031.JPG&lt;/sp</col>
       </attributes>
       <webtag autoSize="true" height="300" width="400">
@@ -97,6 +136,7 @@
       <attributes>
         <col name="KmlStyleUrl">#photoSpot</col>
         <col name="Image">B30_Road.jpg</col>
+        <col name="Id">0</col>
         <col name="KmlDescription">&lt;div align='left'&gt;&lt;b&gt;2010-04-26 10:30:42&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&gt;&lt;img src='B30 logging road.album/studio.data/size_full/_ICT0196.JPG' width='320' height='212' /&gt;&lt;br/&gt;&lt;span style='font-size:10px; line-height:150%; color:#999999'&gt;_ICT0196.JPG</col>
       </attributes>
       <webtag autoSize="true" height="300" width="400">
@@ -106,23 +146,13 @@
     </feature>
   </layer>
 
-  <layer SWFFile="map_L3.swf" depth="3" name="Orangutan" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L7.swf" depth="7" name="Orangutan" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L4.swf" depth="4" name="Tiger" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L8.swf" depth="8" name="Tiger" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L5.swf" depth="5" name="Ranges" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L9.swf" depth="9" name="Primary Forest" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L6.swf" depth="6" name="Targetted 2007" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L7.swf" depth="7" name="Aquired to 2007" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L8.swf" depth="8" name="Aquired between 2007-09" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L9.swf" depth="9" name="Uncertain Status" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L10.swf" depth="10" name="Primary Forest" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L11.swf" depth="11" name="Secondary Forest" userToggle="true" visible="true">
+  <layer SWFFile="map_L10.swf" depth="10" name="Secondary Forest" userToggle="true" visible="true">
     <feature ctrX="389.011" ctrY="254.99" extH="20.46" extW="35.55" extX="365.02" extY="242.97">
       <aggregate>
         <polygon direction="ccw">
@@ -275,12 +305,16 @@
     </feature>
   </layer>
 
-  <layer SWFFile="map_L12.swf" depth="12" name=">4 metre Peat" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L11.swf" depth="11" name="forested_Orangutan_habitat_dd_area 1" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L13.swf" depth="13" name="2-4 metre Peat" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L12.swf" depth="12" name="forested_tiger_habitat_dd" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L14.swf" depth="14" name="0-2 metre Peat" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L13.swf" depth="13" name=">4 metre Peat" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L15.swf" depth="15" name="map_L15.swf"/>
+  <layer SWFFile="map_L14.swf" depth="14" name="2-4 metre Peat" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L15.swf" depth="15" name="0-2 metre Peat" userToggle="true" visible="true"/>
+
+  <layer SWFFile="map_L16.swf" depth="16" name="map_L16.swf"/>
 
 </map>
