@@ -69,13 +69,7 @@
     <div class="main nav">
       <ul class="level1">
         <li><a href="#">The Risks</a></li>
-        <li>
-          <a href="#" class="active">SMG/APP</a>
-          <ul class="level2">
-           <li><a href="#">Bukit Tigapuluh</a></li>
-           <li><a href="#">Kermutan</a></li>
-          </ul>
-        </li>
+        <li><a href="#" class="active">SMG/APP</a></li>
         <li><a href="#">Toy Sector</a></li>
         <li><a href="#">Solutions</a></li>
       </ul>
@@ -135,15 +129,14 @@
   </div>
   <!-- Detailed Facts -->
   <div class="content detailed facts clearfix">
-    <div id="slides">
-      <div class="nav secondary">
+    <div class="slides">
+      <div class="nav secondary slide-nav">
         <ul class="level1">
-          <li><a href="#" class="active">Peat</a></li>
-          <li><a href="#">Habitat</a></li>
-          <li><a href="#">Concessions</a></li>
+          <li><a href="#peat" id="slide1">Peat</a></li>
+          <li><a href="#habitat" id="slide2">Habitat</a></li>
         </ul>
       </div>
-      <div class="slide 1">
+      <div class="slide slide1">
         <div class="slide-content">
         <h3>Peatland</h3>
         <div class="image right" style="width:250px">
@@ -160,7 +153,7 @@
           terajoules of energy.[1]
         </p>
         <p>
-          Peat has a high carbon content and can burn under low moisture conditions. 
+          Peat has a <a href="#">high carbon</a> content and can burn under low moisture conditions. 
           Once ignited by the presence of a heat source (e.g. a wildfire penetrating the subsurface), 
           it smolders. These smoldering fires can burn undetected for very long periods of time (months, 
           years and even centuries) propagating in a creeping fashion through the underground peat 
@@ -169,6 +162,11 @@
           growths containing more than 50 billion tons of carbon, has contributed to increases in 
           world carbon dioxide levels. Peat deposits in Southeast Asia could be destroyed by 2040.[2]
         </p>
+        <div class="image left" style="width:150px">
+           <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Toppila_power_plant.JPG/220px-Toppila_power_plant.JPG" width="150px"/>
+           <span class="copyright">Photo (c) Greenpeace/Wikipedia</span>
+           <span class="caption">The Toppila Power Station, a peat-fired facility in Oulu, Finland.</span>
+        </div>
         <p>
           In North America, peat fires have a returning cycle (70–130 years) depending on the recolonization 
           by Black Spruce (Picea mariana)[3]. Once a fire has burnt through the area normally hollows in the peat 
@@ -188,9 +186,16 @@
           In June 2008, the International Peat Society published the book "Peatlands and Climate Change", 
           summarizing the currently available knowledge on the topic.
         </p>
+        <p>
+          <ul class="footnotes">
+            <li>[1] World Energy Council (2007). "Survey of Energy Resources 2007" (PDF). http://www.worldenergy.org/documents/ser2007_executive_summary.pdf. Retrieved 2008-08-11.</li> 
+            <li>[2] http://waspada.co.id/index.php?option=com_content&view=article&id=193680:us-ri-discuss-future-of-peat-land-mangroves&catid=30:english-news&Itemid=101</li>
+            <li>[3] International Mire Conservation Group (2007-01-03). "Peat should not be treated as a renewable energy source" (PDF). http://www.imcg.net/docum/peatrenewable.pdf. Retrieved 2007-02-12.</li>
+          </ul>
+        </p>
         </div>
         <div class="slide-sidebar">
-          <h5>Related links<h5>
+          <h5>Related links</h5>
           <ul>
             <li>blablabla</li>
             <li>blablabla</li>
@@ -199,8 +204,10 @@
           </ul>
         </div>
       </div>
-      <div class="slide 2">
+      <div class="slide slide2">
+        <div class="slide-content">
         <h3>Habitats</h3>
+        <a name="habitat"></a>
         <p>
           The term "population" is preferred to "organism" because, while it is possible to describe the habitat 
           of a single black bear, it is also possible that we may not find any particular or individual bear but the 

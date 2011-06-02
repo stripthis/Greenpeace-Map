@@ -1,14 +1,14 @@
-/**
- * Map.css
+/**********************************************************
+ * Map.css - Sinar Mas under investigation
  * @updated 2011-05-31
- */
+ * @author Greenpeace team rocket!
+ **********************************************************/
+/* quick reset */
 body {
   font-family: helvetica, arial, verdana, sans-serif;
   margin:0;
   padding:0;
 }
-
-/* reset */
 #app-container * {
   padding:0;
   margin:0;
@@ -17,7 +17,7 @@ body {
   list-style-type:none;
 }
 
-/* Universal clearfix hack */
+/* universal clearfix hack */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -32,11 +32,15 @@ body {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-
-/* need to go once in planet */
-body.fakeheader{
-  background:#FCFCFC url(../images/fakeheader.png) center top repeat-x;
-  padding-top:87px; 
+/* links */
+#app-container a {
+  color:#FF0000;
+  font-weight:bold;
+  text-decoration:none;
+}
+#app-container a:hover {
+  text-decoration:underline;
+  cursor:pointer;
 }
 
 /* layout */
@@ -45,7 +49,7 @@ body.fakeheader{
   background-color:#FFF;
   width:960px;
   padding:5px 0 50px 0;
-  -moz-box-shadow: 0 0 10px #888;
+  -moz-box-shadow: 0 -10px 10px #888;
   -webkit-box-shadow: 0 0 10px #888;
   box-shadow: 0 0 10px #888;
   height: 100%;
@@ -96,8 +100,6 @@ body.fakeheader{
   float:left;
   padding:5px 10px;
   margin:3px 0 0 10px;
-/*  color:#EC2227;
-  border:1px solid #EC2227;*/
   color:#000;
   font-weight:bold;
   text-decoration:none;
@@ -110,9 +112,6 @@ body.fakeheader{
 #app-container .nav ul li a:hover{
   background:#EC2227;
   color:#FFF;
-}
-#app-container .level2 {
-  display:none;
 }
 
 /* main content map */
@@ -201,15 +200,21 @@ body.fakeheader{
   padding:5px;
 }
 
-/* content */
+/* content quickfacts */ 
 #app-container .content.quick.facts {
-  background: transparent url(../images/deforestation.png) left 0 no-repeat;
-  padding-left:200px;
+  background: transparent url(../images/deforestation.png) left bottom no-repeat;
+  padding-left:190px;
   padding-top:0px;
 }
-#app-container .content.detailed.facts {
-  /*float:left;
-  clear:both;*/
+#app-container .content.quick.facts h2 {
+  padding:5px 0 0 25px;
+}
+#app-container .content.quick.facts {
+}
+
+/* content general */
+#app-container .nav.secondary {
+  margin:15px;
 }
 #app-container .content h2,
 #app-container .content h3,
@@ -219,22 +224,46 @@ body.fakeheader{
   padding:10px 25px 5px 25px;
   clear:both;
 }
-#app-container .content h3 {
+#app-container .content h4 {
+  font-size:18px;
+}
+#app-container .content h5 {
+  font-size:16px;
+}
+#app-container .content,
+#app-container .slides {
+  font-size:13px;
 }
 #app-container .content p {
-  font-size:13px;
   padding:5px 25px;
 }
-#app-container .content .image.left {
-  float:left;
+#app-container .content ul li {
+  background:transparent url(../images/arrow0.png) left 6px no-repeat;
+  padding:2px 5px 0 15px;
 }
-#app-container .content .image.right {
-  float:right;
-  width:150px;
-  margin:0 25px 10px 25px;
+#app-container .content ul.footnotes {
+  font-size:10px;
+  padding:5px 25px;
+}
+#app-container .content .nav ul li,
+#app-container .content ul.footnotes li{
+  background:0;
+  padding-left:0;
+}
+
+/* image frames */
+#app-container .content .image {
   font-size:10px;
   background:#F1F1F1;
   padding:10px;
+}
+#app-container .content .image.left {
+  float:left;
+  margin:10px 25px 10px 25px;
+}
+#app-container .content .image.right {
+  float:right;
+  margin:10px 25px 10px 25px;
 }
 #app-container .content .image .copyright {
   color:#333;
@@ -248,16 +277,15 @@ body.fakeheader{
   padding-top:5px;
   display:block;
 }
-#app-container .nav.secondary {
-  margin:15px;
-}
 
-.slide-content {
+/* slideshow */
+#app-container .slide-content {
   width:740px;
   float:left;
   clear:left;
 }
-.slide-sidebar {
+#app-container .slide-sidebar {
   width:215px;
   float:left;
+  margin-top:60px;
 }
