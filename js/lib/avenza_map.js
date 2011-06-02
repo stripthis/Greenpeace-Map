@@ -64,6 +64,9 @@ AvenzaMap.prototype._initialize = function() {
   $(window).mousemove(function(e) {
     self._handleMouseMove(e);
   });
+  $(window).click(function(e) {
+    self._handleClick(e);
+  });
 };
 
 AvenzaMap.prototype._embedd = function() {
@@ -116,6 +119,20 @@ AvenzaMap.prototype._handleMouseMove = function(e) {
       left: (e.pageX + 20) + 'px',
       top: (e.pageY + 20) + 'px'
     });
+};
+
+AvenzaMap.prototype._handleClick = function(e) {
+  var callout = this.map.retrieve(AVENZA.FEATURE);
+
+  if (this.$callout) {
+    this.$callout.remove();
+  }
+
+  if (!callout || !callout.attributes) {
+    return;
+  }
+
+  alert("Callout.attributes.Id = "+callout.attributes.Id);
 };
 
 AvenzaMap.prototype._getTranslation = function(callout) {

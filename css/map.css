@@ -231,23 +231,33 @@ body.fakeheader{
 #app-container .content .image.right {
   float:right;
   width:150px;
-  margin:0 25px;
+  margin:0 25px 10px 25px;
   font-size:10px;
   background:#F1F1F1;
   padding:10px;
 }
-
+#app-container .content .image .copyright {
+  color:#333;
+  clear:both;
+  display:block;
+}
+#app-container .content .image .caption {
+  font-size:12px;
+  color:#333;
+  clear:both;
+  padding-top:5px;
+  display:block;
+}
 #app-container .nav.secondary {
   margin:15px;
 }
-/*
+
 .slide-content {
-  width:640px;
+  width:740px;
   float:left;
-  border:1px solid blue;
+  clear:left;
 }
 .slide-sidebar {
-  width:150px;
+  width:215px;
   float:left;
-  border:1px solid red;
-}*/
+}
