@@ -34,7 +34,7 @@ body {
 
 /* links */
 #app-container a {
-  color:#FF0000;
+  color:#D50005;
   font-weight:bold;
   text-decoration:none;
 }
@@ -106,7 +106,6 @@ body {
   font-size:16px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-
 }
 #app-container .nav ul li a.active,
 #app-container .nav ul li a:hover{
@@ -202,14 +201,36 @@ body {
 
 /* content quickfacts */ 
 #app-container .content.quick.facts {
-  background: transparent url(../images/deforestation.png) left bottom no-repeat;
+  background: transparent url(../images/deforestation.png) left 15px no-repeat;
   padding-left:190px;
   padding-top:0px;
 }
 #app-container .content.quick.facts h2 {
   padding:5px 0 0 25px;
 }
-#app-container .content.quick.facts {
+#app-container .content.quick.facts p{
+  width:480px;
+  float:left;
+}
+#app-container .content.quick.facts a.button{
+  width:170px;
+  float:right;
+  padding:10px 10px 10px 20px;
+  margin:0 25px 0 0; 
+  clear:right;
+  border:1px solid #EC2227;
+  text-align:center;
+  font-size:14px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#app-container .content.quick.facts a.button.print{
+  margin-top:10px;
+  background:transparent url(../images/rainbow.png) 10px center no-repeat;
+}
+#app-container .content.quick.facts a.button.pdf{
+  margin-top:-25px;
+  background:transparent url(../images/pdf.png) 10px center no-repeat;
 }
 
 /* content general */
@@ -287,5 +308,5 @@ body {
 #app-container .slide-sidebar {
   width:215px;
   float:left;
-  margin-top:60px;
+  margin-top:52px;
 }
