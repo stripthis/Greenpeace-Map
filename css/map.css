@@ -34,7 +34,7 @@ body {
 
 /* links */
 #app-container a {
-  color:#D50005;
+  color:#1d65bc;
   font-weight:bold;
   text-decoration:none;
 }
@@ -79,15 +79,23 @@ body {
 
 /* top */
 #app-container #app-header {
-  padding:10px;  
+  padding:0 10px;  
+  height:140px;
 }
-#app-container h1 span{
+#app-container h1 span,
+#app-container h2 span{
   display:none;
 }
-#app-container h1 {
+#app-container #title-holder h1 {
   width:180px;
-  height:40px;
+  height:55px;
   background: transparent url(../images/sinarmas.png) center center no-repeat;
+  margin-left:10px;
+}
+#app-container #title-holder h2 {
+  width:180px;
+  height:72px;
+  background: transparent url(../images/logo2.png) center center no-repeat;
   margin-left:10px;
 }
 
@@ -99,20 +107,42 @@ body {
 #app-container .nav ul li a{
   float:left;
   padding:5px 10px;
-  margin:3px 0 0 10px;
+  margin:1px 0 0 10px;
   color:#000;
   font-weight:bold;
   text-decoration:none;
   font-size:16px;
+  font-size:18px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  font-style:italic;
+  background:transparent url(../images/button_bakground.png) 0 0 repeat-x;
+  width:110px;
+  text-align: center;
 }
 #app-container .nav ul li a.active,
 #app-container .nav ul li a:hover{
-  background:#EC2227;
+/*  background:#EC2227;*/
+  background:transparent url(../images/button_bakground2.png) 0 0 repeat-x;
   color:#FFF;
 }
-
+#app-container .main.nav{
+  padding-top:10px;
+}
+#app-container .main.nav .level2 li a{
+  height:65px;
+  vertical-align:middle;
+  margin-top:8px;
+}
+#app-container .main.nav .level2 li a span{
+  float:left;
+  width:110px;
+  text-align:center;
+  padding-top:20px;
+}
+#app-container .main.nav .level2 li a span.long{
+  padding-top:8px;
+}
 /* main content map */
 #app-container #map-layers {
   position:absolute;
@@ -120,7 +150,7 @@ body {
   background:transparent url(../images/opacity75.png) 0 0 repeat; /*todo ie6 */
   height:450px;
   width:180px;
-  margin-top:42px;
+  margin-top:2px;
   margin-left:22px;
   padding:0;
   border-right:2px solid #CCC;
@@ -208,34 +238,50 @@ body {
 #app-container .content.quick.facts h2 {
   padding:5px 0 0 25px;
 }
+#app-container .content.quick.facts h2 span{
+  display:block;
+}
 #app-container .content.quick.facts p{
-  width:480px;
+  width:570px;
   float:left;
 }
 #app-container .content.quick.facts a.button{
-  width:170px;
+  width:125px;
   float:right;
-  padding:10px 10px 10px 20px;
-  margin:0 25px 0 0; 
+  padding:10px 5px 5px 0;
+  margin:0 20px 0 0; 
   clear:right;
-  border:1px solid #EC2227;
   text-align:center;
   font-size:14px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  height:30px;
 }
 #app-container .content.quick.facts a.button.print{
-  margin-top:10px;
+  margin-top:0px;
   background:transparent url(../images/rainbow.png) 10px center no-repeat;
+  background:transparent url(../images/print2.png) 10px center no-repeat;
 }
 #app-container .content.quick.facts a.button.pdf{
-  margin-top:-25px;
-  background:transparent url(../images/pdf.png) 10px center no-repeat;
+  margin-top:-35px;
+  background:transparent url(../images/pdf2.png) 10px center no-repeat;
 }
-
+#app-container .content.quick.facts a.button span{
+  display:none;
+}
 /* content general */
 #app-container .nav.secondary {
   margin:15px;
+}
+#app-container .nav.secondary ul.level1{
+  border-bottom:1px solid #CCC;
+  width:930px;
+}
+#app-container .nav.secondary ul.level1 a {
+  border:1px solid #FEFEFE;
+  background:#FEFEFE;
+  border-bottom:0;
+  color:#000;
 }
 #app-container .content h2,
 #app-container .content h3,
@@ -244,6 +290,7 @@ body {
   margin-top:5px;
   padding:10px 25px 5px 25px;
   clear:both;
+  font-style:italic;
 }
 #app-container .content h4 {
   font-size:18px;
@@ -267,7 +314,7 @@ body {
   padding:5px 25px;
 }
 #app-container .content .nav ul li,
-#app-container .content ul.footnotes li{
+#app-container .content ul.footnotes li {
   background:0;
   padding-left:0;
 }

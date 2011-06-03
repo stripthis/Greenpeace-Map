@@ -34,7 +34,7 @@ body {
 
 /* links */
 #app-container a {
-  color:#1d65bc;
+  color:#D50005;
   font-weight:bold;
   text-decoration:none;
 }
@@ -79,23 +79,15 @@ body {
 
 /* top */
 #app-container #app-header {
-  padding:0 10px;  
-  height:140px;
+  padding:10px;  
 }
-#app-container h1 span,
-#app-container h2 span{
+#app-container h1 span{
   display:none;
 }
-#app-container #title-holder h1 {
+#app-container h1 {
   width:180px;
-  height:55px;
+  height:40px;
   background: transparent url(../images/sinarmas.png) center center no-repeat;
-  margin-left:10px;
-}
-#app-container #title-holder h2 {
-  width:180px;
-  height:72px;
-  background: transparent url(../images/logo2.png) center center no-repeat;
   margin-left:10px;
 }
 
@@ -107,42 +99,20 @@ body {
 #app-container .nav ul li a{
   float:left;
   padding:5px 10px;
-  margin:1px 0 0 10px;
+  margin:3px 0 0 10px;
   color:#000;
   font-weight:bold;
   text-decoration:none;
   font-size:16px;
-  font-size:18px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  font-style:italic;
-  background:transparent url(../images/button_bakground.png) 0 0 repeat-x;
-  width:110px;
-  text-align: center;
 }
 #app-container .nav ul li a.active,
 #app-container .nav ul li a:hover{
-/*  background:#EC2227;*/
-  background:transparent url(../images/button_bakground2.png) 0 0 repeat-x;
+  background:#EC2227;
   color:#FFF;
 }
-#app-container .main.nav{
-  padding-top:10px;
-}
-#app-container .main.nav .level2 li a{
-  height:65px;
-  vertical-align:middle;
-  margin-top:8px;
-}
-#app-container .main.nav .level2 li a span{
-  float:left;
-  width:110px;
-  text-align:center;
-  padding-top:20px;
-}
-#app-container .main.nav .level2 li a span.long{
-  padding-top:8px;
-}
+
 /* main content map */
 #app-container #map-layers {
   position:absolute;
@@ -150,7 +120,7 @@ body {
   background:transparent url(../images/opacity75.png) 0 0 repeat; /*todo ie6 */
   height:450px;
   width:180px;
-  margin-top:2px;
+  margin-top:42px;
   margin-left:22px;
   padding:0;
   border-right:2px solid #CCC;
@@ -238,37 +208,31 @@ body {
 #app-container .content.quick.facts h2 {
   padding:5px 0 0 25px;
 }
-#app-container .content.quick.facts h2 span{
-  display:block;
-}
 #app-container .content.quick.facts p{
-  width:570px;
+  width:480px;
   float:left;
 }
 #app-container .content.quick.facts a.button{
-  width:125px;
+  width:170px;
   float:right;
-  padding:10px 5px 5px 0;
-  margin:0 20px 0 0; 
+  padding:10px 10px 10px 20px;
+  margin:0 25px 0 0; 
   clear:right;
+  border:1px solid #EC2227;
   text-align:center;
   font-size:14px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  height:30px;
 }
 #app-container .content.quick.facts a.button.print{
-  margin-top:0px;
+  margin-top:10px;
   background:transparent url(../images/rainbow.png) 10px center no-repeat;
-  background:transparent url(../images/print2.png) 10px center no-repeat;
 }
 #app-container .content.quick.facts a.button.pdf{
-  margin-top:-35px;
-  background:transparent url(../images/pdf2.png) 10px center no-repeat;
+  margin-top:-25px;
+  background:transparent url(../images/pdf.png) 10px center no-repeat;
 }
-#app-container .content.quick.facts a.button span{
-  display:none;
-}
+
 /* content general */
 #app-container .nav.secondary {
   margin:15px;
@@ -280,7 +244,6 @@ body {
   margin-top:5px;
   padding:10px 25px 5px 25px;
   clear:both;
-  font-style:italic;
 }
 #app-container .content h4 {
   font-size:18px;

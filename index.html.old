@@ -20,7 +20,7 @@
 
   <link href="img/favicon.ico" type="image/x-icon" rel="icon"/>
   <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
-  <link rel="stylesheet" type="text/css" href="css/map2.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/map.css" media="screen" />
 
   <!-- deps -->
   <script type="text/javascript" src="js/dep/jquery.js"></script>
@@ -62,21 +62,16 @@
   <!-- titles -->
   <div id="title-holder">
     <h1><span class="sinarmas logo">Sinar Mass Under Investigation</span></h1>
-    <h2><span class="sinarmas logo">How APP is toying with extinction</span></h2>
   </div>
 
   <!-- section navigation -->
   <div id="main-nav-holder">
     <div class="main nav">
       <ul class="level1">
-        <li><a href="#"><span>The Risks</span></a></li>
-        <li><a href="#" class="active"><span>SMG/APP</span></a></li>
-        <li><a href="#"><span>Toy Sector</span></a></li>
-        <li><a href="#"><span>Solutions</span></a></li>
-      </ul>
-      <ul class="level2">
-        <li data-layer="1" class="concession js_layer"><a href="#"><span class="long">Bukit Tigapuluh</span></a></li>
-        <li data-layer="2" class="concession js_layer"><a href="#"><span>Kermutan</span></a></li>
+        <li><a href="#">The Risks</a></li>
+        <li><a href="#" class="active">SMG/APP</a></li>
+        <li><a href="#">Toy Sector</a></li>
+        <li><a href="#">Solutions</a></li>
       </ul>
     </div>
   </div>
@@ -87,6 +82,11 @@
   <div class="layer nav">
     <div id="map-layers">
       <ul class="js_layers">
+        <li><h3>Case Studies</h3></li>
+        <li data-layer="1" class="concession active js_layer"><span>Overview</span></li>
+        <li data-layer="1" class="concession js_layer"><span>Bukit Tigapuluh</span></li>
+        <li data-layer="2" class="concession js_layer"><span>Kermutan</span></li>
+        <li class="spacer"><span>Layers</span><li>
         <li><h3>Pulp Concessions</h3></li>
         <li data-layer="Uncertain status BOB" class="concession active js_layer"><span>Uncertain Status</span></li>
         <li data-layer="Targetted 2007 BOB" class="concession active js_layer"><span>Targetted 2007</span></li>
@@ -126,8 +126,8 @@
       shows how major brands like Bob, Biloute and Bilette are fueling climate change 
       and pushing Sumatran tigers and orang-utans towards the brink of extinction.
     </p>
-    <a href="#" class="button pdf"><span>Download the report</span></a>
-    <a href="#" class="button print"><span>Don't print the report</span></a>
+    <a href="#" class="button pdf">Download the report</a>
+    <a href="#" class="button print">Don't print the report</a>
   </div>
   <!-- Detailed Facts -->
   <div class="content detailed facts clearfix">
