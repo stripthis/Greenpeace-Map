@@ -32,9 +32,16 @@ $(function() {
     });
 
   $('.js_places')
-    .delegate('li', 'click', function() {
-      var place = map.getPlace($(this).data('layer'));
-      place.panTo();
+    .delegate('.js_place', 'click', function() {
+      var $this = $(this);
+
+      $('.js_places .js_place').removeClass('active');
+      $this.addClass('active');
+
+      var itemId = $(this).data('itemid');
+      map.panAndZoomTo(itemId);
+
+      return false;
     });
 
   /* at startup show navigation */

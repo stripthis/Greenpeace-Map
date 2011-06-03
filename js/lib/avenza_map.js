@@ -80,6 +80,18 @@ AvenzaMap.prototype._monitorZoom = function() {
   }.bind(this), 100);
 };
 
+AvenzaMap.prototype.panAndZoomTo = function(item) {
+  if (typeof item === 'string') {
+    item = this.getItem(item);
+  }
+
+  if (!item) {
+    return;
+  }
+
+  this.map.panToPointAndZoom(item.x, item.y, item.zoom);
+};
+
 AvenzaMap.prototype._embedd = function() {
   var self = this;
   this.view.loadedCB = function() {
@@ -120,7 +132,18 @@ AvenzaMap.prototype._handleClick = function(e) {
 };
 
 AvenzaMap.prototype._handleZoomChange = function(current) {
+  console.log(current);
   this.emit('zoomChange', current);
+};
+
+AvenzaMap.prototype.getItem = function(id) {
+  var item = this.json.items[id];
+  if (!item) {
+    return;
+  }
+
+  item.id = id;
+  return item;
 };
 
 AvenzaMap.prototype._getActiveItem = function() {

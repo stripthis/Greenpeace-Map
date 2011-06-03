@@ -1,10 +1,22 @@
 {
   "items": {
+    "home": {
+      "comment": "Sumatra Overview",
+      "x": 0,
+      "y": 0,
+      "zoom": 102
+    },
     "04e57761-8d42-11e0-91e4-0": {
-      "type": "CaseStudy",
-      "x": 625,
+      "comment": "Buktit Tigapuluh",
+      "x": 624,
       "y": 260,
-      "zoom": 1300
+      "zoom": 1278
+    },
+    "04e57760-8d42-11e0-91e4-0": {
+      "comment": "Kerumutan Swamp Forest",
+      "x": 648,
+      "y": 227,
+      "zoom": 2000
     }
   },
 }
