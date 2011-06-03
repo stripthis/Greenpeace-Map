@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sinar Mas Under Investigation - How APP is toying with extinction | Greenpeace International</title>
+  <!--
+           __   _  __   __     __    ___   _____      __     __       __     __
+         /'_ `\/\`'__\/'__`\ /'__`\/' _ `\/\  __`\  /'__`\ /'__`\   /'__`\ /'__`\
+        /\ \_\ \ \ \//\  __//\  __//\ \/\ \ \ \_\ \/\  __//\ \_\.\_/\ \__//\  __/
+        \ \____ \ \_\\ \____\ \____\ \_\ \_\ \  __/\ \____\ \__/.\_\ \____\ \____\
+         \/___L\ \/_/ \/____/\/____/\/_/\/_/\ \ \/  \/____/\/__/\/_/\/____/\/____/
+           /\____/                           \ \_\                                     _♥)
+           \_/__/                             \/_/   peace & love!                    _(\)
+
+  -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="copyright 2011 - Greenpeace International" />
+  <meta name="description" content="Greenpeace exists because this fragile Earth deserves a voice. It needs solutions. It needs change. It needs action! " />
+  <meta name="keywords" content="greenpeace, forest, sinar mas, app, indonesia, sumatra, deforestation" />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <link href="img/favicon.ico" type="image/x-icon" rel="icon"/>
+  <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+  <link rel="stylesheet" type="text/css" href="css/map2.css" media="screen" />
+
+  <!-- deps -->
+  <script type="text/javascript" src="js/dep/jquery.js"></script>
+  <script type="text/javascript" src="js/dep/swfobject.js"></script>
+  <script type="text/javascript" src="js/dep/avenza.js"></script>
+  <script type="text/javascript" src="js/dep/event_emitter.js"></script>
+  <script type="text/javascript" src="js/dep/jquery.tmpl.js"></script>
+
+  <!-- lib -->
+  <script type="text/javascript" src="js/lib/avenza_map.js"></script>
+  <script type="text/javascript" src="js/lib/avenza_layer.js"></script>
+  <script type="text/javascript" src="js/lib/avenza_place.js"></script>
+
+  <!-- main -->
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <!-- templates -->
+  <script id="layer_template" type="text/x-jquery-tmpl">
+    {{if visible }}
+    <li data-name="${ name }" class="${ visible ? 'active' : '' } js_layer"><span>${name}</span></li>
+    {{/if}}
+  </script>
+
+  <script id="place_template" type="text/x-jquery-tmpl">
+    <li data-name="${ name }" class="js_place"><span>${name}</span></li>
+  </script>
+
+  <script id="callout_template" class="popup" type="text/x-jquery-tmpl">
+    <div class="callout">
+      <h2>${ title }</h2>
+      ${ content }
+    </div>
+  </script>
+</head>
+<body>
+<!-- Section Container -->
+<div id="app-container" style="clear:both;">
+<div id="app-header">
+  <!-- titles -->
+  <div id="title-holder">
+    <h1><span class="sinarmas logo">Sinar Mass Under Investigation</span></h1>
+    <h2><span class="sinarmas logo">How APP is toying with extinction</span></h2>
+  </div>
+
+  <!-- section navigation -->
+  <div id="main-nav-holder">
+    <div class="main nav">
+      <ul class="level1">
+        <li><a href="#"><span>The Risks</span></a></li>
+        <li><a href="#" class="active"><span>SMG/APP</span></a></li>
+        <li><a href="#"><span>Toy Sector</span></a></li>
+        <li><a href="#"><span>Solutions</span></a></li>
+      </ul>
+      <ul class="level2">
+        <li data-layer="1" class="concession js_layer"><a href="#"><span class="long">Bukit Tigapuluh</span></a></li>
+        <li data-layer="2" class="concession js_layer"><a href="#"><span>Kermutan</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="map-content">
+  <!-- layers -->
+  <div class="layer nav">
+    <div id="map-layers">
+      <ul class="js_layers">
+        <li><h3>Pulp Concessions</h3></li>
+        <li data-layer="Uncertain status BOB" class="concession active js_layer"><span>Uncertain Status</span></li>
+        <li data-layer="Targetted 2007 BOB" class="concession active js_layer"><span>Targetted 2007</span></li>
+        <li data-layer="Acquired to end 2006 BOB" class="concession active js_layer"><span>Acquired to end 2006</span></li>
+        <li data-layer="Acquired 2007-2009 BOB" class="concession active js_layer"><span>Acquired between 2007-09</span></li>
+        <li><h3>Forest</h3></li>
+        <li data-layer="Primary Forest" class="forest primary active js_layer"><span>Primary</span></li>
+        <li data-layer="Secondary Forest" class="forest secondary active js_layer"><span>Secondary</span></li>
+        <li><h3>Peatland</h3></li>
+        <li data-layer="0-2 metre Peat" class="peatland p02m active js_layer"><span>0-2 metre peat</span></li>
+        <li data-layer="2-4 metre Peat" class="peatland p24m active js_layer"><span>2-4 metre peat</span></li>
+        <li data-layer=">4 metre Peat" class="peatland p40m active js_layer"><span>> 4 metre peat</span></li>
+        <li><h3>Annimal Habitat</h3></li>
+        <li data-layer="Tiger" class="habitat tiger js_layer"<span>Tiger</span></li>
+        <li data-layer="Orangutan" class="habitat orangutan active js_layer"<span>Oran-gutan</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- flash map -->
+  <div class="map-holder">
+    <div id="map">
+      <p>
+        For the cool interactive map, you need to install
+        <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="content-holder">
+  <!-- Quick Facts -->
+  <div class="content quick facts clearfix">
+    <h2><span class="app deforestation">How APP is toying with extinction</span></h2>
+    <p>
+      A new investigative report from Greenpeace, 'How APP is toying with extinction', 
+      shows how major brands like Bob, Biloute and Bilette are fueling climate change 
+      and pushing Sumatran tigers and orang-utans towards the brink of extinction.
+    </p>
+    <a href="#" class="button pdf"><span>Download the report</span></a>
+    <a href="#" class="button print"><span>Don't print the report</span></a>
+  </div>
+  <!-- Detailed Facts -->
+  <div class="content detailed facts clearfix">
+    <div class="slides">
+      <div class="nav secondary slide-nav">
+        <ul class="level1">
+          <li><a href="#peat" id="slide1">Peat</a></li>
+          <li><a href="#habitat" id="slide2">Habitat</a></li>
+        </ul>
+      </div>
+      <div class="slide slide1">
+        <div class="slide-content">
+        <h3>Peatland</h3>
+        <div class="image right" style="width:250px">
+           <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/db/TOMS_indonesia_smog_lrg.jpg/800px-TOMS_indonesia_smog_lrg.jpg" width="250px"/>
+           <span class="copyright">Photo (c) Greenpeace/Wikipedia</span>
+           <span class="caption">Smoke and ozone pollution from Indonesian fires, 1997.</span>
+        </div>
+        <p>
+          Peat, or turf, is an accumulation of partially decayed vegetation matter or histosol. 
+          Peat forms in wetland bogs, moors, muskegs, pocosins, mires, and peat swamp forests. 
+          Peat is harvested as an important source of fuel in certain parts of the world. 
+          By volume, there are about 4 trillion m³ of peat in the world covering a total of 
+          around 2% of global land area (about 3 million km²), containing about 8 billion 
+          terajoules of energy.[1]
+        </p>
+        <p>
+          Peat has a <a href="#">high carbon</a> content and can burn under low moisture conditions. 
+          Once ignited by the presence of a heat source (e.g. a wildfire penetrating the subsurface), 
+          it smolders. These smoldering fires can burn undetected for very long periods of time (months, 
+          years and even centuries) propagating in a creeping fashion through the underground peat 
+          layer. Peat fires are emerging as a global threat with significant economic, social and 
+          ecological impacts. Recent burning of peat bogs in Indonesia, with their large and deep 
+          growths containing more than 50 billion tons of carbon, has contributed to increases in 
+          world carbon dioxide levels. Peat deposits in Southeast Asia could be destroyed by 2040.[2]
+        </p>
+        <div class="image left" style="width:150px">
+           <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Toppila_power_plant.JPG/220px-Toppila_power_plant.JPG" width="150px"/>
+           <span class="copyright">Photo (c) Greenpeace/Wikipedia</span>
+           <span class="caption">The Toppila Power Station, a peat-fired facility in Oulu, Finland.</span>
+        </div>
+        <p>
+          In North America, peat fires have a returning cycle (70–130 years) depending on the recolonization 
+          by Black Spruce (Picea mariana)[3]. Once a fire has burnt through the area normally hollows in the peat 
+          are burnt out, and hummocks are desiccated but can contribute to Sphagnum recolonization.[4]
+          In June 2002, the United Nations Development Programme launched the Wetlands Ecosystem and 
+          Tropical Peat Swamp Forest Rehabilitation Project. This project was targeted to last for 5 years
+          until 2007 and brings together the efforts of various non-government organisations.
+        </p>
+        <p>
+          In November 2002, the International Peat Society and the International Mire Conservation 
+          Group (IMCG) published guidelines on the "Wise Use of Mires and Peatlands — Backgrounds and .
+          Principles including a framework for decision-making". The aim of this publication is to develop 
+          mechanisms that can balance the conflicting demands on the global peatland heritage, to ensure its wise 
+          use to meet the needs of humankind.
+        </p>
+        <p>
+          In June 2008, the International Peat Society published the book "Peatlands and Climate Change", 
+          summarizing the currently available knowledge on the topic.
+        </p>
+        <p>
+          <ul class="footnotes">
+            <li>[1] World Energy Council (2007). "Survey of Energy Resources 2007" (PDF). http://www.worldenergy.org/documents/ser2007_executive_summary.pdf. Retrieved 2008-08-11.</li> 
+            <li>[2] http://waspada.co.id/index.php?option=com_content&view=article&id=193680:us-ri-discuss-future-of-peat-land-mangroves&catid=30:english-news&Itemid=101</li>
+            <li>[3] International Mire Conservation Group (2007-01-03). "Peat should not be treated as a renewable energy source" (PDF). http://www.imcg.net/docum/peatrenewable.pdf. Retrieved 2007-02-12.</li>
+          </ul>
+        </p>
+        </div>
+        <div class="slide-sidebar">
+          <h5>Related links</h5>
+          <ul>
+            <li>blablabla</li>
+            <li>blablabla</li>
+            <li>blablabla</li>
+            <li>blablabla</li>
+          </ul>
+        </div>
+      </div>
+      <div class="slide slide2">
+        <div class="slide-content">
+        <h3>Habitats</h3>
+        <a name="habitat"></a>
+        <p>
+          The term "population" is preferred to "organism" because, while it is possible to describe the habitat 
+          of a single black bear, it is also possible that we may not find any particular or individual bear but the 
+          grouping of bears that constitute a breeding population and occupy a certain biogeographical area. 
+          Further, this habitat could be somewhat different from the habitat of another group or population 
+          of black bears living elsewhere. Thus it is neither the species nor the individual for which the term 
+          habitat is typically used.
+        </p>
+        <h4>Microhabitat</h4>
+        <p>
+          The term microhabitat is often used to describe the small-scale physical requirements of a 
+          particular organism or population.
+        </p>
+        <h4>Monotypic habitat</h4>
+        <p>
+          The monotypic habitat occurs in botanical and zoological contexts, and is a component of conservation biology. 
+          In restoration ecology of native plant communities or habitats, some invasive species create monotypic stands 
+          that replace and/or prevent other species, especially indigenous ones, from growing there. A dominant colonization 
+          can occur from retardant chemicals exuded, nutrient monopolization, or from lack of natural controls such as herbivores or climate, 
+          that keep them in balance with their native habitats. The yellow starthistle, Centaurea solstitialis, is a botanical monotypic-habitat example 
+          of this, currently dominating over 15,000,000 acres (61,000 km2) in California alone.[3][4] 
+          The non-native freshwater zebra mussel, Dreissena polymorpha, that colonizes areas of the Great Lakes and the Mississippi River watershed, 
+          without its home-range predator control, is a zoological monotypic-habitat example.
+        </p>
+        <p>
+          Even though its name may seem to imply simplicity as compared with polytypic habitats, the monotypic habitat can be complex.[5]
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
