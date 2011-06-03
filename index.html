@@ -28,6 +28,7 @@
   <script type="text/javascript" src="js/dep/avenza.js"></script>
   <script type="text/javascript" src="js/dep/event_emitter.js"></script>
   <script type="text/javascript" src="js/dep/jquery.tmpl.js"></script>
+  <script type="text/javascript" src="js/dep/es5-shim.js"></script>
 
   <!-- lib -->
   <script type="text/javascript" src="js/lib/avenza_map.js"></script>
@@ -42,10 +43,6 @@
     {{if visible }}
     <li data-name="${ name }" class="${ visible ? 'active' : '' } js_layer"><span>${name}</span></li>
     {{/if}}
-  </script>
-
-  <script id="place_template" type="text/x-jquery-tmpl">
-    <li data-name="${ name }" class="js_place"><span>${name}</span></li>
   </script>
 
   <script id="callout_template" class="popup" type="text/x-jquery-tmpl">

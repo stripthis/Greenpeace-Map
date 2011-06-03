@@ -9,17 +9,14 @@ $(function() {
     }
   });
 
-  map.on('load.xml', function() {
-    $('#layer_template')
-      //.tmpl(map.getLayers())
-      .appendTo('.js_layers');
-  });
+  map.on('zoomChange', function(current) {
+    ['APP mills BOB', 'map_L6.swf'].forEach(function(name) {
+      var layer = map.getLayer(name);
 
-  map.on('load.json', function() {
-    var places = map.getPlaces();
-    $('#place_template')
-      .tmpl(places)
-      .appendTo('.js_places');
+      (current.zoom > 950)
+        ? layer.hide()
+        : layer.show();
+    });
   });
 
   $('.js_layers')
