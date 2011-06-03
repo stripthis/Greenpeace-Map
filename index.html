@@ -75,6 +75,7 @@
         <li><a href="#"><span>Solutions</span></a></li>
       </ul>
       <ul class="level2">
+        <li data-layer="0" class="concession js_layer"><a href="#" class="active"><span class="long">Sumatra Overview</span></a></li>
         <li data-layer="1" class="concession js_layer"><a href="#"><span class="long">Bukit Tigapuluh</span></a></li>
         <li data-layer="2" class="concession js_layer"><a href="#"><span>Kermutan</span></a></li>
       </ul>
@@ -84,35 +85,34 @@
 
 <div id="map-content">
   <!-- layers -->
-  <div class="layer nav">
-    <div id="map-layers">
-      <ul class="js_layers">
-        <li><h3>Pulp Concessions</h3></li>
-        <li data-layer="Uncertain status BOB" class="concession active js_layer"><span>Uncertain Status</span></li>
-        <li data-layer="Targetted 2007 BOB" class="concession active js_layer"><span>Targetted 2007</span></li>
-        <li data-layer="Acquired to end 2006 BOB" class="concession active js_layer"><span>Acquired to end 2006</span></li>
-        <li data-layer="Acquired 2007-2009 BOB" class="concession active js_layer"><span>Acquired between 2007-09</span></li>
-        <li><h3>Forest</h3></li>
-        <li data-layer="Primary Forest" class="forest primary active js_layer"><span>Primary</span></li>
-        <li data-layer="Secondary Forest" class="forest secondary active js_layer"><span>Secondary</span></li>
-        <li><h3>Peatland</h3></li>
-        <li data-layer="0-2 metre Peat" class="peatland p02m active js_layer"><span>0-2 metre peat</span></li>
-        <li data-layer="2-4 metre Peat" class="peatland p24m active js_layer"><span>2-4 metre peat</span></li>
-        <li data-layer=">4 metre Peat" class="peatland p40m active js_layer"><span> 4 metre peat</span></li>
-        <li><h3>Annimal Habitat</h3></li>
-        <li data-layer="Tiger" class="habitat tiger js_layer"><span>Tiger</span></li>
-        <li data-layer="Orangutan" class="habitat orangutan active js_layer"><span>Oran-gutan</span></li>
-      </ul>
-    </div>
+  <div id="map-layers" class="nav">
+    <ul class="js_layers">
+      <li><h3>Pulp Concessions</h3></li>
+      <li data-layer="Uncertain status BOB" class="concession active js_layer"><span>Uncertain Status</span></li>
+      <li data-layer="Targetted 2007 BOB" class="concession active js_layer"><span>Targetted 2007</span></li>
+      <li data-layer="Acquired to end 2006 BOB" class="concession active js_layer"><span>Acquired to end 2006</span></li>
+      <li data-layer="Acquired 2007-2009 BOB" class="concession active js_layer"><span>Acquired between 2007-09</span></li>
+      <li><h3>Forest</h3></li>
+      <li data-layer="Primary Forest" class="forest primary active js_layer"><span>Primary</span></li>
+      <li data-layer="Secondary Forest" class="forest secondary active js_layer"><span>Secondary</span></li>
+      <li><h3>Peatland</h3></li>
+      <li data-layer="0-2 metre Peat" class="peatland p02m active js_layer"><span>0-2 metre peat</span></li>
+      <li data-layer="2-4 metre Peat" class="peatland p24m active js_layer"><span>2-4 metre peat</span></li>
+      <li data-layer=">4 metre Peat" class="peatland p40m active js_layer"><span> 4 metre peat</span></li>
+      <li><h3>Annimal Habitat</h3></li>
+      <li data-layer="Tiger" class="habitat tiger js_layer"><span>Tiger</span></li>
+      <li data-layer="Orangutan" class="habitat orangutan js_layer"><span>Oran-gutan</span></li>
+    </ul>
   </div>
 
   <!-- flash map -->
   <div class="map-holder">
     <div id="map">
-      <p>
+      <div class="nojs">
+        <h3>Oops, something is broken!</h3>
         For the cool interactive map, you need to install
-        <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>
-      </p>
+        <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>. Sorry about that.
+      </div>
     </div>
   </div>
 </div>
@@ -133,8 +133,8 @@
   <div class="content detailed facts clearfix">
     <div class="slides">
       <div class="nav secondary slide-nav">
-        <ul class="level1">
-          <li><a href="#peat" id="slide1">Peat</a></li>
+        <ul class="level1 tabs">
+          <li><a href="#peat" id="slide1" class="active">Peat</a></li>
           <li><a href="#habitat" id="slide2">Habitat</a></li>
         </ul>
       </div>

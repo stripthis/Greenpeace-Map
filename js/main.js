@@ -39,6 +39,9 @@ $(function() {
       var place = map.getPlace($(this).data('layer'));
       place.panTo();
     });
+
+  /* at startup show navigation */
+  $('#map-layers').show();
 });
 
 /* Slideshow */
