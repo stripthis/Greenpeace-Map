@@ -132,7 +132,6 @@ AvenzaMap.prototype._handleClick = function(e) {
 };
 
 AvenzaMap.prototype._handleZoomChange = function(current) {
-  console.log(current);
   this.emit('zoomChange', current);
 };
 
