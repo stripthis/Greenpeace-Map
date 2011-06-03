@@ -1,0 +1,22 @@
+{
+  "places": [
+    {
+      "name": "Sumatra",
+      "x": 500,
+      "y": 50,
+      "zoom": 150
+    },
+    {
+      "name": "Kalimantan",
+      "x": 915,
+      "y": 50,
+      "zoom": 150
+    }
+  ],
+  "callouts": {
+    "This is a test": {
+      "title": "Das ist ein Test",
+      "content": "Das ist unser content"
+    }
+  }
+}
