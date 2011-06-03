@@ -60,13 +60,9 @@ AvenzaMap.prototype._initialize = function() {
   this._load(this.url + '/map.xml', 'xml');
   this._load(this.url + '/map.json', 'json');
 
-  var self = this;
-  $(window).mousemove(function(e) {
-    self._handleMouseMove(e);
-  });
-  $(window).click(function(e) {
-    self._handleClick(e);
-  });
+  $(window)
+    .mousemove(this._handleMouseMove.bind(this))
+    .click(this._handleClick.bind(this));
 };
 
 AvenzaMap.prototype._embedd = function() {
