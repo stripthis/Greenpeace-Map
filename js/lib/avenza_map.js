@@ -16,7 +16,6 @@ function AvenzaMap() {
   EventEmitter.call(this);
 
   this.$element = null;
-  this.$callout = null;
 
   this.url = null;
   this.view = {};
@@ -36,7 +35,8 @@ AvenzaMap.VIEW_DEFAULTS = {
   searchWidget: false,
   layerWidget: false,
   overviewWidget: false,
-  zoomWidget:false,
+  zoomWidget: true,
+  disableAnimations: true,
   zoomMin:150,
   zoomMax:3000,
   useCentroidForCallouts:true,
@@ -59,10 +59,27 @@ AvenzaMap.prototype._initialize = function() {
   this._embedd();
   this._load(this.url + '/map.xml', 'xml');
   this._load(this.url + '/map.json', 'json');
+  this._monitorZoom();
 
-  $(window)
-    .mousemove(this._handleMouseMove.bind(this))
-    .click(this._handleClick.bind(this));
+  $(window).click(this._handleClick.bind(this));
+};
+
+AvenzaMap.prototype._monitorZoom = function() {
+  var previousZoom = 0;
+
+  setInterval(function() {
+    var current = this.map.retrieve(AVENZA.PAN_AND_ZOOM);
+    if (!current) {
+      return;
+    }
+
+    if (current.zoom === previousZoom) {
+      return;
+    }
+
+    previousZoom = current.zoom;
+    this._handleZoomChange(current);
+  }.bind(this), 100);
 };
 
 AvenzaMap.prototype._embedd = function() {
@@ -95,49 +112,43 @@ AvenzaMap.prototype._load = function(url, type) {
   });
 };
 
-AvenzaMap.prototype._handleMouseMove = function(e) {
-  var callout = this.map.retrieve(AVENZA.FEATURE);
-
-  if (this.$callout) {
-    this.$callout.remove();
-  }
-
-  if (!callout || !callout.attributes) {
-    return;
-  }
-
-  callout = this._getTranslation(callout);
-
-  this.$callout = $('#callout_template')
-    .tmpl(callout)
-    .appendTo('body')
-    .css({
-      left: (e.pageX + 20) + 'px',
-      top: (e.pageY + 20) + 'px'
-    });
-};
-
 AvenzaMap.prototype._handleClick = function(e) {
-  var callout = this.map.retrieve(AVENZA.FEATURE);
-
-  if (this.$callout) {
-    this.$callout.remove();
-  }
-
-  if (!callout || !callout.attributes) {
+  var item = this._getActiveItem();
+  if (!item) {
     return;
   }
 
-  alert("Callout.attributes.Id = "+callout.attributes.Id);
+  item.handleClick(e);
 };
 
-AvenzaMap.prototype._getTranslation = function(callout) {
-  var translatedCallout = this.json.callouts[callout.title];
-  if (translatedCallout) {
-    return translatedCallout;
+AvenzaMap.prototype._handleZoomChange = function(current) {
+  this.emit('zoomChange', current);
+};
+
+AvenzaMap.prototype._getActiveItem = function() {
+  var feature = this.map.retrieve(AVENZA.FEATURE);
+  if (!feature || !feature.attributes) {
+    return;
   }
 
-  return callout;
+  var id = feature.attributes.UUID;
+  this.map.features('UUID="' + id +'"').reveal();
+
+  //var id = feature.attributes.UUID;
+  //var item = this.json.items[id];
+  //if (!item) {
+    //return;
+  //}
+
+  //var properties = $.extend({}, item);
+  //delete properties['type'];
+
+  //item = window['Avenza' + item.type].create({
+    //map: this,
+    //properties: properties
+  //});
+
+  //return item;
 };
 
 AvenzaMap.prototype._checkIfLoaded = function() {

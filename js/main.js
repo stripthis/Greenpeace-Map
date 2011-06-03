@@ -9,6 +9,16 @@ $(function() {
     }
   });
 
+  map.on('zoomChange', function(current) {
+    ['APP mills BOB', 'map_L6.swf'].forEach(function(name) {
+      var layer = map.getLayer(name);
+
+      (current.zoom > 950)
+        ? layer.hide()
+        : layer.show();
+    });
+  });
+
   $('.js_layers')
     .delegate('li', 'click', function() {
       var layer = map.getLayer($(this).data('layer'));
