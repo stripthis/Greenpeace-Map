@@ -37,8 +37,6 @@ AvenzaMap.VIEW_DEFAULTS = {
   overviewWidget: false,
   zoomWidget: true,
   disableAnimations: true,
-  zoomMin:150,
-  zoomMax:3000,
   useCentroidForCallouts:true,
   flashSecuritySandbox: AVENZA.AUTO_SANDBOX
 };
