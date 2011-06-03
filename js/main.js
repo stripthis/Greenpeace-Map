@@ -2,9 +2,9 @@ $(function() {
   var map = $('#map').avenzaMap({
     url: 'data/sumatra',
     view: {
-      initialPanX: 10,
-      initialPanY: 80,
-      zoomMin:138,
+      initialPanX: 20,
+      initialPanY: 5,
+      zoomMin:102,
       zoomMax:2000
     }
   });
