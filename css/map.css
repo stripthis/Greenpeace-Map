@@ -273,7 +273,7 @@ body {
 #app-container .content.quick.facts a.button{
   width:115px;
   float:right;
-  padding:8px 10px 8px 5px;
+  padding:8px 20px 8px 5px;
   margin:0 20px 0 0; 
   clear:right;
   text-align:center;
@@ -397,4 +397,55 @@ body {
   width:215px;
   float:left;
   margin-top:52px;
+}
+
+/*bex additions*/
+
+#app-container .content ul.bodylist {
+  padding:5px 25px;
+  }
+  
+#flickr-holder {
+  height: 455px;
+  margin: auto 20px;
+  width:920px;
+  display:block;
+  border: 2px solid #CCCCCC;
+}
+
+#flickr-slideshow {
+  width:740px;
+  float:right;
+  clear:left;
+  display:block;
+  }
+
+#flickr-text {
+  float:left;
+  display:block;
+  height:455px;
+  border-right: 2px solid #CCCCCC;
+  padding: 0;
+  position: absolute;
+  width: 180px;
+  background: #EEE;
+   }
+
+#flickr-text p {
+  font-size:14px;
+  margin: 5px;
+  }
+  
+#app-container .content h5 {
+  padding:10px 25px 5px 25px;
+}
+
+
+#app-container .quickfacts {
+    color:#ED343A;
+    font-weight:bold;
+}
+
+#app-container .content.quick.facts h2 span{
+  padding:5px 15px 20px 25px;
 }
