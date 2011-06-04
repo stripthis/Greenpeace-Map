@@ -44,21 +44,38 @@ $(function() {
       return false;
     });
 
-  /* at startup show navigation */
-  $('#map-layers').show();
-});
-
-/* Slideshow */
-$(function() {
-  $('.slides .slide-nav a').click(function() {
-    $('.slides .slide-nav a').removeClass("active");
-    $(this).addClass("active")
+  /* pages and tabs navigation */
+  function activatePage(pageId) {
+    $('.page-nav a').removeClass('active');
+    $('.page-nav a#'+pageId).addClass('active');
+    $('.pages .page').hide();
+    $('.pages .page.'+pageId).show();
+    activateTab(pageId,null);
+  }
+  function activateTab(pageId,slideId) {
+    if(pageId!=null) {
+      pageId='.'+pageId;
+    } else pageId='';
+    if(slideId==null) {
+      slideId = $('.slides'+pageId+' .slide-nav a.first').attr('id');
+    }
     $('.slides .slide').hide();
-    $('.slides .slide.'+ $(this).attr("id")).show();
+    $('.slides' + pageId + ' .slide.' + slideId).show();
+    $('.slide-nav a').removeClass('active');
+    $('.slide-nav a#'+slideId).addClass('active');
+  }
+
+  /* Pages */
+  $('.page-nav a').click(function() {
+    activatePage($(this).attr('id'));
+  });
+
+  /* Tabs */
+  $('.slides .slide-nav a').click(function() {
+    activateTab(null,$(this).attr('id'));
     return false;
   });
-  $('.slides .slide').hide();
-  $('.slides .slide.slide1').show();
-  $('.slides .slide-nav a#slide1').addClass("active");
-});
 
+  activatePage($('.page-nav a.first').attr('id'));
+  $('#map-layers').show();
+});

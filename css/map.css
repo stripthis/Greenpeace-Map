@@ -26,10 +26,10 @@ body {
   clear: both;
   height: 0;
 }
-.clearfix { display: inline-block; }
+.clearfix { display: inline-block;}
 /* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
+* html .clearfix { height: 1%;}
+.clearfix { display: block;}
 /* close commented backslash hack */
 
 /* links */
@@ -168,6 +168,7 @@ body {
 #app-container .main.nav .level2 li a span.long{
   padding-top:7px;
 }
+
 /* main content map */
 #app-container #map-layers {
   position:absolute;
@@ -194,6 +195,7 @@ body {
   padding:1px 2px 1px 12px;
   margin-top:1px;
 }
+
 /* opac50 #f5f9f8, opac75 #f5f9f8 */
 #app-container #map-layers .forest.primary.active span {
   background:#609b61;
@@ -245,6 +247,7 @@ body {
 #app-container #map {
   border:2px solid #CCC;
 }
+
 /* callout */
 #app-container .callout {
   position:absolute;
@@ -257,24 +260,38 @@ body {
 /* content quickfacts */ 
 #app-container .content.quick.facts {
   background: transparent url(../images/deforestation.png) left 15px no-repeat;
-  padding-left:190px;
-  padding-top:0px;
+  padding:10px 0 20px 220px;
 }
-#app-container .content.quick.facts h2 {
-  padding:5px 0 0 25px;
-}
-#app-container .content.quick.facts h2 span{
+#app-container .content.quick.facts h2,
+#app-container .content.quick.facts h2 span,
+#app-container .content.quick.facts p{
+  padding-left:0;
   display:block;
 }
 #app-container .content.quick.facts p{
+  padding-left:0;
+}
+#app-container .content.quick.facts li {
+  width:500px;
+}
+#app-container .content.quick.facts .col1{
+  width:520px;
+  float:left;
+}
+#app-container .content.quick.facts .col2 {
+  width:180px;
+  float:left;
+  margin-left:20px;
+}
+#app-container .content.quick.facts ul {
   width:550px;
   float:left;
 }
 #app-container .content.quick.facts a.button{
-  width:115px;
-  float:right;
-  padding:8px 20px 8px 5px;
-  margin:0 20px 0 0; 
+  width:125px;
+  float:left;
+  padding:8px 35px 8px 5px;
+  margin:0 0 10px 0; 
   clear:right;
   text-align:center;
   font-size:16px;
@@ -290,7 +307,6 @@ body {
   margin-top:0px;
 }
 #app-container .content.quick.facts a.button.pdf {
-  margin:-20px 20px 10px 0;
 }
 #app-container .content.quick.facts a.button.pdf span{
   background:transparent url(../images/pdf.png) 10px center no-repeat;
@@ -299,7 +315,7 @@ body {
   background:transparent url(../images/print.png) 10px center no-repeat;
 }
 #app-container .content.quick.facts a.button span{
-  padding:0px 0px 0px 40px;
+  padding:0px 0px 0px 35px;
   display:block;
 }
 
@@ -323,10 +339,12 @@ body {
   background:#FFF;
   border-bottom:1px solid #FFF;
 }
+
 /* content general */
 #app-container .content h2,
 #app-container .content h3,
-#app-container .content h4 {
+#app-container .content h4,
+#app-container .content h5 {
   font-size:22px;
   margin-top:5px;
   padding:10px 25px 5px 25px;
@@ -398,13 +416,10 @@ body {
   float:left;
   margin-top:52px;
 }
-
-/*bex additions*/
-
-#app-container .content ul.bodylist {
-  padding:5px 25px;
-  }
-  
+#app-container .content .slide-sidebar h5{
+  padding-left:0;
+}
+/*flickr */
 #flickr-holder {
   height: 455px;
   margin: auto 20px;
@@ -412,14 +427,12 @@ body {
   display:block;
   border: 2px solid #CCCCCC;
 }
-
 #flickr-slideshow {
   width:740px;
   float:right;
   clear:left;
   display:block;
-  }
-
+}
 #flickr-text {
   float:left;
   display:block;
@@ -429,23 +442,22 @@ body {
   position: absolute;
   width: 180px;
   background: #EEE;
-   }
-
+}
 #flickr-text p {
   font-size:14px;
-  margin: 5px;
-  }
-  
-#app-container .content h5 {
-  padding:10px 25px 5px 25px;
+  margin: 20px 5px 5px 5px;
+  font-weight:bold;
 }
 
-
+/* bex additions content styling */
+#app-container .content ul.bodylist {
+  padding:5px 25px;
+}
+#app-container .content ol li {
+  padding:2px 5px 0 5px;
+  margin-left:45px;
+}
 #app-container .quickfacts {
-    color:#ED343A;
-    font-weight:bold;
-}
-
-#app-container .content.quick.facts h2 span{
-  padding:5px 15px 20px 25px;
+  color:#ED343A;
+  font-weight:bold;
 }

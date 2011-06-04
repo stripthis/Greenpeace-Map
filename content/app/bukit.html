@@ -1,140 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Sinar Mas Under Investigation - How APP is toying with extinction | Greenpeace International</title>
-  <!--
-           __   _  __   __     __    ___   _____      __     __       __     __
-         /'_ `\/\`'__\/'__`\ /'__`\/' _ `\/\  __`\  /'__`\ /'__`\   /'__`\ /'__`\
-        /\ \_\ \ \ \//\  __//\  __//\ \/\ \ \ \_\ \/\  __//\ \_\.\_/\ \__//\  __/
-        \ \____ \ \_\\ \____\ \____\ \_\ \_\ \  __/\ \____\ \__/.\_\ \____\ \____\
-         \/___L\ \/_/ \/____/\/____/\/_/\/_/\ \ \/  \/____/\/__/\/_/\/____/\/____/
-           /\____/                           \ \_\                                     _♥)
-           \_/__/                             \/_/   peace & love!                    _(\)
 
-  -->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="copyright" content="copyright 2011 - Greenpeace International" />
-  <meta name="description" content="Greenpeace exists because this fragile Earth deserves a voice. It needs solutions. It needs change. It needs action! " />
-  <meta name="keywords" content="greenpeace, forest, sinar mas, app, indonesia, sumatra, deforestation" />
-  <meta name="robots" content="noindex,nofollow" />
-
-  <link href="img/favicon.ico" type="image/x-icon" rel="icon"/>
-  <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
-  <link rel="stylesheet" type="text/css" href="css/map.css" media="screen" />
-
-  <!-- deps -->
-  <script type="text/javascript" src="js/dep/jquery.js"></script>
-  <script type="text/javascript" src="js/dep/swfobject.js"></script>
-  <script type="text/javascript" src="js/dep/avenza.js"></script>
-  <script type="text/javascript" src="js/dep/event_emitter.js"></script>
-  <script type="text/javascript" src="js/dep/jquery.tmpl.js"></script>
-  <script type="text/javascript" src="js/dep/es5-shim.js"></script>
-
-  <!-- lib -->
-  <script type="text/javascript" src="js/lib/avenza_map.js"></script>
-  <script type="text/javascript" src="js/lib/avenza_layer.js"></script>
-  <script type="text/javascript" src="js/lib/avenza_place.js"></script>
-
-  <!-- main -->
-  <script type="text/javascript" src="js/main.js"></script>
-
-  <!-- templates -->
-  <script id="layer_template" type="text/x-jquery-tmpl">
-    {{if visible }}
-    <li data-name="${ name }" class="${ visible ? 'active' : '' } js_layer"><span>${name}</span></li>
-    {{/if}}
-  </script>
-
-  <script id="callout_template" class="popup" type="text/x-jquery-tmpl">
-    <div class="callout">
-      <h2>${ title }</h2>
-      ${ content }
-    </div>
-  </script>
-</head>
-<body>
-<!-- Section Container -->
-<div id="app-container" style="clear:both;">
-<div id="app-header">
-  <!-- titles -->
-  <div id="title-holder">
-    <h1><span class="sinarmas logo">Sinar Mass Under Investigation</span></h1>
-    <h2><span class="sinarmas logo">How APP is toying with extinction</span></h2>
-  </div>
-
-  <!-- section navigation -->
-  <div id="main-nav-holder">
-    <div class="main nav">
-      <ul class="level1">
-        <li><a href="risks.html"><span>The Risks</span></a></li>
-        <li><a href="index.html" class="active"><span>SMG/APP</span></a></li>
-        <li><a href="toy.html"><span>Toy Sector</span></a></li>
-        <li><a href="solutions.html"><span>Solutions</span></a></li>
-      </ul>
-      <ul class="level2">
-        <li data-layer="0" class="concession js_layer"><a href="index.html"><span class="long">Sumatra Overview</span></a></li>
-        <li data-layer="1" class="concession js_layer"><a href="bukit.html" class="active"><span class="long">Bukit Tigapuluh</span></a></li>
-        <li data-layer="2" class="concession js_layer"><a href="kermutan.html"><span>Kermutan</span></a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div id="map-content">
-  <!-- layers -->
-  <div id="map-layers" class="nav">
-    <ul class="js_layers">
-      <li><h3>Pulp Concessions</h3></li>
-      <li data-layer="Uncertain status BOB" class="concession active js_layer"><span>Uncertain Status</span></li>
-      <li data-layer="Targetted 2007 BOB" class="concession active js_layer"><span>Targetted 2007</span></li>
-      <li data-layer="Acquired to end 2006 BOB" class="concession active js_layer"><span>Acquired to end 2006</span></li>
-      <li data-layer="Acquired 2007-2009 BOB" class="concession active js_layer"><span>Acquired between 2007-09</span></li>
-      <li><h3>Forest</h3></li>
-      <li data-layer="Primary Forest" class="forest primary active js_layer"><span>Primary</span></li>
-      <li data-layer="Secondary Forest" class="forest secondary active js_layer"><span>Secondary</span></li>
-      <li><h3>Peatland</h3></li>
-      <li data-layer="0-2 metre Peat" class="peatland p02m active js_layer"><span>0-2 metre peat</span></li>
-      <li data-layer="2-4 metre Peat" class="peatland p24m active js_layer"><span>2-4 metre peat</span></li>
-      <li data-layer=">4 metre Peat" class="peatland p40m active js_layer"><span> 4 metre peat</span></li>
-      <li><h3>Annimal Habitat</h3></li>
-      <li data-layer="Tiger" class="habitat tiger js_layer"><span>Tiger</span></li>
-      <li data-layer="Orangutan" class="habitat orangutan js_layer"><span>Oran-gutan</span></li>
-    </ul>
-  </div>
-
-  <!-- flash map -->
-  <div class="map-holder">
-    <div id="map">
-      <div class="nojs">
-        <h3>Oops, something is broken!</h3>
-        For the cool interactive map, you need to install
-        <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>. Sorry about that.
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="content-holder">
   <!-- Quick Facts -->
   <div class="content quick facts clearfix">
     <h2><span class="app deforestation">The Bukit Tigapuluh Forest Landscape in central Sumatra is one of the last refuges of endangered species including the Sumatran tiger, and is critical to the future of the Sumatran orang-utan. While a portion of the Landscape has been designated a national park, much of the habitat is slated for clearance and is under threat from SMG/APP. </span></h2>
+    <div class="col1">
     <p>
       <ul>
         <li>The Bukit Tigapuluh Forest Landscape is a vitally important habitat for several critically endangered species. It hosts the Sumatran Orang-utan Reintroduction Centre and is home to nearly 10% of all Sumatran tigers living in the wild.</li>
         <li>The Bukit Tigapuluh Forest Landscape is important to communities belonging to two indigenous forest peoples: the Orang Rimba and the Talang Mamak.</li>
-        <li>SMG/APP is expanding its operations in the Bukit Tigapuluh Forest Landscape.</li></p>
-  <p>
-<br /><br /><a href="#" class="button pdf">Download this section</a>
-</p>
-    <a href="#" class="button pdf">Download the report</a>
-    <a href="#" class="button print">Don't print the report</a>
+        <li>SMG/APP is expanding its operations in the Bukit Tigapuluh Forest Landscape.</li>
+      </ul>
+    </p>
+    </div>
+    <div class="col2">
+      <a href="#" class="button pdf"><span>Download this section</span></a>
+      <a href="#" class="button pdf"><span>Download the report</span></a>
+      <a href="#" class="button print"><span>Don't print the report</span></a>
+    </div>
   </div>
   <!-- Detailed Facts -->
   <div class="content detailed facts clearfix">
-    <div class="slides">
+    <div class="slides bukit">
       <div class="nav secondary slide-nav">
         <ul class="level1 tabs">
-          <li><a href="#stake" id="slide1">What is at stake</a></li>
+          <li><a href="#stake" id="slide1" class="first">What is at stake</a></li>
           <li><a href="#mth" id="slide2">MTH supply</a></li>
           <li><a href="#investigations" id="slide3">Investigations</a></li>
         </ul>
@@ -187,11 +75,11 @@
         <h3>APP is pulping wildlife habitat</h3>
         <a name="mth"></a>
         <p>Confidential 2007 SMG/APP documents[14] obtained by Greenpeace show that the group was targeting ten forested areas for expansion within the Bukit Tigapuluh Forest Landscape, adjacent to the National Park.</p>
-<p>By 2011, SMG/APP suppliers owned or had preliminary licenses for at least four pulpwood concessions.[15]</p>
-<p>According to Greenpeace mapping analysis, between 2007 and 2011 SMG/APP has added 69,500 hectares inside the Bukit Tigapuluh Forest Landscape to its pulpwood supply areas.[16] Two thirds of the area was forested in 2006.[17]</p>
-<p>Greenpeace investigations document the extensive loss of rainforest and plantation establishment post-2006 within recently acquired SMG/APP concessions in the northwestern reaches of the Bukit Tigupuluh Forest Landscape.</p>
-<p>In July 2010, Greenpeace released documentary evidence of active clearing in the northwestern section of the Bukit Tigapuluh Landscape by SMG/APP supplier PT Artelindo Wiratama.[18] The concession had been identified by SMG/APP as a target for expansion in the 2007 internal document,[19] and field investigations documented that logs were being transported to APP’s Indah Kiat mill in Riau.[20] The concession was listed by official government documents as a pulpwood supplier to Indah Kiat in 2009.[21] In August 2010, Greenpeace aerial monitoring documented ongoing clearance within PT Artelindo Wiratama.</p> 
-<p>The nearby concession of PT Tebo Multiagro is another SMG/APP supplier.[22] In 2006, more than two thirds of the area was forested, according to Ministry of Forestry data.[23] In August 2010, Greenpeace aerial monitoring shows extensive areas of recently established plantations, as well as ongoing clearance in the western areas of the concession.</p>
+        <p>By 2011, SMG/APP suppliers owned or had preliminary licenses for at least four pulpwood concessions.[15]</p>
+        <p>According to Greenpeace mapping analysis, between 2007 and 2011 SMG/APP has added 69,500 hectares inside the Bukit Tigapuluh Forest Landscape to its pulpwood supply areas.[16] Two thirds of the area was forested in 2006.[17]</p>
+        <p>Greenpeace investigations document the extensive loss of rainforest and plantation establishment post-2006 within recently acquired SMG/APP concessions in the northwestern reaches of the Bukit Tigupuluh Forest Landscape.</p>
+        <p>In July 2010, Greenpeace released documentary evidence of active clearing in the northwestern section of the Bukit Tigapuluh Landscape by SMG/APP supplier PT Artelindo Wiratama.[18] The concession had been identified by SMG/APP as a target for expansion in the 2007 internal document,[19] and field investigations documented that logs were being transported to APP’s Indah Kiat mill in Riau.[20] The concession was listed by official government documents as a pulpwood supplier to Indah Kiat in 2009.[21] In August 2010, Greenpeace aerial monitoring documented ongoing clearance within PT Artelindo Wiratama.</p> 
+        <p>The nearby concession of PT Tebo Multiagro is another SMG/APP supplier.[22] In 2006, more than two thirds of the area was forested, according to Ministry of Forestry data.[23] In August 2010, Greenpeace aerial monitoring shows extensive areas of recently established plantations, as well as ongoing clearance in the western areas of the concession.</p>
          <p>
           <ul class="footnotes">
             <li>[14] Sinarmas Forestry (2007)</li>
@@ -255,12 +143,6 @@
           </ul>
         </div>
       </div>
-          </div>
+    </div>
 </div>
 
-  </div>
-
-</div>
-</div>
-</body>
-</html>

@@ -31,6 +31,7 @@ AvenzaMap.prototype = EventEmitter.prototype;
 
 AvenzaMap.VIEW_DEFAULTS = {
   viewerBaseURL: 'swf/avenza',
+  styleSheet:'css/map-viewer.css',
   panWidget: false,
   searchWidget: false,
   layerWidget: false,
