@@ -114,8 +114,13 @@ AvenzaMap.prototype._load = function(url, type) {
 
 AvenzaMap.prototype._handleClick = function(e) {
   var item = this._getActiveItem();
+  var isClickOnCallout = $(e.target).closest('.js_callout').length > 0;
+
   if (!item) {
-    this.removeCallout();
+    if (!isClickOnCallout) {
+      this.removeCallout();
+    }
+
     return;
   }
 
