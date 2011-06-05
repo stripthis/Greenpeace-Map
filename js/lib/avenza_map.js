@@ -124,6 +124,7 @@ AvenzaMap.prototype._handleClick = function(e) {
     return;
   }
 
+  this.emit('item.click', item, e);
   item.handleClick(e);
 };
 

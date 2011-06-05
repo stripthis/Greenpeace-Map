@@ -46,6 +46,17 @@ $(function() {
       return false;
     });
 
+  map.on('item.click', function(item) {
+    var $place = $('.js_places')
+      .find('.js_place[data-itemid=' + item.id + ']');
+
+    if (!$place.length) {
+      return;
+    }
+
+    activatePage($place.attr('id'));
+  });
+
   // Enable to auto-zoom to a picture area
   //map.on('ready', function() {
     //var study = map.getItem('04e57760-8d42-11e0-91e4-0');
