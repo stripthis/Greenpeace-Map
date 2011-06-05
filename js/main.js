@@ -36,6 +36,12 @@ $(function() {
       return false;
     });
 
+  // Only here temporary, to make it easier to test the callouts
+  map.on('ready', function() {
+    var item = map.getItem('04e57760-8d42-11e0-91e4-0');
+    item.panAndZoomTo();
+  });
+
   /* pages and tabs navigation */
   function activatePage(pageId) {
     $('.page-nav a').removeClass('active');

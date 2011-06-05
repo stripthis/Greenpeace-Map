@@ -17,12 +17,13 @@ AvenzaItem.create = function(options) {
   return instance;
 };
 
-AvenzaItem.prototype.handleClick = function() {
-  if (!this.hasCoordinates()) {
+AvenzaItem.prototype.handleClick = function(e) {
+  if (this.hasCoordinates()) {
+    this.panAndZoomTo();
     return;
   }
 
-  this.panAndZoomTo();
+  this.showCallout(e.pageX, e.pageY);
 };
 
 AvenzaItem.prototype.hasCoordinates = function() {
@@ -30,5 +31,9 @@ AvenzaItem.prototype.hasCoordinates = function() {
 };
 
 AvenzaItem.prototype.panAndZoomTo = function() {
-  this._map.map.panToPointAndZoom(this.x, this.y, this.zoom);
+  this._map.panAndZoomTo(this);
+};
+
+AvenzaItem.prototype.showCallout = function(x, y) {
+  this._map.showCallout(this, x, y);
 };
