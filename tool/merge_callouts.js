@@ -10,6 +10,7 @@ var outputJson = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
 
 var map = {
   id: 6,
+  title: 3,
   caption: 4,
   image_url: 8,
   credit: 5,
