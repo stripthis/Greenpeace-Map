@@ -14,7 +14,7 @@
 <?php require("content/header.html"); ?>
 <body>
 <!-- Section Container -->
-<div id="app-container" class="<?php echo $page;?> js_appcontainer">
+<div id="app-container" class="<?php echo $page;?>">
 <div id="app-header">
   <!-- titles -->
   <div id="title-holder">
@@ -50,6 +50,11 @@
 <?php case('solutions'): ?>
       <ul class="level2 page-nav">
         <li><a href="#lowcarbon" class="first" id="lowcarbon"><span>Low Carbon</span></a></li>
+      </ul>
+<?php break; ?>
+<?php case('risk'): ?>
+      <ul class="level2 page-nav">
+        <li><a href="#plannedloss" class="first" id="plannedloss"><span class="long">Planned loss</span></a></li>
       </ul>
 <?php break; ?>
 <?php endswitch; ?>
