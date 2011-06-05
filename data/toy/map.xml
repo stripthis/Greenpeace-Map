@@ -3,7 +3,7 @@
 
   <layer SWFFile="map_L1.swf" depth="1" name="map_L1.swf"/>
 
-  <layer SWFFile="map_L2.swf" depth="2" isStatic="true" name="frame copy" userToggle="false" visible="true"/>
+  <layer SWFFile="map_L2.swf" depth="2" isStatic="true" name="frame copy" userToggle="false" visible="false"/>
 
   <layer SWFFile="map_L3.swf" depth="3" name="map_L3.swf"/>
 

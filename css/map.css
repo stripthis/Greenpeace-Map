@@ -67,7 +67,12 @@ body {
   width:920px;
   height:455px;
   margin:auto 20px;
-  background:transparent url(../images/map.png) 0 0 no-repeat;
+}
+#map.sumatra {
+  background:transparent url(../images/sumatra-map.png) 0 0 no-repeat;
+}
+#map.toy {
+  background:transparent url(../images/toy-map.png) 0 0 no-repeat;
 }
 #map-layers {
   display:none;

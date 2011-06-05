@@ -7,10 +7,11 @@ $(function() {
       zoomMax:2000
     } ,
     'toy' : {
-      initialPanX: 5,
-      initialPanY: 5,
+      initialPanX: 0,
+      initialPanY: 0,
       zoomMin:100,
-      zoomMax:100
+      zoomMax:100,
+      zoomWidget: false,
     }
   };
 
