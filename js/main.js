@@ -1,12 +1,22 @@
 $(function() {
-  var map = $('#map').avenzaMap({
-    url: 'data/sumatra',
-    view: {
+  var mapConfig = {
+    'sumatra' : {
       initialPanX: 20,
       initialPanY: 5,
       zoomMin:102,
       zoomMax:2000
+    } ,
+    'toy' : {
+      initialPanX: 5,
+      initialPanY: 5,
+      zoomMin:100,
+      zoomMax:100
     }
+  };
+
+  var map = $('#map').avenzaMap({
+    url: 'data/'+$('#map').attr('class'),
+    view: mapConfig[$('#map').attr('class')]
   });
 
   $('.js_layers')
