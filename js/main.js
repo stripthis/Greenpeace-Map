@@ -1,9 +1,9 @@
 $(function() {
   var mapConfig = {
     'sumatra' : {
-      initialPanX: 20,
-      initialPanY: 5,
-      zoomMin:102,
+      initialPanX: 0,
+      initialPanY: 0,
+      zoomMin:100,
       zoomMax:2000
     } ,
     'toy' : {
