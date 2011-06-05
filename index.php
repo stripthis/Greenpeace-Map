@@ -14,7 +14,7 @@
 <?php require("content/header.html"); ?>
 <body>
 <!-- Section Container -->
-<div id="app-container" class="<?php echo $page;?>">
+<div id="app-container" class="<?php echo $page;?> js_appcontainer">
 <div id="app-header">
   <!-- titles -->
   <div id="title-holder">
