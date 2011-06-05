@@ -1,13 +1,13 @@
 
 <map>
 
-  <layer SWFFile="map_L1.swf" depth="1" name="map_L1.swf" visible="false"/>
+  <layer SWFFile="map_L1.swf" depth="1" name="map_L1.swf"/>
 
-  <layer SWFFile="map_L2.swf" depth="2" isStatic="true" name="frame" userToggle="false" visible="false"/>
+  <layer SWFFile="map_L2.swf" depth="2" isStatic="true" name="frame" userToggle="false" visible="true"/>
 
   <layer SWFFile="map_L3.swf" depth="3" hiddenAbove="400" name="labels" userToggle="false" visible="true"/>
 
-  <layer SWFFile="map_L4.swf" depth="4" name="APP Mills (BOB)" userToggle="true" visible="true">
+  <layer SWFFile="map_L4.swf" depth="4" hiddenAbove="500" name="APP Mills (BOB)" userToggle="true" visible="true">
     <feature extH="40.37" extW="67.68" extX="630.11" extY="256.76">
       <aggregate ctrX="663.613" ctrY="276.82">
         <polygon direction="cw">
@@ -34,7 +34,7 @@
 
   <layer SWFFile="map_L5.swf" depth="5" name="APP mills (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L6.swf" depth="6" hiddenAbove="200" name="Case study boxes (BOB)" userToggle="false" visible="true">
+  <layer SWFFile="map_L6.swf" depth="6" hiddenAbove="500" name="Case study boxes (BOB)" userToggle="false" visible="true">
     <feature ctrX="631.038" ctrY="259.981" extH="32.65" extW="44.25" extX="608.90" extY="243.66">
       <polygon direction="cw">
         <coords>652.7,275.8 609.4,275.8 609.4,244.2 652.7,244.2 652.7,275.8 </coords>
@@ -57,15 +57,7 @@
     </feature>
   </layer>
 
-  <layer SWFFile="map_L7.swf" depth="7" name="Targetted 2007" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L8.swf" depth="8" name="Acquired by 2006" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L9.swf" depth="9" name="Acquired 2007-09" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L10.swf" depth="10" name="Uncertain status" userToggle="true" visible="true"/>
-
-  <layer SWFFile="map_L11.swf" depth="11" name="Photographs (CS1 ZOOM)" userToggle="true" visible="false">
+  <layer SWFFile="map_L7.swf" depth="7" name="Photographs (CS1 ZOOM)" userToggle="true" visible="false">
     <feature ctrX="618.316" ctrY="259.088" extH="1.35" extW="1.78" extX="617.43" extY="258.42">
       <polygon>
         <coords>618.2,258.4 618.4,258.4 618.4,258.4 618.5,258.4 618.5,258.4 618.5,258.4 618.5,258.4 618.6,258.4 618.6,258.5 618.6,258.5 618.6,258.5 618.6,258.5 618.6,258.5 618.6,258.5 618.6,258.5 618.6,258.5 618.6,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.5 618.7,258.6 618.7,258.6 618.7,258.6 618.9,258.6 618.9,258.6 619.0,258.6 619.0,258.6 619.0,258.6 619.0,258.6 619.0,258.6 619.0,258.6 619.1,258.6 619.1,258.6 619.1,258.6 619.1,258.6 619.1,258.6 619.1,258.7 619.1,258.7 619.1,258.7 619.1,258.7 619.1,258.7 619.1,258.7 619.1,258.7 619.1,258.7 619.1,258.7 619.1,258.7 619.1,258.7 619.2,258.7 619.2,258.7 619.2,258.7 619.2,258.7 619.2,258.7 619.2,258.7 619.2,258.7 619.2,258.8 619.2,258.8 619.2,258.8 619.2,258.8 619.2,258.8 619.2,258.8 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.6 619.2,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.1,259.7 619.0,259.7 619.0,259.7 619.0,259.7 619.0,259.8 619.0,259.8 619.0,259.8 618.9,259.8 618.9,259.8 618.8,259.8 618.8,259.8 617.7,259.8 617.7,259.8 617.6,259.8 617.6,259.7 617.6,259.7 617.6,259.7 617.6,259.7 617.6,259.7 617.6,259.7 617.6,259.7 617.6,259.7 617.6,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.7 617.5,259.6 617.5,259.6 617.5,259.6 617.5,259.6 617.5,259.6 617.5,259.6 617.5,259.6 617.4,259.6 617.4,259.6 617.4,259.6 617.4,259.6 617.4,259.6 617.4,258.8 617.4,258.8 617.4,258.8 617.4,258.8 617.4,258.8 617.5,258.8 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.5,258.7 617.6,258.7 617.6,258.6 617.6,258.6 617.6,258.6 617.6,258.6 617.6,258.6 617.6,258.6 617.6,258.6 617.6,258.6 617.6,258.6 617.7,258.6 617.7,258.6 617.8,258.6 617.8,258.6 617.9,258.6 617.9,258.6 617.9,258.6 617.9,258.5 617.9,258.5 617.9,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.0,258.5 618.1,258.5 618.1,258.4 618.1,258.4 618.1,258.4 618.1,258.4 618.1,258.4 618.2,258.4 618.2,258.4 </coords>
@@ -180,26 +172,7 @@
     </feature>
   </layer>
 
-  <layer SWFFile="map_L12.swf" depth="12" name="Orangutan (CS1 ZOOM)" userToggle="true" visible="false"/>
-
-  <layer SWFFile="map_L13.swf" depth="13" name="Tiger (CS1 ZOOM)" userToggle="true" visible="false"/>
-
-  <layer SWFFile="map_L14.swf" depth="14" name="Bukit Infrastructure (CS1 ZOOM)" userToggle="true" visible="false"/>
-
-  <layer SWFFile="map_L15.swf" depth="15" name="Wildlife ranges (CS1 ZOOM)" userToggle="true" visible="false"/>
-
-  <layer SWFFile="map_L16.swf" depth="16" name="Photographs (CS2 ZOOM)" userToggle="true" visible="true">
-    <feature ctrX="649.612" ctrY="231.51" extH="1.35" extW="1.78" extX="648.72" extY="230.84">
-      <polygon>
-        <coords>649.5,230.8 649.7,230.8 649.7,230.8 649.8,230.8 649.8,230.9 649.8,230.9 649.8,230.9 649.9,230.9 649.9,230.9 649.9,230.9 649.9,230.9 649.9,230.9 649.9,230.9 649.9,230.9 649.9,230.9 649.9,230.9 649.9,230.9 650.0,230.9 650.0,230.9 650.0,230.9 650.0,230.9 650.0,230.9 650.0,230.9 650.0,230.9 650.0,231.0 650.0,231.0 650.0,231.0 650.0,231.0 650.0,231.0 650.0,231.0 650.0,231.0 650.2,231.0 650.2,231.0 650.3,231.0 650.3,231.0 650.3,231.0 650.3,231.0 650.3,231.0 650.3,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.4,231.1 650.5,231.1 650.5,231.1 650.5,231.1 650.5,231.2 650.5,231.2 650.5,231.2 650.5,231.2 650.5,231.2 650.5,231.2 650.5,231.2 650.5,231.2 650.5,232.0 650.5,232.0 650.5,232.0 650.5,232.0 650.5,232.0 650.5,232.0 650.5,232.0 650.5,232.0 650.5,232.1 650.5,232.1 650.5,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.1 650.4,232.2 650.3,232.2 650.3,232.2 650.3,232.2 650.3,232.2 650.3,232.2 650.3,232.2 650.2,232.2 650.2,232.2 650.1,232.2 650.1,232.2 649.0,232.2 649.0,232.2 648.9,232.2 648.9,232.2 648.9,232.2 648.9,232.2 648.9,232.2 648.9,232.1 648.9,232.1 648.9,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.1 648.8,232.0 648.7,232.0 648.7,232.0 648.7,232.0 648.7,232.0 648.7,232.0 648.7,232.0 648.7,232.0 648.7,231.2 648.7,231.2 648.7,231.2 648.7,231.2 648.7,231.2 648.7,231.2 648.7,231.2 648.8,231.2 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.8,231.1 648.9,231.1 648.9,231.1 648.9,231.1 648.9,231.1 648.9,231.1 648.9,231.0 648.9,231.0 648.9,231.0 649.0,231.0 649.0,231.0 649.1,231.0 649.1,231.0 649.2,231.0 649.2,231.0 649.2,231.0 649.2,231.0 649.2,231.0 649.2,231.0 649.2,231.0 649.2,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.3,230.9 649.4,230.9 649.4,230.9 649.4,230.9 649.4,230.9 649.4,230.9 649.4,230.8 649.5,230.8 649.5,230.8 </coords>
-      </polygon>
-      <attributes>
-        <col name="KmlStyleUrl">#photoSpot</col>
-        <col name="UUID">9a2f7b92-8d2e-11e0-91e4-0</col>
-        <col name="KmlDescription">&lt;div align='left'&gt;&lt;b&gt;2010-08-05 10:41:00&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&gt;&lt;img src='PT BDL.album/studio.data/size_full/FOC_514851.JPG' width='320' height='207' /&gt;&lt;br/&gt;&lt;span style='font-size:10px; line-height:150%; color:#999999'&gt;FOC_514851.JPG&lt;/span</col>
-      </attributes>
-      <webtag autoSize="false" height="300" width="400"/>
-    </feature>
+  <layer SWFFile="map_L8.swf" depth="8" name="Photographs (CS2 ZOOM)" userToggle="true" visible="true">
     <feature ctrX="650.216" ctrY="230.829" extH="1.35" extW="1.78" extX="649.33" extY="230.16">
       <polygon>
         <coords>650.1,230.2 650.3,230.2 650.3,230.2 650.4,230.2 650.4,230.2 650.4,230.2 650.4,230.2 650.5,230.2 650.5,230.2 650.5,230.2 650.5,230.2 650.5,230.2 650.5,230.2 650.5,230.2 650.5,230.2 650.5,230.2 650.5,230.2 650.6,230.2 650.6,230.2 650.6,230.2 650.6,230.3 650.6,230.3 650.6,230.3 650.6,230.3 650.6,230.3 650.6,230.3 650.6,230.3 650.6,230.3 650.6,230.3 650.6,230.3 650.6,230.3 650.8,230.3 650.8,230.3 650.9,230.3 650.9,230.4 650.9,230.4 650.9,230.4 650.9,230.4 650.9,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.0,230.4 651.1,230.4 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,230.5 651.1,231.3 651.1,231.3 651.1,231.3 651.1,231.3 651.1,231.3 651.1,231.3 651.1,231.4 651.1,231.4 651.1,231.4 651.1,231.4 651.1,231.4 651.1,231.4 651.1,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.4 651.0,231.5 651.0,231.5 651.0,231.5 651.0,231.5 651.0,231.5 650.9,231.5 650.9,231.5 650.9,231.5 650.9,231.5 650.9,231.5 650.9,231.5 650.8,231.5 650.8,231.5 650.7,231.5 650.7,231.5 649.6,231.5 649.6,231.5 649.5,231.5 649.5,231.5 649.5,231.5 649.5,231.5 649.5,231.5 649.5,231.5 649.5,231.5 649.5,231.5 649.5,231.5 649.5,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.4 649.4,231.3 649.3,231.3 649.3,231.3 649.3,231.3 649.3,231.3 649.3,231.3 649.3,230.5 649.3,230.5 649.3,230.5 649.3,230.5 649.3,230.5 649.4,230.5 649.4,230.5 649.4,230.5 649.4,230.5 649.4,230.5 649.4,230.5 649.4,230.5 649.4,230.4 649.4,230.4 649.4,230.4 649.4,230.4 649.4,230.4 649.4,230.4 649.4,230.4 649.4,230.4 649.4,230.4 649.4,230.4 649.4,230.4 649.5,230.4 649.5,230.4 649.5,230.4 649.5,230.4 649.5,230.4 649.5,230.4 649.5,230.4 649.5,230.4 649.5,230.4 649.5,230.4 649.6,230.4 649.6,230.3 649.7,230.3 649.7,230.3 649.8,230.3 649.8,230.3 649.8,230.3 649.8,230.3 649.8,230.3 649.8,230.3 649.9,230.3 649.9,230.3 649.9,230.3 649.9,230.3 649.9,230.3 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 649.9,230.2 650.0,230.2 650.0,230.2 650.0,230.2 650.0,230.2 650.0,230.2 650.0,230.2 650.1,230.2 650.1,230.2 </coords>
@@ -270,36 +243,44 @@ Greenpeace/Donang Wahyu&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&
     </feature>
   </layer>
 
-  <layer SWFFile="map_L17.swf" depth="17" name="Deforestation 2009-11 (CS2 ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L9.swf" depth="9" name="Deforestation 2009-11 (CS2 ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L18.swf" depth="18" name="Primary (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L10.swf" depth="10" name="Targetted 2007" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L19.swf" depth="19" name="Secondary (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L11.swf" depth="11" name="Acquired by 2006" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L20.swf" depth="20" name="Orangutan (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L12.swf" depth="12" name="Acquired 2007-09" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L21.swf" depth="21" name="Tiger (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L13.swf" depth="13" name="Uncertain status" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L22.swf" depth="22" name="> 4 metre (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L14.swf" depth="14" name="Primary (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L23.swf" depth="23" name="2-4 metre (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L15.swf" depth="15" name="Secondary (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L24.swf" depth="24" name="0-2 metre (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L16.swf" depth="16" name="Orangutan (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L25.swf" depth="25" hiddenBelow="500" name="Primary (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L17.swf" depth="17" name="Tiger (BOB)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L26.swf" depth="26" hiddenBelow="500" name="Secondary (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L18.swf" depth="18" name="> 4 metre (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L27.swf" depth="27" hiddenBelow="500" name="Orangutan (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L19.swf" depth="19" name="2-4 metre (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L28.swf" depth="28" hiddenBelow="500" name="Tiger (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L20.swf" depth="20" name="0-2 metre (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L29.swf" depth="29" hiddenBelow="500" name="> 4 metre (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L21.swf" depth="21" hiddenBelow="500" name="Primary (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L30.swf" depth="30" hiddenBelow="500" name=" 2-4 metre (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L22.swf" depth="22" hiddenBelow="500" name="Secondary (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L31.swf" depth="31" hiddenBelow="500" name="0-2 metre (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L23.swf" depth="23" hiddenBelow="500" name="Orangutan (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L32.swf" depth="32" name="map_L32.swf"/>
+  <layer SWFFile="map_L24.swf" depth="24" hiddenBelow="500" name="Tiger (ZOOM)" userToggle="true" visible="false"/>
+
+  <layer SWFFile="map_L25.swf" depth="25" hiddenBelow="500" name="> 4 metre (ZOOM)" userToggle="true" visible="false"/>
+
+  <layer SWFFile="map_L26.swf" depth="26" hiddenBelow="500" name=" 2-4 metre (ZOOM)" userToggle="true" visible="false"/>
+
+  <layer SWFFile="map_L27.swf" depth="27" hiddenBelow="500" name="0-2 metre (ZOOM)" userToggle="true" visible="false"/>
+
+  <layer SWFFile="map_L28.swf" depth="28" name="map_L28.swf"/>
 
 </map>
