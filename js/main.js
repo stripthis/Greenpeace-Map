@@ -46,11 +46,11 @@ $(function() {
       return false;
     });
 
-  // Only here temporary, to make it easier to test the callouts
-  map.on('ready', function() {
-    var study = map.getItem('04e57760-8d42-11e0-91e4-0');
-    study.panAndZoomTo();
-  });
+  // Enable to auto-zoom to a picture area
+  //map.on('ready', function() {
+    //var study = map.getItem('04e57760-8d42-11e0-91e4-0');
+    //study.panAndZoomTo();
+  //});
 
   /* pages and tabs navigation */
   function activatePage(pageId) {
