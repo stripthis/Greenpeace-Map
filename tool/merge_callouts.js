@@ -2,7 +2,7 @@
 var path = require('path');
 var fs = require('fs');
 
-var inputPath = path.join(__dirname, '../data/callouts.tsv');
+var inputPath = path.join(__dirname, '../data/sumatra/callouts.tsv');
 var outputPath = path.join(__dirname, '../data/sumatra/map.json');
 
 var outputJson = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
