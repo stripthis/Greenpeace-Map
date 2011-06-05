@@ -36,7 +36,15 @@
       <ul class="level2 js_places page-nav">
         <li class=""><a href="#overview" data-itemid="home" class="js_place first" id="overview"><span class="long">Sumatra Overview</span></a></li>
         <li class=""><a href="#bukit" data-itemid="04e57761-8d42-11e0-91e4-0" class="js_place" id="bukit"><span class="long">Bukit Tigapuluh</span></a></li>
-        <li class=""><a href="#kermutan" data-itemid="04e57760-8d42-11e0-91e4-0" class="js_place" id="kermutan"><span>Kermutan</span></a></li>
+        <li class=""><a href="#kermutan" data-itemid="04e57760-8d42-11e0-91e4-0" class="js_place" id="kermutan"><span>Kerumutan</span></a></li>
+      </ul>
+<?php break; ?>
+<?php case('toy'): ?>
+      <ul class="level2 page-nav">
+        <li><a href="#intro" class="first" id="intro"><span class="long">Toy sector overview</span></a></li>
+        <li><a href="#mattel" id="mattel"><span>Mattel</span></a></li>
+        <li><a href="#disney" id="disney"><span>Disney</span></a></li>
+        <li><a href="#others" id="others"><span>Others</span></a></li>
       </ul>
 <?php break; ?>
 <?php case('solutions'): ?>
