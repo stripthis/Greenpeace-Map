@@ -268,7 +268,6 @@ body {
   display:none;
 }
 
-
 /* callout */
 #app-container .callout {
   position:absolute;
@@ -276,6 +275,7 @@ body {
   background:#FFF;
   border:1px solid #CCC;
   padding:5px;
+  margin-top:-200px;
 }
 #app-container .callout h2{
   font-size: 16px;
