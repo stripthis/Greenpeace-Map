@@ -69,10 +69,10 @@ body {
   margin:auto 20px;
 }
 #map.sumatra {
-  background:transparent url(../images/sumatra-map.png) 0 0 no-repeat;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/sumatra-map.png) 0 0 no-repeat;
 }
 #map.toy {
-  background:transparent url(../images/toy-map.png) 0 0 no-repeat;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/toy-map.png) 0 0 no-repeat;
 }
 #map-layers {
   display:none;
@@ -91,9 +91,17 @@ body {
   border-radius:5px;
   -moz-border-radius:5px;
   margin-top:150px;
-  background:transparent url(../images/opacity75.png) 0 0 repeat; /*todo ie6 */
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/opacity75.png) 0 0 repeat; /*todo ie6 */
 }
-
+#app-container .map {
+  text-align:center;
+}
+#app-container .map img{
+  text-align:center;
+  padding:3px;
+  border:1px solid #000;
+  width:920px;
+}
 /* top */
 #app-container #app-header {
   padding:0 10px;  
@@ -108,12 +116,12 @@ body {
   display:block;
   width:180px;
   height:55px;
-  background: transparent url(../images/sinarmas.png) center 10px no-repeat;
+  background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/sinarmas.png) center 10px no-repeat;
 }
 #app-container #title-holder h2 {
   width:180px;
   height:72px;
-  background: transparent url(../images/extinction.png) center center no-repeat;
+  background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/extinction.png) center center no-repeat;
   margin-left:10px;
 }
 #app-container h1 span,
@@ -186,7 +194,7 @@ body {
 #app-container #map-layers {
   position:absolute;
   /*top:50px;*/
-  background:transparent url(../images/opacity75.png) 0 0 repeat; /*todo ie6 */
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/opacity75.png) 0 0 repeat; /*todo ie6 */
   height:450px;
   width:180px;
   margin-top:2px;
@@ -289,7 +297,7 @@ body {
 
 /* content quickfacts */ 
 #app-container .content.quick.facts {
-  background: transparent url(../images/deforestation.png) left 15px no-repeat;
+  background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/deforestation.png) left 15px no-repeat;
   padding:10px 0 20px 220px;
 }
 #app-container .content.quick.facts h2,
@@ -339,10 +347,10 @@ body {
 #app-container .content.quick.facts a.button.pdf {
 }
 #app-container .content.quick.facts a.button.pdf span{
-  background:transparent url(../images/pdf.png) 10px center no-repeat;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/pdf.png) 10px center no-repeat;
 }
 #app-container .content.quick.facts a.button.print span {
-  background:transparent url(../images/print.png) 10px center no-repeat;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/print.png) 10px center no-repeat;
 }
 #app-container .content.quick.facts a.button span{
   padding:0px 0px 0px 35px;
@@ -395,7 +403,7 @@ body {
   padding:5px 25px;
 }
 #app-container .content ul li {
-  background:transparent url(../images/arrow0.png) left 6px no-repeat;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/arrow0.png) left 6px no-repeat;
   padding:2px 5px 0 15px;
 }
 #app-container .content ul.footnotes {
@@ -480,31 +488,30 @@ body {
 }
 
 /* tables */
-#chart
-{
-	width: 90%;
-	margin: 10px auto;
-	border-collapse: collapse;
-	border: 1px solid #333;
-        color:#111;
-        font-size:12px;
+#chart {
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border: 1px solid #333;
+  color:#111;
+  font-size:12px;
  }
 #chart .rowa  {
-	background: #AAA;
-	height: 10px;
+  background: #AAA;
+  height: 10px;
 }
 #chart .rowb {
-	background: #CCC;
-	height: 10px;
+  background: #CCC;
+  height: 10px;
 }
 #chart .cell {
-	padding: 3px;
-	border: none;
+  padding: 3px;
+  border: none;
 }
 #chart .rowc {
-	background: #111;
-	height: 10px;
-        color:#FFF;
+  background: #111;
+  height: 10px;
+  color:#FFF;
 }
 
 /* bex additions content styling */
@@ -538,7 +545,7 @@ body {
 #app-container.home .video-holder {
   width:920;
   margin:20px 20px 10px 20px;
-  background:#DDD url(../images/paper.png) 0 0 repeat;
+  background:#DDD url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/paper.png) 0 0 repeat;
   border-top:5px solid #F00;
   border-bottom:5px solid #F00;
 }
@@ -560,12 +567,12 @@ body {
   border-bottom:5px solid #F00;
 }
 #app-container.home .collumns .collumn.col1{
-  background:#FFF url(../images/home1.png) 0 0 no-repeat;
+  background:#FFF url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/home1.png) 0 0 no-repeat;
 }
 #app-container.home .collumns .collumn.col2{
-  background:#FFF url(../images/home2.png) 0 0 no-repeat;
+  background:#FFF url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/home2.png) 0 0 no-repeat;
 }
 #app-container.home .collumns .collumn.col3{
-  background:#FFF url(../images/home3.png) 0 0 no-repeat;
+  background:#FFF url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/home3.png) 0 0 no-repeat;
   margin:0;
 }
