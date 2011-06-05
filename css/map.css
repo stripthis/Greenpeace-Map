@@ -283,6 +283,10 @@ body {
   font-size: 10px;
 }
 
+#app-container .callout img{
+  float: right;
+}
+
 /* content quickfacts */ 
 #app-container .content.quick.facts {
   background: transparent url(../images/deforestation.png) left 15px no-repeat;
