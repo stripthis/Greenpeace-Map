@@ -14,7 +14,7 @@ $(function() {
       zoomWidget: false,
     }
   };
-
+alert($('#map').attr('class'));
   var map = $('#map').avenzaMap({
     url: 'data/'+$('#map').attr('class'),
     view: mapConfig[$('#map').attr('class')]
