@@ -1,5 +1,5 @@
 <?php 
-  $allowed_pages = array('app','risk','toy','solutions');
+  $allowed_pages = array('home','app','risk','toy','solutions');
   if(isset($_GET['page']) && in_array($_GET['page'],$allowed_pages)) {
     $page = $_GET['page'];
   } else {
@@ -14,11 +14,11 @@
 <?php require("content/header.html"); ?>
 <body>
 <!-- Section Container -->
-<div id="app-container">
+<div id="app-container" class="<?php echo $page;?>">
 <div id="app-header">
   <!-- titles -->
   <div id="title-holder">
-    <h1><span class="sinarmas logo">Sinar Mass Under Investigation</span></h1>
+    <h1><a href="index.php?page=home<?php echo $password;?>"><span class="sinarmas logo">Sinar Mass Under Investigation</span></a></h1>
     <h2><span class="sinarmas logo">How APP is toying with extinction</span></h2>
   </div>
 

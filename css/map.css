@@ -94,15 +94,16 @@ body {
   padding:0 10px;  
   height:140px;
 }
-#app-container h1 span,
-#app-container h2 span{
-  display:none;
+#app-container #title-holder h1{
+  width:180px;
+  height:55px;
+  margin-left:10px;
 }
-#app-container #title-holder h1 {
+#app-container #title-holder h1 a{
+  display:block;
   width:180px;
   height:55px;
   background: transparent url(../images/sinarmas.png) center 10px no-repeat;
-  margin-left:10px;
 }
 #app-container #title-holder h2 {
   width:180px;
@@ -110,7 +111,10 @@ body {
   background: transparent url(../images/extinction.png) center center no-repeat;
   margin-left:10px;
 }
-
+#app-container h1 span,
+#app-container h2 span{
+  display:none;
+}
 /* nav */
 #app-container .nav ul li,
 #app-container .nav ul {
