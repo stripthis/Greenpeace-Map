@@ -9,16 +9,6 @@ $(function() {
     }
   });
 
-  map.on('zoomChange', function(current) {
-    ['APP mills BOB', 'map_L6.swf'].forEach(function(name) {
-      var layer = map.getLayer(name);
-
-      (current.zoom > 950)
-        ? layer.hide()
-        : layer.show();
-    });
-  });
-
   $('.js_layers')
     .delegate('li', 'click', function() {
       var layer = map.getLayer($(this).data('layer'));
@@ -39,10 +29,18 @@ $(function() {
       $this.addClass('active');
 
       var itemId = $(this).data('itemid');
-      map.panAndZoomTo(itemId);
+      var item = map.getItem(itemId);
+
+      item.panAndZoomTo();
 
       return false;
     });
+
+  // Only here temporary, to make it easier to test the callouts
+  map.on('ready', function() {
+    var item = map.getItem('04e57760-8d42-11e0-91e4-0');
+    item.panAndZoomTo();
+  });
 
   /* pages and tabs navigation */
   function activatePage(pageId) {

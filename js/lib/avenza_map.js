@@ -16,6 +16,7 @@ function AvenzaMap() {
   EventEmitter.call(this);
 
   this.$element = null;
+  this.$callout = null;
 
   this.url = null;
   this.view = {};
@@ -81,18 +82,6 @@ AvenzaMap.prototype._monitorZoom = function() {
   }.bind(this), 100);
 };
 
-AvenzaMap.prototype.panAndZoomTo = function(item) {
-  if (typeof item === 'string') {
-    item = this.getItem(item);
-  }
-
-  if (!item) {
-    return;
-  }
-
-  this.map.panToPointAndZoom(item.x, item.y, item.zoom);
-};
-
 AvenzaMap.prototype._embedd = function() {
   var self = this;
   this.view.loadedCB = function() {
@@ -125,7 +114,13 @@ AvenzaMap.prototype._load = function(url, type) {
 
 AvenzaMap.prototype._handleClick = function(e) {
   var item = this._getActiveItem();
+  var isClickOnCallout = $(e.target).closest('.js_callout').length > 0;
+
   if (!item) {
+    if (!isClickOnCallout) {
+      this.removeCallout();
+    }
+
     return;
   }
 
@@ -137,13 +132,14 @@ AvenzaMap.prototype._handleZoomChange = function(current) {
 };
 
 AvenzaMap.prototype.getItem = function(id) {
-  var item = this.json.items[id];
-  if (!item) {
-    return;
-  }
+  var properties = this.json.items[id] || {};
 
-  item.id = id;
-  return item;
+  properties.id = id;
+
+  return AvenzaItem.create({
+    map: this,
+    properties: properties
+  });
 };
 
 AvenzaMap.prototype._getActiveItem = function() {
@@ -153,23 +149,7 @@ AvenzaMap.prototype._getActiveItem = function() {
   }
 
   var id = feature.attributes.UUID;
-  this.map.features('UUID="' + id +'"').reveal();
-
-  //var id = feature.attributes.UUID;
-  //var item = this.json.items[id];
-  //if (!item) {
-    //return;
-  //}
-
-  //var properties = $.extend({}, item);
-  //delete properties['type'];
-
-  //item = window['Avenza' + item.type].create({
-    //map: this,
-    //properties: properties
-  //});
-
-  //return item;
+  return this.getItem(id);
 };
 
 AvenzaMap.prototype._checkIfLoaded = function() {
@@ -247,4 +227,31 @@ AvenzaMap.prototype.getLayer = function(name) {
       return layer;
     }
   }
+};
+
+AvenzaMap.prototype.panAndZoomTo = function(item) {
+  this.map.panToPointAndZoom(item.x, item.y, item.zoom);
+};
+
+AvenzaMap.prototype.showCallout = function(item, x, y) {
+  this.removeCallout();
+
+  var $callout = $('#callout_template')
+    .tmpl(item)
+    .css({
+      top: (y + 20) + 'px',
+      left: (x + 20) + 'px'
+    })
+    .appendTo('.js_appcontainer');
+
+  this.$callout = $callout;
+};
+
+AvenzaMap.prototype.removeCallout = function() {
+  if (!this.$callout) {
+    return;
+  }
+
+  this.$callout.remove();
+  this.$callout = null;
 };
