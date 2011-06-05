@@ -1,3 +1,4 @@
+<?php require("content/toy/map.html"); ?>
   <div class="pages">
     <div class="page intro">
 <?php require("content/toy/intro.html"); ?>

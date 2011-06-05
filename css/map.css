@@ -279,10 +279,6 @@ body {
 #app-container .content.quick.facts p{
   padding-left:0;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 61dd45456a556754e795ff48266ea2116e1dc643
 #app-container .content.quick.facts li {
   width:500px;
 }
@@ -501,9 +497,53 @@ body {
   color:#ED343A;
   font-weight:bold;
 }
-
 #app-container .content .footnotes {
   font-size:10px;
   font-weight:normal;
+}
 
+/* home page */
+#app-container.home #app-header {
+  height:45px;
+}
+#app-container.home #title-holder h2 {
+  display:none;
+}
+#app-container.home  h2 {
+  color:#F00;
+  font-style:italic;
+}
+#app-container.home .video-holder {
+  width:920;
+  margin:20px 20px 10px 20px;
+  background:#DDD url(../images/paper.png) 0 0 repeat;
+  border-top:5px solid #F00;
+  border-bottom:5px solid #F00;
+}
+#app-container.home .video {
+  padding:20px;
+  margin-left:120px;
+}
+#app-container.home .collumns {
+  width:920px;
+  margin:0 20px;
+  float:left;
+}
+#app-container.home .collumns .collumn{
+  width:300px;
+  float:left;
+  margin-right:10px;
+  padding-top:180px;
+  height:180px;
+  border-bottom:5px solid #F00;
+}
+#app-container.home .collumns .collumn.col1{
+  background:#FFF url(../images/home1.png) 0 0 no-repeat;
+}
+#app-container.home .collumns .collumn.col2{
+  background:#FFF url(../images/home2.png) 0 0 no-repeat;
+}
+#app-container.home .collumns .collumn.col3{
+  background:#FFF url(../images/home3.png) 0 0 no-repeat;
+  margin:0;
 }

@@ -1,4 +1,4 @@
-<?php require("content/map.html"); ?>
+<?php require("content/app/map.html"); ?>
 
 <div class="content-holder">
   <div class="pages">
