@@ -45,8 +45,14 @@
 
   <script id="callout_template" class="popup" type="text/x-jquery-tmpl">
     <div class="callout js_callout">
-      <h2>${ image_title }</h2>
-      <img src="${ image_url }">
+      <h2>${ title }</h2>
+      <img
+        class="${ (image_height > image_width) ? 'portrait' : 'landscape' }"
+        alt="${ title }"
+        width="${ image_width }"
+        height="${ image_height }"
+        src="${ image_url }"
+      >
       <span>${ date }</span>
       <p>${ caption }</p>
     </div>

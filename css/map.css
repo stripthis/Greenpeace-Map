@@ -287,7 +287,11 @@ body {
 #app-container .callout p{
   font-size: 10px;
 }
-#app-container .callout img{
+
+#app-container .callout img.landscape{
+}
+
+#app-container .callout img.portrait{
   float: right;
 }
 
