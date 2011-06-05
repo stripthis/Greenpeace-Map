@@ -29,7 +29,9 @@ $(function() {
       $this.addClass('active');
 
       var itemId = $(this).data('itemid');
-      map.panAndZoomTo(itemId);
+      var item = map.getItem(itemId);
+
+      item.panAndZoomTo();
 
       return false;
     });

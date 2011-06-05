@@ -81,18 +81,6 @@ AvenzaMap.prototype._monitorZoom = function() {
   }.bind(this), 100);
 };
 
-AvenzaMap.prototype.panAndZoomTo = function(item) {
-  if (typeof item === 'string') {
-    item = this.getItem(item);
-  }
-
-  if (!item) {
-    return;
-  }
-
-  this.map.panToPointAndZoom(item.x, item.y, item.zoom);
-};
-
 AvenzaMap.prototype._embedd = function() {
   var self = this;
   this.view.loadedCB = function() {
@@ -137,13 +125,14 @@ AvenzaMap.prototype._handleZoomChange = function(current) {
 };
 
 AvenzaMap.prototype.getItem = function(id) {
-  var item = this.json.items[id];
-  if (!item) {
-    return;
-  }
+  var properties = this.json.items[id] || {};
 
-  item.id = id;
-  return item;
+  properties.id = id;
+
+  return AvenzaItem.create({
+    map: this,
+    properties: properties
+  });
 };
 
 AvenzaMap.prototype._getActiveItem = function() {
@@ -153,23 +142,7 @@ AvenzaMap.prototype._getActiveItem = function() {
   }
 
   var id = feature.attributes.UUID;
-  this.map.features('UUID="' + id +'"').reveal();
-
-  //var id = feature.attributes.UUID;
-  //var item = this.json.items[id];
-  //if (!item) {
-    //return;
-  //}
-
-  //var properties = $.extend({}, item);
-  //delete properties['type'];
-
-  //item = window['Avenza' + item.type].create({
-    //map: this,
-    //properties: properties
-  //});
-
-  //return item;
+  return this.getItem(id);
 };
 
 AvenzaMap.prototype._checkIfLoaded = function() {
