@@ -205,11 +205,11 @@ body {
   border-right:0;
 }
 #app-container #map-layers li h3{
-  font-size:11px;
+  font-size:12px;
   padding:10px 5px 2px 7px;
 }
 #app-container #map-layers li span{
-  font-size:10px;
+  font-size:11px;
   display:block;
   cursor:pointer;
   width:160px;
