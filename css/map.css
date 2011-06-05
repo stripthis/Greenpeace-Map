@@ -264,10 +264,23 @@ body {
 /* callout */
 #app-container .callout {
   position:absolute;
-  width:200px;
+  width:250px;
   background:#FFF;
   border:1px solid #CCC;
   padding:5px;
+}
+
+#app-container .callout h2{
+  font-size: 16px;
+}
+
+#app-container .callout span{
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#app-container .callout p{
+  font-size: 10px;
 }
 
 /* content quickfacts */ 
