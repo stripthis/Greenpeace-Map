@@ -8,15 +8,12 @@ var outputPath = path.join(__dirname, '../data/sumatra/map.json');
 var outputJson = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
 
 var map = {
-  id: 8,
-  caption: 6,
-  image: 2,
-  image_title: 5,
-  credit: 7,
-  location: 3,
-  date: 4,
-  page: 0,
-  where_in_page: 1,
+  id: 6,
+  caption: 4,
+  image_url: 8,
+  credit: 5,
+  location: 1,
+  date: 2,
 };
 
 var data = fs.readFileSync(inputPath, 'utf8');
