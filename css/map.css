@@ -264,7 +264,7 @@ body {
 /* callout */
 #app-container .callout {
   position:absolute;
-  width:250px;
+  width:255px;
   background:#FFF;
   border:1px solid #CCC;
   padding:5px;
