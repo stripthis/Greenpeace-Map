@@ -96,7 +96,7 @@ $(function() {
   /* Tabs */
   $('.slides .slide-nav a').click(function() {
     activateTab(null,$(this).attr('id'));
-    return false;
+    return true;
   });
 
   activatePage($('.page-nav a.first').attr('id'));
