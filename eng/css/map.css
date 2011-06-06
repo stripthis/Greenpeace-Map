@@ -269,31 +269,50 @@ body {
 }
 
 /* callout */
+
 #app-container .callout {
   position:absolute;
-  width:255px;
+  margin-top:-245px;
+  width:250px;
+  margin-left:25px;
+}
+#app-container .callout-content {
+  position:absolute;
   background:#FFF;
-  border:1px solid #CCC;
-  padding:5px;
-  margin-top:-200px;
+  border:1px solid #AAA;
+  padding:10px;
+}
+#app-container .callout .arrow {
+  background:transparent url(../images/arrow_bubble.png) 0 bottom no-repeat;
+  width:50px;
+  height:70px;
+  z-index:99;
+  position:absolute;
+  margin-bottom:0;
+  margin-left:-24px;
+  margin-top:200px;
 }
 #app-container .callout h2{
   font-size: 16px;
 }
-#app-container .callout span{
+#app-container .callout .date{
   font-size: 10px;
   font-weight: bold;
+  padding:10px 0;
 }
-#app-container .callout p{
+#app-container .callout .copyright,
+#app-container .callout .caption{
   font-size: 10px;
 }
-
+#app-container .callout img {
+  padding:10px 0;
+}
 #app-container .callout img.landscape{
   display: block;
 }
-
 #app-container .callout img.portrait{
   float: right;
+  padding-left:10px;
 }
 
 /* content quickfacts */ 

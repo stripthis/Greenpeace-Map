@@ -16,14 +16,16 @@ AvenzaItem.create = function(options) {
 
   return instance;
 };
-
+AvenzaItem.prototype.handleMouseover = function(e) {
+  this.showCallout(e.pageX, e.pageY);
+};
 AvenzaItem.prototype.handleClick = function(e) {
   if (this.hasCoordinates()) {
     this.panAndZoomTo();
     return;
   }
 
-  this.showCallout(e.pageX, e.pageY);
+  //this.showCallout(e.pageX, e.pageY);
 };
 
 AvenzaItem.prototype.hasCoordinates = function() {

@@ -46,6 +46,10 @@ $(function() {
       return false;
     });
 
+  var over=false;
+  map.on('item.mouseover', function(item) {
+  });
+
   map.on('item.click', function(item) {
     var $place = $('.js_places')
       .find('.js_place[data-itemid=' + item.id + ']');

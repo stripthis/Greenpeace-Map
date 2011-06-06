@@ -44,18 +44,21 @@
   </script>
 
   <script id="callout_template" class="popup" type="text/x-jquery-tmpl">
-    <div class="callout js_callout">
-      <h2>${ title }</h2>
-      <img
-        class="${ (image_height > image_width) ? 'portrait' : 'landscape' }"
-        alt="${ title }"
-        width="${ image_width }"
-        height="${ image_height }"
-        src="${ image_url }"
-      >
-      <span>${ date }</span>
-      <p>${ caption }</p>
-      <p class="copyright">${ credit }</p>
-    </div>
+      <div class="callout js_callout">
+        <div class="callout-content">
+        <h2>${ title }</h2>
+        <img
+          class="${ (image_height > image_width) ? 'portrait' : 'landscape' }"
+          alt="${ title }"
+          width="${ image_width }"
+          height="${ image_height }"
+          src="${ image_url }"
+        >
+        <span class="date">${ date }</span>
+        <p class="caption">${ caption }</p>
+        <p class="copyright">${ credit }</p>
+        </div>
+        <span class="arrow"></span>
+      </div>
   </script>
 </head>

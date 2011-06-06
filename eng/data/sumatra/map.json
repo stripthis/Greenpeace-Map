@@ -18,13 +18,23 @@
       "y": 227,
       "zoom": 2000
     },
-    "bbee38b4-8c62-11e0-83f2-0": {
-      "title": "SMG/APP logging road",
-      "caption": "Road developed by SMG/APP to transport logs from its concession areas in the Bukit Tigapuluh Forest Landscape to its pulp mills.",
-      "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/B30_RHM_ForestRoad.jpg",
+    "04e57760-8d42-77e0-91e4-0": {
+      "title": "APP's Indah Kiat pulp and paper mill",
+      "caption": "Stockpiles of logs at APP's PT Indah Kiat pulp and paper mill in Riau.",
+      "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/app/APP_IndahKiat.jpg",
+      "credit": "©Beltra/Greenpeace",
+      "location": "",
+      "date": "August 28, 2008",
+      "image_width": 133,
+      "image_height": 200
+    },
+    "04e57760-8d42-88e0-91e4-0": {
+      "title": "APP Lontar Papyrus pulp and paper mill",
+      "caption": "Paper reels inside APP's Lontar Papyrus pulp and paper mill in Jambi.",
+      "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/app/APP_LontarPaprus.jpg",
       "credit": "©Greenpeace",
-      "location": "Bukit Tigapuluh Forest Landscape, Jambi, Sumatra",
-      "date": "April 26, 2010",
+      "location": "",
+      "date": "",
       "image_width": 230,
       "image_height": 153
     },
@@ -32,7 +42,7 @@
       "title": "Forest clearance",
       "caption": "Active clearance of forested tiger habitat in SMG/APP affiliated PT Artelindo Wiratama.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/B30_Artelindo_Hills.jpg",
-      "credit": "©Greenpeace",
+      "credit": "©Beltra/Greenpeace",
       "location": "Bukit Tigapuluh Forest Landscape, Riau, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,

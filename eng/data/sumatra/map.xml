@@ -7,6 +7,10 @@
 
   <layer SWFFile="map_L3.swf" depth="3" hiddenAbove="500" name="APP Mills (BOB)" userToggle="true" visible="true">
     <feature extH="40.37" extW="67.68" extX="630.11" extY="256.76">
+      <attributes>
+        <col name="Landscape">APP Indah Kiat pulp mill</col>
+        <col name="UUID">04e57760-8d42-77e0-91e4-0</col>
+      </attributes>
       <aggregate ctrX="663.613" ctrY="276.82">
         <polygon direction="cw">
           <coords>630.1,297.1 630.1,256.8 697.8,256.8 697.8,297.1 630.1,297.1 </coords>
@@ -18,6 +22,10 @@
       <webtag autoSize="false" height="300" width="400"/>
     </feature>
     <feature extH="40.17" extW="68.04" extX="569.22" extY="169.67">
+      <attributes>
+        <col name="Landscape">APP Lontar Papyrus pulp mill</col>
+        <col name="UUID">04e57760-8d42-88e0-91e4-0</col>
+      </attributes>
       <aggregate ctrX="602.715" ctrY="189.784">
         <polygon direction="cw">
           <coords>569.2,209.6 569.2,169.7 637.3,169.7 637.3,209.6 569.2,209.6 </coords>

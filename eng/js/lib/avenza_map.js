@@ -40,6 +40,9 @@ AvenzaMap.VIEW_DEFAULTS = {
   zoomWidget: true,
   disableAnimations: true,
   useCentroidForCallouts:true,
+	hoverCalloutBubble:false,
+	clickCalloutBubble:false,
+	useClickCalloutForHover:true,
   flashSecuritySandbox: AVENZA.AUTO_SANDBOX
 };
 
@@ -62,6 +65,8 @@ AvenzaMap.prototype._initialize = function() {
   this._monitorZoom();
 
   $(window).click(this._handleClick.bind(this));
+  $('.map-holder').mousemove(this._handleMouseover.bind(this));
+
 };
 
 AvenzaMap.prototype._monitorZoom = function() {
@@ -112,18 +117,25 @@ AvenzaMap.prototype._load = function(url, type) {
   });
 };
 
+AvenzaMap.prototype._handleMouseover = function(e) {
+  var item = this._getActiveItem();
+  if (!item) {
+    this.removeCallout();
+    return;
+  }
+  this.emit('item.mouseover', item, e);
+  item.handleMouseover(e);
+}
+
 AvenzaMap.prototype._handleClick = function(e) {
   var item = this._getActiveItem();
   var isClickOnCallout = $(e.target).closest('.js_callout').length > 0;
-
   if (!item) {
     if (!isClickOnCallout) {
       this.removeCallout();
     }
-
     return;
   }
-
   this.emit('item.click', item, e);
   item.handleClick(e);
 };

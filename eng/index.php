@@ -1,13 +1,14 @@
-<?php 
+<?php
   $allowed_pages = array('home','app','risk','toy','solutions');
   if(isset($_GET['page']) && in_array($_GET['page'],$allowed_pages)) {
     $page = $_GET['page'];
   } else {
     $page = $allowed_pages[0];
   }
-  if(!isset($_GET['passwd']) && $_GET['passwd'] != '832ceab0-8f66-11e0-91e4-0800200c9a66') {
+  /*if(!isset($_GET['passwd']) || $_GET['passwd'] != '832ceab0-8f66-11e0-91e4-0800200c9a66') {
     return;
-  } else $password='&passwd=832ceab0-8f66-11e0-91e4-0800200c9a66';
+  } else $password='&passwd=832ceab0-8f66-11e0-91e4-0800200c9a66';*/
+  $password='';
 ?>
 <!DOCTYPE html>
 <html>
