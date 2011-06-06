@@ -8,6 +8,7 @@ body {
   font-family: helvetica, arial, verdana, sans-serif;
   margin:0;
   padding:0;
+  background-color:#EFEFEF;
 }
 #app-container * {
   padding:0;
@@ -193,72 +194,75 @@ body {
 }
 #map-layers {
   margin-left:3px;
-  padding-left:5px;
   position:absolute;
-  /*top:50px;*/
-  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/opacity75.png) 0 0 repeat; /*todo ie6 */
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/opacity50.png) 0 0 repeat; /*todo ie6 */
   height:445px;
   width:180px;
   margin-top:10px;
   margin-left:25px;
   padding:0;
-  border-right:0;
 }
-#app-container #map-layers li h3{
-  font-size:12px;
-  padding:10px 5px 2px 7px;
+#app-container #map-layers li h3 {
+  padding:0; margin:0;
+}
+
+#app-container #map-layers li h3 a,
+#app-container #map-layers li h3 a.open{
+  font-size:11px;
+  color:#FFF;
+  padding:1px 2px 1px 18px;
+  margin:3px 3px 0px 3px;
+  display:block;
+  width:154px;
+  background:#000 url(../images/toggle1.png) 4px 4px no-repeat;
+}
+#app-container #map-layers li h3 a.closed{
+  background:#000 url(../images/toggle0.png) 5px 4px no-repeat;
+}
+#app-container #map-layers li h3 a:hover {
+  text-decoration:none;
 }
 #app-container #map-layers li span{
   font-size:11px;
   display:block;
   cursor:pointer;
-  width:160px;
+  width:155px;
   color:#000;
   font-weight:bold;
-  padding:1px 2px 1px 12px;
+  padding:2px 2px 2px 17px;
   margin-top:1px;
+  margin:1px 3px 0px 3px;
 }
-
 /* opac50 #f5f9f8, opac75 #f5f9f8 */
 #app-container #map-layers .forest.primary.active span {
-  background:#609b61;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#609b61)); 
-  background: -moz-linear-gradient(left,#f5f9f8,#609b61);
+  background:#8BCB8B;
 }
 #app-container #map-layers .forest.secondary.active span {
-  background:#8bcb8b;
-  background: -webkit-gradient(linear, left top, right top, from(#F5F9F8), to(#8bcb8b));
-  background: -moz-linear-gradient(left,#f5f9f8,#8bcb8b);
+  background:#85BA85;
 }
 #app-container #map-layers .peatland.p02m.active span {
   background:#CFAB7A;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#CFAB7A));
-  background: -moz-linear-gradient(left,#f5f9f8,#CFAB7A);
 }
 #app-container #map-layers .peatland.p24m.active span {
-  background:#A16A1A;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#A16A1A));
-  background: -moz-linear-gradient(left,#f5f9f8,#A16A1A);
+  background:#B29062;
 }
 #app-container #map-layers .peatland.p40m.active span {
-  background:#5F4D22;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#5F4D22));
-  background: -moz-linear-gradient(left,#f5f9f8,#5F4D22);
+  background:#7C735E;
 }
 #app-container #map-layers .habitat.tiger.active span {
-  background:#F37224;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#F37224));
-  background: -moz-linear-gradient(left,#f5f9f8,#F37224);
+  background:#E2A688;
 }
 #app-container #map-layers .habitat.orangutan.active span {
-  background:#f34424;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#F34424));
-  background: -moz-linear-gradient(left,#f5f9f8,#F34424);
+  background:#EDD77A;
 }
-#app-container #map-layers .concession.active span {
-  background:#EC2227;
-  background: -webkit-gradient(linear, left top, right top, from(#f5f9f8), to(#EC2227));
-  background: -moz-linear-gradient(left,#F5F9F8,#EC2227);
+#app-container #map-layers .concession.targetted.active span {
+  background:#EA6CAE;
+}
+#app-container #map-layers .concession.acquired.active span {
+  background:#E03845;
+}
+#app-container #map-layers .concession.uncertain.active span {
+  background:#E8626C;
 }
 #app-container #map-layers .spacer {
   margin-top:15px;
@@ -269,7 +273,6 @@ body {
 }
 
 /* callout */
-
 #app-container .callout {
   position:absolute;
   margin-top:-245px;
@@ -317,8 +320,7 @@ body {
 
 /* content quickfacts */ 
 #app-container .content.quick.facts {
-  background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/deforestation.png) left 15px no-repeat;
-  padding:10px 0 20px 220px;
+  padding:0px 0 20px 30px;
 }
 #app-container .content.quick.facts h2,
 #app-container .content.quick.facts h2 span,
@@ -330,16 +332,16 @@ body {
   padding-left:0;
 }
 #app-container .content.quick.facts li {
-  width:500px;
+  width:650px;
 }
 #app-container .content.quick.facts .col1{
-  width:520px;
+  width:650px;
   float:left;
 }
 #app-container .content.quick.facts .col2 {
   width:180px;
   float:left;
-  margin-left:20px;
+  margin-left:60px;
 }
 #app-container .content.quick.facts ul {
   width:550px;
@@ -348,15 +350,14 @@ body {
 #app-container .content.quick.facts a.button{
   width:125px;
   float:left;
-  padding:8px 35px 8px 5px;
+  padding:5px 15px 5px 5px;
   margin:0 0 10px 0; 
   clear:right;
   text-align:center;
-  font-size:16px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  height:30px;
-  font-size:14px;
+  height:25px;
+  font-size:12px;
   height:auto;
   line-height:13px;
   text-style:italic;
@@ -367,16 +368,22 @@ body {
 #app-container .content.quick.facts a.button.pdf {
 }
 #app-container .content.quick.facts a.button.pdf span{
-  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/pdf.png) 10px center no-repeat;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/pdf.png) 8px center no-repeat;
 }
 #app-container .content.quick.facts a.button.print span {
-  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/print.png) 10px center no-repeat;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/print.png) 8px center no-repeat;
 }
 #app-container .content.quick.facts a.button span{
-  padding:0px 0px 0px 35px;
+  padding:0px 0px 0px 20px;
   display:block;
 }
-
+#app-container .content.quick.facts a.button:active {
+  color:#000;
+  background:#e9e6d7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b8b5a9), to(#e9e6d7));
+  background: -moz-linear-gradient(top,#b8b5a9,#e9e6d7);
+  text-decoration:none;
+}
 /* navigation tabs */
 #app-container .nav .tabs {
   border-bottom:1px solid #CCC;
@@ -479,32 +486,27 @@ body {
 }
 /*flickr */
 #flickr-holder {
-  height: 455px;
-  margin: auto 20px;
+  margin: auto;
   width:920px;
-  display:block;
-  border: 2px solid #CCCCCC;
+  background:#000;
+  padding:10px 0;
 }
 #flickr-slideshow {
   width:740px;
-  float:right;
-  clear:left;
-  display:block;
+  margin:auto;
 }
 #flickr-text {
-  float:left;
-  display:block;
-  height:455px;
-  border-right: 2px solid #CCCCCC;
   padding: 0;
-  position: absolute;
   width: 180px;
-  background: #EEE;
+  width:940px;
+  color:#FFF;
 }
 #flickr-text p {
   font-size:14px;
-  margin: 20px 5px 5px 5px;
   font-weight:bold;
+  padding:5px;
+  width:700px;
+  margin:auto;
 }
 
 /* tables */
@@ -559,15 +561,12 @@ body {
   display:none;
 }
 #app-container.home  h2 {
-  color:#F00;
   font-style:italic;
 }
 #app-container.home .video-holder {
-  width:920;
-  margin:20px 20px 10px 20px;
-  background:#DDD url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/paper.png) 0 0 repeat;
-  border-top:5px solid #F00;
-  border-bottom:5px solid #F00;
+  width:920px;
+  margin:20px 20px 15px 20px;
+  background:#000;
 }
 #app-container.home .video {
   padding:20px;
@@ -575,24 +574,25 @@ body {
 }
 #app-container.home .collumns {
   width:920px;
-  margin:0 20px;
+  margin:0 0 0 20px;
   float:left;
 }
 #app-container.home .collumns .collumn{
-  width:300px;
+  width:296px;
   float:left;
-  margin-right:10px;
-  padding-top:180px;
-  height:180px;
-  border-bottom:5px solid #F00;
+  margin:0px;
 }
 #app-container.home .collumns .collumn.col1{
-  background:#FFF url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/home1.png) 0 0 no-repeat;
+  margin-right:15px;
 }
 #app-container.home .collumns .collumn.col2{
-  background:#FFF url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/home2.png) 0 0 no-repeat;
+  margin-left:0px;
+  margin-right:15px;
 }
 #app-container.home .collumns .collumn.col3{
-  background:#FFF url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/home3.png) 0 0 no-repeat;
   margin:0;
+}
+#app-container.home .collumns .collumn a img{
+  width:296px;
+  border:0;
 }

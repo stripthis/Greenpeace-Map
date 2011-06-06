@@ -100,5 +100,20 @@ $(function() {
   });
 
   activatePage($('.page-nav a.first').attr('id'));
-  $('#map-layers').show();
+
+  /* navigation toogle */
+  // a.toggle#<id> triggers closing/opening of .toggle_<id> (easy hey?)
+  $('a.js_toggle').click(function() {
+    if ($('a.js_toggle#' + $(this).attr("id")).hasClass("closed")) {
+      $('a.js_toggle#' + $(this).attr("id")).addClass("open").removeClass("closed");
+      $('a.js_toggle#' + $(this).attr("id")).parents('.widget').addClass("open").removeClass("closed");
+      $(".js_toggle_" + $(this).attr("id")).show();
+    } else {
+      $('a.js_toggle#' + $(this).attr("id")).addClass("closed").removeClass("open");
+      $('a.js_toggle#' + $(this).attr("id")).parents('.widget').addClass("closed").removeClass("open");
+      $(".js_toggle_" + $(this).attr("id")).hide();
+    }
+    //$('#right_sidebar a.save-widgets').text(saveWidgetsText); // save the choice
+    return false;
+  });
 });
