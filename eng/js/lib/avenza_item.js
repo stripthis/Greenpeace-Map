@@ -17,6 +17,10 @@ AvenzaItem.create = function(options) {
   return instance;
 };
 AvenzaItem.prototype.handleMouseover = function(e) {
+  if (this.hasCoordinates()) {
+    return;
+  }
+
   this.showCallout(e.pageX, e.pageY);
 };
 AvenzaItem.prototype.handleClick = function(e) {
