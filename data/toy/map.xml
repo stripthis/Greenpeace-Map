@@ -1,8 +1,0 @@
-
-<map>
-
-  <layer SWFFile="map_L1.swf" depth="1" name="map_L1.swf"/>
-
-  <layer SWFFile="map_L3.swf" depth="3" name="map_L3.swf"/>
-
-</map>
