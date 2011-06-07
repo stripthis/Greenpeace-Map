@@ -8,7 +8,7 @@ body {
   font-family: helvetica, arial, verdana, sans-serif;
   margin:0;
   padding:0;
-  background-color:#EFEFEF;
+  background-color:#FFF;
 }
 #app-container * {
   padding:0;
@@ -17,7 +17,9 @@ body {
 #app-container ul {
   list-style-type:none;
 }
-
+#app-container a img {
+  border:0;
+} 
 /* universal clearfix hack */
 .clearfix:after {
   visibility: hidden;
@@ -49,10 +51,10 @@ body {
   margin:auto;
   background-color:#FFF;
   width:960px;
-  padding:5px 0 50px 0;
+  padding:0px 0 50px 0;/*
   -moz-box-shadow: 0 -10px 10px #888;
   -webkit-box-shadow: 0 0 10px #888;
-  box-shadow: 0 0 10px #888;
+  box-shadow: 0 0 10px #888;*/
   height: 100%;
 }
 #app-container #title-holder,
