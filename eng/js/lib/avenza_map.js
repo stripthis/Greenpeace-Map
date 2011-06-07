@@ -23,6 +23,7 @@ function AvenzaMap() {
   this.map = null;
   this._layers = null;
   this._places = null;
+  this._zoom = null;
 
   this.mapLoaded = false;
   this.xml = null;
@@ -141,6 +142,7 @@ AvenzaMap.prototype._handleClick = function(e) {
 };
 
 AvenzaMap.prototype._handleZoomChange = function(current) {
+  this._zoom = current;
   this.emit('zoom.change', current);
 };
 
@@ -171,6 +173,9 @@ AvenzaMap.prototype._checkIfLoaded = function() {
   }
 
   this.emit('ready');
+  if (this._zoom) {
+    this._handleZoomChange(this._zoom);
+  }
 };
 
 AvenzaMap.prototype._error = function(err) {
