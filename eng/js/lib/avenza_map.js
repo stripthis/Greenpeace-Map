@@ -40,9 +40,9 @@ AvenzaMap.VIEW_DEFAULTS = {
   zoomWidget: true,
   disableAnimations: true,
   useCentroidForCallouts:true,
-	hoverCalloutBubble:false,
-	clickCalloutBubble:false,
-	useClickCalloutForHover:true,
+  hoverCalloutBubble:false,
+  clickCalloutBubble:false,
+  useClickCalloutForHover:true,
   flashSecuritySandbox: AVENZA.AUTO_SANDBOX
 };
 
