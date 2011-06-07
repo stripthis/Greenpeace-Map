@@ -257,7 +257,7 @@ Greenpeace/Donang Wahyu&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&
     </feature>
   </layer>
 
-  <layer SWFFile="map_L12.swf" depth="12" hiddenBelow="500" name="Deforestation 2009-11 (CS2 ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L12.swf" depth="12" name="Deforestation 2009-11 (CS2 ZOOM)" userToggle="true" visible="false"/>
 
   <layer SWFFile="map_L13.swf" depth="13" name="Targetted 2007" userToggle="true" visible="true"/>
 
@@ -267,33 +267,33 @@ Greenpeace/Donang Wahyu&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&
 
   <layer SWFFile="map_L16.swf" depth="16" name="Uncertain status" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L17.swf" depth="17" hiddenAbove="500" name="Primary (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L17.swf" depth="17" name="Primary (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L18.swf" depth="18" hiddenAbove="500" name="Secondary (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L18.swf" depth="18" name="Secondary (BOB)" userToggle="true" visible="true"/>
 
   <layer SWFFile="map_L19.swf" depth="19" name="Orangutan (BOB)" userToggle="true" visible="false"/>
 
   <layer SWFFile="map_L20.swf" depth="20" name="Tiger (BOB)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L21.swf" depth="21" hiddenAbove="500" name="> 4 metre (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L21.swf" depth="21" name="> 4 metre (BOB)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L22.swf" depth="22" hiddenAbove="500" name="2-4 metre (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L22.swf" depth="22" name="2-4 metre (BOB)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L23.swf" depth="23" hiddenAbove="500" name="0-2 metre (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L23.swf" depth="23" name="0-2 metre (BOB)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L24.swf" depth="24" hiddenBelow="500" name="Primary (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L24.swf" depth="24" name="Primary (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L25.swf" depth="25" hiddenBelow="500" name="Secondary (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L25.swf" depth="25" name="Secondary (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L26.swf" depth="26" hiddenBelow="500" name="Orangutan (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L26.swf" depth="26" name="Orangutan (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L27.swf" depth="27" hiddenBelow="500" name="Tiger (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L27.swf" depth="27" name="Tiger (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L28.swf" depth="28" hiddenBelow="500" name="> 4 metre (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L28.swf" depth="28" name="> 4 metre (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L29.swf" depth="29" hiddenBelow="500" name=" 2-4 metre (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L29.swf" depth="29" name=" 2-4 metre (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L30.swf" depth="30" hiddenBelow="500" name="0-2 metre (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L30.swf" depth="30" name="0-2 metre (ZOOM)" userToggle="true" visible="false"/>
 
   <layer SWFFile="map_L31.swf" depth="31" name="map_L31.swf"/>
 

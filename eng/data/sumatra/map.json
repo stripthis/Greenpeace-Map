@@ -1,4 +1,45 @@
 {
+  "layers": {
+    "Primary (BOB)": {
+      "hidden_above": 500
+    },
+    "Secondary (BOB)": {
+      "hidden_above": 500
+    },
+
+    "> 4 metre (BOB)": {
+      "hidden_above": 500
+    },
+    "2-4 metre (BOB)": {
+      "hidden_above": 500
+    },
+    "0-2 metre (BOB)": {
+      "hidden_above": 500
+    },
+
+    "Primary (ZOOM)": {
+      "hidden_below": 500
+    },
+    "Secondary (ZOOM)": {
+      "hidden_below": 500
+    },
+    "Orangutan (ZOOM)": {
+      "hidden_below": 500
+    },
+    "Tiger (ZOOM)": {
+      "hidden_below": 500
+    },
+
+    "> 4 metre (ZOOM)": {
+      "hidden_below": 500
+    },
+    " 2-4 metre (ZOOM)": {
+      "hidden_below": 500
+    },
+    "0-2 metre (ZOOM)": {
+      "hidden_below": 500
+    }
+  },
   "items": {
     "home": {
       "comment": "Sumatra Overview",
