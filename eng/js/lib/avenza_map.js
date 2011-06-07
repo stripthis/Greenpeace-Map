@@ -141,7 +141,7 @@ AvenzaMap.prototype._handleClick = function(e) {
 };
 
 AvenzaMap.prototype._handleZoomChange = function(current) {
-  this.emit('zoomChange', current);
+  this.emit('zoom.change', current);
 };
 
 AvenzaMap.prototype.getItem = function(id) {

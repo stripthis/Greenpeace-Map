@@ -21,16 +21,21 @@ $(function() {
 
   $('.js_layers')
     .delegate('li.js_layer', 'click', function() {
-      var name = $(this).data('layer');
-      var layer = map.getLayer(name);
+      var $this = $(this);
+      var names = [].concat($this.data('layer'));
+      var active = $this.is('.active');
 
-      layer.toggle();
+      (active)
+        ? $this.removeClass('active')
+        : $this.addClass('active');
 
-      if ($(this).is('.active')) {
-        $(this).removeClass('active');
-      } else {
-        $(this).addClass('active');
-      }
+      names.forEach(function(name) {
+        var layer = map.getLayer(name);
+
+        (active)
+          ? layer.hide()
+          : layer.show();
+      });
     });
 
   $('.js_places')
@@ -50,6 +55,24 @@ $(function() {
 
   var over=false;
   map.on('item.mouseover', function(item) {
+  });
+
+  map.on('zoom.change', function(zoom) {
+    $('.js_layer').each(function() {
+      var $this = $(this);
+      var names = [].concat($this.data('layer'));
+
+      var active = $this.is('.active');
+      if (active) {
+        return;
+      }
+
+      names.forEach(function(name) {
+        var layer = map.getLayer(name);
+        console.log(name);
+        layer.hide();
+      });
+    });
   });
 
   map.on('item.click', function(item) {
