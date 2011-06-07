@@ -3,12 +3,35 @@
   <div id="map-layers" class="nav">
     <ul class="js_layers">
       <li>
-        <h3><a href="#" class="js_toggle close" id="pulp">Pulp Concessions</a></h3>
+        <h3><a href="#" class="js_toggle open" id="pulp">Pulp Concessions</a></h3>
         <ul class="js_toggle_pulp">
-          <li data-layer="Uncertain status" class="concession uncertain active js_layer"><span>Uncertain Status</span></li>
-          <li data-layer="Targetted 2007" class="concession targetted active js_layer"><span>Targetted 2007</span></li>
-          <li data-layer="Acquired by 2006" class="concession acquired active js_layer"><span>Acquired to end 2006</span></li>
-          <li data-layer="Acquired 2007-09" class="concession acquired active js_layer"><span>Acquired between 2007-09</span></li>
+          <li><h4><a href="#" class="js_toggle open" id="smgapp">SMG/APP</a></h4></li>
+          <li class="js_toggle_smgapp">
+            <ul>
+              <li data-layer="Uncertain status" class="concession uncertain active js_layer"><span>Uncertain Status</span></li>
+              <li data-layer="Targetted 2007" class="concession targetted active js_layer"><span>Targetted 2007</span></li>
+              <li data-layer="Acquired by 2006" class="concession acquired active js_layer"><span>Acquired to end 2006</span></li>
+              <li data-layer="Acquired 2007-09" class="concession acquired active js_layer"><span>Acquired between 2007-09</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3><a href="#" class="js_toggle open" id="administrative">Administrative</a></h3>
+        <ul class="js_toggle_administrative">
+          <li data-layer="" class="active js_layer"><span>National Parks</span></li>
+        </ul>
+      </li>
+      <li>
+        <h3><a href="#" class="js_toggle open" id="infrastructure">Infrastructure</a></h3>
+        <ul class="js_toggle_infrastructure">
+          <li><h4><a href="#" class="js_toggle open" id="apprelated">APP related</a></h4></li>
+          <li class="js_toggle_apprelated">
+            <ul>
+              <li data-layer="" class="roads active js_layer"><span>Roads</span></li>
+              <li data-layer="" class="mills active js_layer"><span>Mills</span></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li>
@@ -34,18 +57,21 @@
         </ul>
       </li>
       <li>
-        <h3><a href="#" class="js_toggle open" id="casestudies">Case studies</a></h3></li>
+        <h3><a href="#" class="js_toggle open" id="casestudies">Case Studies</a></h3>
         <ul class="js_toggle_casestudies">
-          <li class="level2">
-            <h4><a href="#" class="js_toggle open" id="kermutan">Kermutan</a></h4>
-            <ul class="js_toggle_kermutan">
-              <li data-layer="Orangutan (BOB)" class="habitat orangutan js_layer"><span>Oran-gutan</span></li>
+          <li><h4><a href="#" class="js_toggle open" id="bukit">Bukit Tigapuluh</a></h4></li>
+          <li class="js_toggle_bukit">
+            <ul>
+              <li data-layer="" class="photographs active js_layer"><span>Photographs</span></li>
+              <li data-layer="" class="tiger sightings active js_layer"><span>Tiger sightings</span></li>
+              <li data-layer="" class="orangutan sightings active js_layer"><span>Orang-utan sightings</span></li>
             </ul>
           </li>
-          <li class="level2">
-            <h4><a href="#" class="js_toggle open" id="bukit">Bukit Tigapuluh</a></h4>
-            <ul class="js_toggle_bukit">
-              <li data-layer="Orangutan (BOB)" class="habitat orangutan js_layer"><span>Oran-gutan</span></li>
+          <li><h4><a href="#" class="js_toggle open" id="kermutan">Kermutan</a></h4></li>
+          <li class="js_toggle_kermutan">
+            <ul>
+              <li data-layer="" class="photographs active js_layer"><span>Photographs</span></li>
+              <li data-layer="" class="deforestation active js_layer"><span>Deforestation 2009-11</span></li>
             </ul>
           </li>
         </ul>

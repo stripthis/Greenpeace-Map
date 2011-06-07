@@ -8,7 +8,7 @@ body {
   font-family: helvetica, arial, verdana, sans-serif;
   margin:0;
   padding:0;
-  background-color:#EFEFEF;
+  background-color:#FFF;
 }
 #app-container * {
   padding:0;
@@ -17,7 +17,9 @@ body {
 #app-container ul {
   list-style-type:none;
 }
-
+#app-container a img {
+  border:0;
+} 
 /* universal clearfix hack */
 .clearfix:after {
   visibility: hidden;
@@ -49,10 +51,10 @@ body {
   margin:auto;
   background-color:#FFF;
   width:960px;
-  padding:5px 0 50px 0;
+  padding:0px 0 50px 0;/*
   -moz-box-shadow: 0 -10px 10px #888;
   -webkit-box-shadow: 0 0 10px #888;
-  box-shadow: 0 0 10px #888;
+  box-shadow: 0 0 10px #888;*/
   height: 100%;
 }
 #app-container #title-holder,
@@ -92,7 +94,7 @@ body {
   width:180px;
   height:55px;
   margin-left:10px;
-}
+}/*
 #app-container #title-holder h1 a{
   display:block;
   width:180px;
@@ -103,6 +105,18 @@ body {
   width:180px;
   height:72px;
   background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/extinction.png) center center no-repeat;
+  margin-left:10px;
+}*/
+#app-container #title-holder h1 a{
+  display:block;
+  width:180px;
+  height:55px;
+  background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/brand_03.png) center 10px no-repeat;
+}
+#app-container #title-holder h2 {
+  width:180px;
+  height:72px;
+  background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/brand_02.png) center center no-repeat;
   margin-left:10px;
 }
 #app-container h1 span,
@@ -201,6 +215,8 @@ body {
   margin-top:10px;
   margin-left:25px;
   padding:0;
+  overflow-x:hidden;
+  overflow-y:scroll;
 }
 #app-container #map-layers li h3 {
   padding:0; margin:0;
@@ -556,7 +572,7 @@ body {
   color:#FFF;
 }
 
-/* bex additions content styling */
+/* misc */
 #app-container .content ul.bodylist {
   padding:5px 25px;
 }
@@ -579,13 +595,22 @@ body {
 }
 #app-container.home #title-holder h2 {
   display:none;
-}
+  }
 #app-container.home  h2 {
   font-style:italic;
+  color:#ff0000;
+  font-size: 36px;
+  letter-spacing:-1px;
+  padding-top: 10px;
+}
+#app-container.home p {
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 20px;
 }
 #app-container.home .video-holder {
   width:920px;
-  margin:20px 20px 15px 20px;
+  margin:20px 20px 20px 20px;
   background:#000;
 }
 #app-container.home .video {
@@ -593,12 +618,13 @@ body {
   margin-left:120px;
 }
 #app-container.home .collumns {
-  width:920px;
+  width:877px;
   margin:0 0 0 20px;
   float:left;
+  padding-left:20px;
 }
 #app-container.home .collumns .collumn{
-  width:296px;
+  width:282px;
   float:left;
   margin:0px;
 }
@@ -613,6 +639,98 @@ body {
   margin:0;
 }
 #app-container.home .collumns .collumn a img{
-  width:296px;
+  width:282px;
   border:0;
+}
+
+/* scrollpanel */
+.jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.jScrollPaneTrack {
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+	height: 100%;
+	background: #222;
+}
+.jScrollPaneDrag {
+	position: absolute;
+	background: #444;
+	cursor: pointer;
+	overflow: hidden;
+}
+.jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+a.jScrollArrowUp {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	text-indent: -2000px;
+	overflow: hidden;
+	/*background-color: #666;*/
+	height: 9px;
+}
+a.jScrollArrowUp:hover {
+	/*background-color: #f60;*/
+}
+
+a.jScrollArrowDown {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	right: 0;
+	text-indent: -2000px;
+	overflow: hidden;
+	/*background-color: #666;*/
+	height: 9px;
+}
+a.jScrollArrowDown:hover {
+	/*background-color: #f60;*/
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
+	/*background-color: #f00;*/
+}
+.holder {
+  float: left;
+}
+.scroll-pane {
+  width: 182px;
+  overflow: auto;
+  float: left;
+}
+#myScroll {
+  height: 167px;
+}
+a.jScrollArrowUp {
+  background: url(../img/basic_arrow_up.gif) no-repeat 0 0;
+}
+a.jScrollArrowUp:hover {
+  background-position: 0 -15px;
+}
+a.jScrollArrowDown {
+  background: url(../img/basic_arrow_down.gif) no-repeat 0 0;
+}
+a.jScrollArrowDown:hover {
+  background-position: 0 -15px;
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
+  background-position: 0 -30px;
 }
