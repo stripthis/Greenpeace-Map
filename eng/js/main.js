@@ -20,8 +20,10 @@ $(function() {
   });
 
   $('.js_layers')
-    .delegate('li', 'click', function() {
-      var layer = map.getLayer($(this).data('layer'));
+    .delegate('li.js_layer', 'click', function() {
+      var name = $(this).data('layer');
+      var layer = map.getLayer(name);
+
       layer.toggle();
 
       if ($(this).is('.active')) {
