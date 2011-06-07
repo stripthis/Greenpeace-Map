@@ -5,6 +5,11 @@ function AvenzaLayer() {
   this.alpha = 100;
   this.name = null;
   this.visible = null;
+
+  this.hidden = true;
+  this.hiddenAbove = null;
+  this.hiddenBelow = null;
+
   this.highlighted = false;
 }
 
@@ -30,6 +35,7 @@ AvenzaLayer.prototype.hide = function() {
 AvenzaLayer.prototype.show = function() {
   this.visible = true;
   this._updateVisibility();
+  this.handleZoomChange(this.map.getZoom());
 };
 
 AvenzaLayer.prototype.toggle = function() {
@@ -42,6 +48,29 @@ AvenzaLayer.prototype.setAlpha = function(alpha) {
   this.map.map.setAlpha(this.name, this.alpha);
 };
 
+AvenzaLayer.prototype.handleZoomChange = function(zoom) {
+  if (!this.hiddenAbove && !this.hiddenBelow) {
+    return;
+  }
+
+  var hide = (
+    (!!this.hiddenAbove && zoom.zoom > this.hiddenAbove)
+    || (!!this.hiddenBelow && zoom.zoom < this.hiddenBelow)
+  );
+
+  if (hide && this.visible) {
+    this.hidden = true;
+    this._setVisibility(false);
+  } else if (!hide && this.visible) {
+    this.hidden = false;
+    this._setVisibility(true);
+  }
+};
+
 AvenzaLayer.prototype._updateVisibility = function() {
-  this.map.map.setVisible(this.name, this.visible);
+  this._setVisibility(this.visible);
+};
+
+AvenzaLayer.prototype._setVisibility = function(visibility) {
+  this.map.map.setVisible(this.name, visibility);
 };
