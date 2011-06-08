@@ -302,8 +302,23 @@ body {
 #app-container #map-layers .concession.uncertain.active span {
   background:#E8626C;
 }
+#app-container #map-layers .deforestation.active span {
+  background:red;
+}
 #app-container #map-layers .photographs.active span {
   background:transparent url(../images/photo_camera.png) 135px 2px no-repeat;
+}
+#app-container #map-layers .photographs.active span {
+  background:transparent url(../images/photo_camera.png) 135px 2px no-repeat;
+}
+#app-container #map-layers .tiger.sightings.active span {
+  background:transparent url(../images/tiger_triangle.png) 135px 2px no-repeat;
+}
+#app-container #map-layers .orangutan.sightings.active span {
+  background:transparent url(../images/orangutan_dot.png) 135px 3px no-repeat;
+}
+#app-container #map-layers .mill.active span {
+  background:transparent url(../images/mill.png) 135px 3px no-repeat;
 }
 #app-container #map-layers .spacer {
   margin-top:15px;

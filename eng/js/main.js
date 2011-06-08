@@ -21,16 +21,21 @@ $(function() {
 
   $('.js_layers')
     .delegate('li.js_layer', 'click', function() {
-      var name = $(this).data('layer');
-      var layer = map.getLayer(name);
+      var $this = $(this);
+      var names = [].concat($this.data('layer'));
+      var active = $this.is('.active');
 
-      layer.toggle();
+      (active)
+        ? $this.removeClass('active')
+        : $this.addClass('active');
 
-      if ($(this).is('.active')) {
-        $(this).removeClass('active');
-      } else {
-        $(this).addClass('active');
-      }
+      names.forEach(function(name) {
+        var layer = map.getLayer(name);
+
+        (active)
+          ? layer.hide()
+          : layer.show();
+      });
     });
 
   $('.js_places')

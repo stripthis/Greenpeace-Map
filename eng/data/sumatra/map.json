@@ -1,4 +1,48 @@
 {
+  "layers": {
+    "Primary (BOB)": {
+      "hidden_above": 500
+    },
+    "Secondary (BOB)": {
+      "hidden_above": 500
+    },
+    "> 4 metre (BOB)": {
+      "hidden_above": 500
+    },
+    "2-4 metre (BOB)": {
+      "hidden_above": 500
+    },
+    "0-2 metre (BOB)": {
+      "hidden_above": 500
+    },
+    "APP Mills (BOB)": {
+      "hidden_above": 500
+    },
+    "APP Mills (ZOOM)": {
+      "hidden_below": 500
+    },
+    "Primary (ZOOM)": {
+      "hidden_below": 500
+    },
+    "Secondary (ZOOM)": {
+      "hidden_below": 500
+    },
+    "Orangutan (ZOOM)": {
+      "hidden_below": 500
+    },
+    "Tiger (ZOOM)": {
+      "hidden_below": 500
+    },
+    "> 4 metre (ZOOM)": {
+      "hidden_below": 500
+    },
+    " 2-4 metre (ZOOM)": {
+      "hidden_below": 500
+    },
+    "0-2 metre (ZOOM)": {
+      "hidden_below": 500
+    }
+  },
   "items": {
     "home": {
       "comment": "Sumatra Overview",
@@ -22,7 +66,7 @@
       "title": "APP's Indah Kiat pulp and paper mill",
       "caption": "Stockpiles of logs at APP's PT Indah Kiat pulp and paper mill in Riau.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/app/APP_IndahKiat.jpg",
-      "credit": "©Beltra/Greenpeace",
+      "credit": "Â©Beltra/Greenpeace",
       "location": "",
       "date": "August 28, 2008",
       "image_width": 133,
@@ -32,7 +76,7 @@
       "title": "APP Lontar Papyrus pulp and paper mill",
       "caption": "Paper reels inside APP's Lontar Papyrus pulp and paper mill in Jambi.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/app/APP_LontarPaprus.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "",
       "date": "",
       "image_width": 230,
@@ -42,7 +86,7 @@
       "title": "Forest clearance",
       "caption": "Active clearance of forested tiger habitat in SMG/APP affiliated PT Artelindo Wiratama.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/B30_Artelindo_Hills.jpg",
-      "credit": "©Beltra/Greenpeace",
+      "credit": "Â©Beltra/Greenpeace",
       "location": "Bukit Tigapuluh Forest Landscape, Riau, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -52,7 +96,7 @@
       "title": "Forest clearance",
       "caption": "Active clearance of forested tiger habitat in SMG/APP affiliated PT Artelindo Wiratama.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/B30_Artelindo_Plane.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Bukit Tigapuluh Forest Landscape, Riau, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -62,7 +106,7 @@
       "title": "SMG/APP logging road",
       "caption": "Logging road in SMG/APP affiliated PT Artelindo Wiratama.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/B30_Artelindo_Forest.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Bukit Tigapuluh Forest Landscape, Riau, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -72,7 +116,7 @@
       "title": "SMG/APP logging road",
       "caption": "Logging road in SMG/APP affiliated supplier PT Rimba Hutani Mas. The road was developed by SMG/APP to transport logs from its concession areas in the Bukit Tigapuluh Forest Landscape to its pulp mills.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/B30_Road.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Bukit Tigapuluh Forest Landscape, Jambi, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -82,7 +126,7 @@
       "title": "Forested tiger habitat",
       "caption": "Forested tiger habitat adjacent to recently cleared areas in SMG/APP affiliated PT Tebo Multiagro.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/B30_TMA_Forest.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Bukit Tigapuluh Forest Landscape, Jambi, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -92,7 +136,7 @@
       "title": "Forest clearance",
       "caption": "Recent clearance of forested tiger in SMG/APP affiliated PT Tebo Multiagro.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/B30_TMA_ForestEdge.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Bukit Tigapuluh Forest Landscape, Jambi, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -102,7 +146,7 @@
       "title": "Young pulpwood plantations",
       "caption": "Young pulpwood plantations in SMG/APP affiliated PT Tebo Multiagro. The plantations have been established in areas that were natural forest in 2006.",
       "image_url": "http://www.greenpeace.org//international/Global/international/photos/forests/2011/app/map/casestudies/B30_TMA_TreeCrops.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -112,9 +156,9 @@
       "title": "Forest clearance",
       "caption": "Active clearance of natural forest on peatland in SMG/APP affiliated PT Mutiara Sabuk Khatulistiwa.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/_MG_6196.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Kerumutan Peat Swamp Forest, Riau, Sumatra",
-      "date": "May 5, 2011",
+      "date": "Mai 5, 2011",
       "image_width": 230,
       "image_height": 148
     },
@@ -122,9 +166,9 @@
       "title": "Cleared and drained peatland",
       "caption": "Cleared and drained peatland in preparation for plantation establishment in SMG/APP affiliated PT Mutiara Sabuk Khatulistiwa.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/_MG_6024.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Kerumutan Peat Swamp Forest, Riau, Sumatra",
-      "date": "May 5, 2011",
+      "date": "Mai 5, 2011",
       "image_width": 230,
       "image_height": 153
     },
@@ -132,9 +176,9 @@
       "title": "Forest clearance",
       "caption": "Active clearance of natural forest on peatland in SMG/APP affiliated PT Mutiara Sabuk Khatulistiwa.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/_MG_6247.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Kerumutan Peat Swamp Forest, Riau, Sumatra",
-      "date": "May 5, 2011",
+      "date": "Mai 5, 2011",
       "image_width": 230,
       "image_height": 153
     },
@@ -142,9 +186,9 @@
       "title": "Forest clearance",
       "caption": "Active clearance of natural forest on peatland in SMG/APP affiliated PT Mutiara Sabuk Khatulistiwa.",
       "image_url": "http://www.greenpeace.org//international/Global/international/photos/forests/2011/app/map/casestudies/_MG_6174.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Kerumutan Peat Swamp Forest, Riau, Sumatra",
-      "date": "May 5, 2011",
+      "date": "Mai 5, 2011",
       "image_width": 230,
       "image_height": 153
     },
@@ -152,7 +196,7 @@
       "title": "Forest clearance",
       "caption": "Active clearance of natural forest on peatland in SMG/APP affiliated PT Bina Duta Laksana.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/FOC_510351.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Kerumutan Peat Swamp Forest, Riau, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -162,7 +206,7 @@
       "title": "Forest clearance",
       "caption": "Active clearance of natural forest on peatland in SMG/APP affiliated PT Bina Duta Laksana.",
       "image_url": "http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/casestudies/FOC_512751.jpg",
-      "credit": "©Greenpeace",
+      "credit": "Â©Greenpeace",
       "location": "Kerumutan Peat Swamp Forest, Riau, Sumatra",
       "date": "August 5, 2010",
       "image_width": 230,
@@ -170,3 +214,4 @@
     }
   }
 }
+

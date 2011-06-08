@@ -23,6 +23,8 @@ function AvenzaMap() {
   this.map = null;
   this._layers = null;
   this._places = null;
+  this._zoom = null;
+  this._ready = false;
 
   this.mapLoaded = false;
   this.xml = null;
@@ -141,7 +143,16 @@ AvenzaMap.prototype._handleClick = function(e) {
 };
 
 AvenzaMap.prototype._handleZoomChange = function(current) {
-  this.emit('zoomChange', current);
+  this._zoom = current;
+  if (!this._ready) {
+    return;
+  }
+
+  this.emit('zoom.change', current);
+
+  this.getLayers().forEach(function(layer) {
+    layer.handleZoomChange(current);
+  });
 };
 
 AvenzaMap.prototype.getItem = function(id) {
@@ -168,6 +179,20 @@ AvenzaMap.prototype._getActiveItem = function() {
 AvenzaMap.prototype._checkIfLoaded = function() {
   if (!this.mapLoaded || !this.xml || !this.json) {
     return;
+  }
+
+  for (var name in this.json.layers) {
+    var jsonLayer = this.json.layers[name]
+    var layer = this.getLayer(name);
+
+    layer.hiddenAbove = jsonLayer.hidden_above;
+    layer.hiddenBelow = jsonLayer.hidden_below;
+  }
+
+  this._ready = true;
+
+  if (this._zoom) {
+    this._handleZoomChange(this._zoom);
   }
 
   this.emit('ready');
@@ -267,4 +292,8 @@ AvenzaMap.prototype.removeCallout = function() {
 
   this.$callout.remove();
   this.$callout = null;
+};
+
+AvenzaMap.prototype.getZoom = function() {
+  return this._zoom;
 };

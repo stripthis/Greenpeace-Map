@@ -16,6 +16,24 @@
           </li>
         </ul>
       </li>
+      <!--li>
+        <h3><a href="#" class="js_toggle open" id="administrative">Administrative</a></h3>
+        <ul class="js_toggle_administrative">
+          <li data-layer="" class="active js_layer"><span>National Parks</span></li>
+        </ul>
+      </li-->
+      <li>
+        <h3><a href="#" class="js_toggle closed" id="infrastructure">Infrastructure</a></h3>
+        <ul class="js_toggle_infrastructure">
+          <li><h4><a href="#" class="js_toggle open" id="apprelated">APP related</a></h4></li>
+          <li class="js_toggle_apprelated">
+            <ul>
+              <li data-layer="APP Mills (BOB)" class="mill active js_layer"><span>Mills</span></li>
+              <li data-layer="Bukit Infrastructure (CS1 ZOOM)" class="road active js_layer"><span>Road</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li>
         <h3><a href="#" class="js_toggle open" id="forest">Forest</a></h3>
         <ul class="js_toggle_forest">
@@ -26,9 +44,9 @@
       <li>
         <h3><a href="#" class="js_toggle open" id="peatland">Peatland</a></h3>
         <ul class="js_toggle_peatland">
-          <li data-layer="0-2 metre (BOB)" class="peatland p02m active js_layer"><span>0-2 metre peat</span></li>
-          <li data-layer="2-4 metre (BOB)" class="peatland p24m active js_layer"><span>2-4 metre peat</span></li>
-          <li data-layer="> 4 metre (BOB)" class="peatland p40m active js_layer"><span> 4 metre peat</span></li>
+          <li data-layer="[&quot;0-2 metre (BOB)&quot;,&quot;0-2 metre (ZOOM)&quot;]" class="peatland p02m js_layer"><span>0-2 metre peat</span></li>
+          <li data-layer="[&quot;2-4 metre (BOB)&quot;,&quot; 2-4 metre (ZOOM)&quot;]" class="peatland p24m js_layer"><span>2-4 metre peat</span></li>
+          <li data-layer="[&quot;> 4 metre (BOB)&quot;,&quot;> 4 metre (ZOOM)&quot;]" class="peatland p40m js_layer"><span> 4 metre peat</span></li>
         </ul>
       </li>
       <li>
@@ -45,12 +63,16 @@
           <li class="js_toggle_bukit">
             <ul>
               <li data-layer="Photographs (CS1 ZOOM)" class="photographs active js_layer"><span>Photographs</span></li>
+              <li data-layer="Tiger (CS1 ZOOM)" class="tiger sightings active js_layer"><span>Tiger sightings</span></li>
+              <li data-layer="Orangutan (CS1 ZOOM)" class="orangutan sightings active js_layer"><span>Orang-utan sightings</span></li>
+              <!--li data-layer="Wildlife ranges (CS1 ZOOM)" class="orangutan sightings active js_layer"><span>Wildlife Ranges</span></li-->
             </ul>
           </li>
-          <li><h4><a href="#" class="js_toggle open" id="kerumutan">Kerumutan</a></h4></li>
-          <li class="js_toggle_kerumutan">
+          <li><h4><a href="#" class="js_toggle open" id="kermutan">Kermutan</a></h4></li>
+          <li class="js_toggle_kermutan">
             <ul>
               <li data-layer="Photographs (CS2 ZOOM)" class="photographs active js_layer"><span>Photographs</span></li>
+              <li data-layer="Deforestation 2009-11 (CS2 ZOOM)" class="deforestation js_layer"><span>Deforestation 2009-11</span></li>
             </ul>
           </li>
         </ul>
@@ -69,3 +91,4 @@
     </div></div>
   </div>
 </div>
+
