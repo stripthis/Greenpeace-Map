@@ -1,0 +1,64 @@
+<head>
+  <title>Sinar Mas Under Investigation - How APP is toying with extinction | Greenpeace International</title>
+  <!--
+           __   _  __   __     __    ___   _____      __     __       __     __
+         /'_ `\/\`'__\/'__`\ /'__`\/' _ `\/\  __`\  /'__`\ /'__`\   /'__`\ /'__`\
+        /\ \_\ \ \ \//\  __//\  __//\ \/\ \ \ \_\ \/\  __//\ \_\.\_/\ \__//\  __/
+        \ \____ \ \_\\ \____\ \____\ \_\ \_\ \  __/\ \____\ \__/.\_\ \____\ \____\
+         \/___L\ \/_/ \/____/\/____/\/_/\/_/\ \ \/  \/____/\/__/\/_/\/____/\/____/
+           /\____/                           \ \_\                                     _♥)
+           \_/__/                             \/_/   peace & love!                    _(\)
+
+  -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="copyright 2011 - Greenpeace International" />
+  <meta name="description" content="Greenpeace exists because this fragile Earth deserves a voice. It needs solutions. It needs change. It needs action! " />
+  <meta name="keywords" content="greenpeace, forest, sinar mas, app, indonesia, sumatra, deforestation" />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <link href="img/favicon.ico" type="image/x-icon" rel="icon"/>
+  <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+  <link rel="stylesheet" type="text/css" href="css/map.css" media="screen" />
+
+  <!-- deps -->
+  <script type="text/javascript" src="js/dep/jquery.js"></script>
+  <script type="text/javascript" src="js/dep/swfobject.js"></script>
+  <script type="text/javascript" src="js/dep/avenza.js"></script>
+  <script type="text/javascript" src="js/dep/event_emitter.js"></script>
+  <script type="text/javascript" src="js/dep/jquery.tmpl.js"></script>
+  <script type="text/javascript" src="js/dep/es5-shim.js"></script>
+
+  <!-- lib -->
+  <script type="text/javascript" src="js/lib/avenza_map.js"></script>
+  <script type="text/javascript" src="js/lib/avenza_layer.js"></script>
+  <script type="text/javascript" src="js/lib/avenza_item.js"></script>
+
+  <!-- main -->
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <!-- templates -->
+  <script id="layer_template" type="text/x-jquery-tmpl">
+    {{if visible }}
+    <li data-name="${ name }" class="${ visible ? 'active' : '' } js_layer"><span>${name}</span></li>
+    {{/if}}
+  </script>
+
+  <script id="callout_template" class="popup" type="text/x-jquery-tmpl">
+      <div class="callout js_callout">
+        <div class="callout-content">
+        <h2>${ title }</h2>
+        <img
+          class="${ (image_height > image_width) ? 'portrait' : 'landscape' }"
+          alt="${ title }"
+          width="${ image_width }"
+          height="${ image_height }"
+          src="${ image_url }"
+        >
+        <span class="date">${ date }</span>
+        <p class="caption">${ caption }</p>
+        <p class="copyright">${ credit }</p>
+        </div>
+        <span class="arrow"></span>
+      </div>
+  </script>
+</head>

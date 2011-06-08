@@ -7,7 +7,7 @@
 body {
   font-family: helvetica, arial, verdana, sans-serif;
   margin:0;
-  padding:0;
+  padding:5px 0 0 0;
   background-color:#FFF;
 }
 #app-container * {
@@ -67,6 +67,7 @@ body {
   width:750px;
 }
 #app-container .nojs {
+  position:absolute;
   width:350px;
   background:#FFF;
   margin:auto;
@@ -74,8 +75,10 @@ body {
   border-radius:5px;
   -moz-border-radius:5px;
   margin-top:150px;
+  margin-left:290px;
   background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/opacity75.png) 0 0 repeat; /*todo ie6 */
 }
+
 #app-container .map {
   text-align:center;
 }
@@ -135,7 +138,7 @@ body {
   font-weight:bold;
   text-decoration:none;
   font-size:16px;
-  font-size:18px;
+  font-size:17px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   font-style:italic;
@@ -164,31 +167,31 @@ body {
   color:#FFF;
 }
 #app-container .main.nav{
-  padding-top:10px;
+  padding-top:11px;
 }
 
 #app-container .main.nav .level2 {
   clear:both;
 }
 #app-container .main.nav .level2 li a{
-  height:65px;
+  height:58px;
   vertical-align:middle;
-  margin-top:8px;
+  margin-top:9px;
 }
 #app-container .main.nav .level2 li a span{
   float:left;
   width:110px;
   text-align:center;
-  padding-top:20px;
+  padding-top:16px;
 }
 #app-container .main.nav .level2 li a span.long{
-  padding-top:7px;
+  padding-top:5px;
 }
 
 /* main content map */
 #app-container .map-holder {
   border:1px solid #000;
-  margin:10px 15px 15px 15px;
+  margin:5px 15px 15px 15px;
 }
 #app-container .map-holder2 {
   border:1px solid #AAA;
@@ -215,8 +218,7 @@ body {
   margin-top:10px;
   margin-left:25px;
   padding:0;
-  overflow-x:hidden;
-  overflow-y:scroll;
+  overflow: auto;
 }
 #app-container #map-layers li h3 {
   padding:0; margin:0;
@@ -299,6 +301,9 @@ body {
 }
 #app-container #map-layers .concession.uncertain.active span {
   background:#E8626C;
+}
+#app-container #map-layers .photographs.active span {
+  background:transparent url(../images/photo_camera.png) 135px 2px no-repeat;
 }
 #app-container #map-layers .spacer {
   margin-top:15px;
@@ -406,8 +411,13 @@ body {
 #app-container .content.quick.facts a.button.pdf span{
   background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/pdf.png) 8px center no-repeat;
 }
+#app-container .content.quick.facts a.button.print  {
+  padding:7px 15px 7px 5px;
+  height:25px;
+}
 #app-container .content.quick.facts a.button.print span {
-  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/print.png) 8px center no-repeat;
+  padding-top:7px;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/print.png) 8px 5px no-repeat;
 }
 #app-container .content.quick.facts a.button span{
   padding:0px 0px 0px 20px;
@@ -643,94 +653,3 @@ body {
   border:0;
 }
 
-/* scrollpanel */
-.jScrollPaneContainer {
-	position: relative;
-	overflow: hidden;
-	z-index: 1;
-}
-
-.jScrollPaneTrack {
-	position: absolute;
-	cursor: pointer;
-	right: 0;
-	top: 0;
-	height: 100%;
-	background: #222;
-}
-.jScrollPaneDrag {
-	position: absolute;
-	background: #444;
-	cursor: pointer;
-	overflow: hidden;
-}
-.jScrollPaneDragTop {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-}
-.jScrollPaneDragBottom {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-}
-a.jScrollArrowUp {
-	display: block;
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	right: 0;
-	text-indent: -2000px;
-	overflow: hidden;
-	/*background-color: #666;*/
-	height: 9px;
-}
-a.jScrollArrowUp:hover {
-	/*background-color: #f60;*/
-}
-
-a.jScrollArrowDown {
-	display: block;
-	position: absolute;
-	z-index: 1;
-	bottom: 0;
-	right: 0;
-	text-indent: -2000px;
-	overflow: hidden;
-	/*background-color: #666;*/
-	height: 9px;
-}
-a.jScrollArrowDown:hover {
-	/*background-color: #f60;*/
-}
-a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
-	/*background-color: #f00;*/
-}
-.holder {
-  float: left;
-}
-.scroll-pane {
-  width: 182px;
-  overflow: auto;
-  float: left;
-}
-#myScroll {
-  height: 167px;
-}
-a.jScrollArrowUp {
-  background: url(../img/basic_arrow_up.gif) no-repeat 0 0;
-}
-a.jScrollArrowUp:hover {
-  background-position: 0 -15px;
-}
-a.jScrollArrowDown {
-  background: url(../img/basic_arrow_down.gif) no-repeat 0 0;
-}
-a.jScrollArrowDown:hover {
-  background-position: 0 -15px;
-}
-a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
-  background-position: 0 -30px;
-}

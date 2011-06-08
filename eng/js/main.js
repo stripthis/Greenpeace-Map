@@ -103,6 +103,9 @@ $(function() {
 
   activatePage($('.page-nav a.first').attr('id'));
 
+  /*  scroolbar for navigation */
+  $('.js_scroll').jScrollPane();
+
   /* navigation toogle */
   // a.toggle#<id> triggers closing/opening of .toggle_<id> (easy hey?)
   $('a.js_toggle').click(function() {
@@ -118,4 +121,9 @@ $(function() {
     //$('#right_sidebar a.save-widgets').text(saveWidgetsText); // save the choice
     return false;
   });
+  $("a.js_toggle.closed").each(function() {
+    $(".js_toggle_"+$(this).attr("id")).hide();
+  });
+
+
 });

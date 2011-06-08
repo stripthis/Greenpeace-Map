@@ -1,0 +1,630 @@
+/**********************************************************
+ * Map.css - Sinar Mas under investigation
+ * @updated 2011-05-31
+ * @author Greenpeace team rocket!
+ **********************************************************/
+/* quick reset */
+body {
+  font-family: helvetica, arial, verdana, sans-serif;
+  margin:0;
+  padding:0;
+  background-color:#FFF;
+}
+#app-container * {
+  padding:0;
+  margin:0;
+}
+#app-container ul {
+  list-style-type:none;
+}
+#app-container a img {
+  border:0;
+} 
+/* universal clearfix hack */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block;}
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%;}
+.clearfix { display: block;}
+/* close commented backslash hack */
+
+/* links */
+#app-container a {
+  color:#1d65bc;
+  font-weight:bold;
+  text-decoration:none;
+}
+#app-container a:hover {
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+/* layout */
+#app-container {
+  margin:auto;
+  background-color:#FFF;
+  width:960px;
+  padding:0px 0 50px 0;/*
+  -moz-box-shadow: 0 -10px 10px #888;
+  -webkit-box-shadow: 0 0 10px #888;
+  box-shadow: 0 0 10px #888;*/
+  height: 100%;
+}
+#app-container #title-holder,
+#app-container #main-nav-holder {
+  float:left;
+  width:185px;
+  height:50px;
+}
+#app-container #main-nav-holder {
+  width:750px;
+}
+#app-container .nojs {
+  width:350px;
+  background:#FFF;
+  margin:auto;
+  padding:30px;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  margin-top:150px;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/opacity75.png) 0 0 repeat; /*todo ie6 */
+}
+#app-container .map {
+  text-align:center;
+}
+#app-container .map img{
+  text-align:center;
+  padding:3px;
+  border:1px solid #000;
+  width:920px;
+}
+/* top */
+#app-container #app-header {
+  padding:0 10px;  
+  height:140px;
+}
+#app-container #title-holder h1{
+  width:180px;
+  height:55px;
+  margin-left:10px;
+}
+#app-container #title-holder h1 a{
+  display:block;
+  width:180px;
+  height:55px;
+  background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/sinarmas.png) center 10px no-repeat;
+}
+#app-container #title-holder h2 {
+  width:180px;
+  height:72px;
+  background: transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/extinction.png) center center no-repeat;
+  margin-left:10px;
+}
+#app-container h1 span,
+#app-container h2 span{
+  display:none;
+}
+/* nav */
+#app-container .nav ul li,
+#app-container .nav ul {
+  float:left;
+}
+#app-container .main.nav ul li a{
+  float:left;
+  padding:6px 10px;
+  margin:0 0 0 10px;
+  font-weight:bold;
+  text-decoration:none;
+  font-size:16px;
+  font-size:18px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-style:italic;
+  width:110px;
+  text-align: center;
+}
+#app-container a.button,
+#app-container .main.nav ul li a{
+  color:#000;
+  background:#e9e6d7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9e6d7), to(#b8b5a9));
+  background: -moz-linear-gradient(top,#e9e6d7,#b8b5a9);
+  text-decoration:none;
+}
+#app-container .main.nav ul li a.active,
+#app-container .main.nav ul li a:hover{
+  background:#ed343a;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ed343a), to(#bd1e24));
+  background: -moz-linear-gradient(top,#ed343a,#bd1e24);
+  color:#FFF;
+}
+#app-container .main.nav ul li a:active{
+  background:#ed343a;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bd1e24), to(#ed343a));
+  background: -moz-linear-gradient(top,#bd1e24,#ed343a);
+  color:#FFF;
+}
+#app-container .main.nav{
+  padding-top:10px;
+}
+
+#app-container .main.nav .level2 {
+  clear:both;
+}
+#app-container .main.nav .level2 li a{
+  height:65px;
+  vertical-align:middle;
+  margin-top:8px;
+}
+#app-container .main.nav .level2 li a span{
+  float:left;
+  width:110px;
+  text-align:center;
+  padding-top:20px;
+}
+#app-container .main.nav .level2 li a span.long{
+  padding-top:7px;
+}
+
+/* main content map */
+#app-container .map-holder {
+  border:1px solid #000;
+  margin:10px 15px 15px 15px;
+}
+#app-container .map-holder2 {
+  border:1px solid #AAA;
+  margin:3px;
+  height:455px;
+}
+#map {
+  margin:0;
+  width:920px;
+  height:455px;
+}
+#map.sumatra {
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/sumatra-map.png) 0 0 no-repeat;
+}
+#map.toy {
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/toy-map.png) 0 0 no-repeat;
+}
+#map-layers {
+  margin-left:3px;
+  position:absolute;
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/opacity50.png) 0 0 repeat; /*todo ie6 */
+  height:445px;
+  width:180px;
+  margin-top:10px;
+  margin-left:25px;
+  padding:0;
+}
+#app-container #map-layers li h3 {
+  padding:0; margin:0;
+}
+#app-container #map-layers li {
+  margin:3px 3px 0px 3px;
+  width:154px;
+}
+#app-container #map-layers li li {
+  margin:1px 0 0 0;
+}
+#app-container #map-layers li h3 a,
+#app-container #map-layers li h3 a.open,
+#app-container #map-layers li h4 a,
+#app-container #map-layers li h4 a.open{
+  font-size:11px;
+  color:#FFF;
+  padding:1px 2px 1px 18px;
+  display:block;
+  width:154px;
+  background:#000 url(../images/toggle1.png) 4px 4px no-repeat;
+}
+#app-container #map-layers li h3 a.closed{
+  background:#000 url(../images/toggle0.png) 5px 4px no-repeat;
+}
+#app-container #map-layers li h4 a,
+#app-container #map-layers li h4 a.open{
+  color:#000;
+  background:transparent url(../images/toggle2.png) 4px 4px no-repeat;
+}
+#app-container #map-layers li h4 a.closed{
+  background:transparent url(../images/toggle3.png) 5px 4px no-repeat;
+}
+#app-container #map-layers li h3 a:hover {
+  text-decoration:none;
+}
+#app-container #map-layers li span{
+  font-size:11px;
+  display:block;
+  cursor:pointer;
+  width:155px;
+  color:#000;
+  font-weight:bold;
+  padding:2px 2px 2px 17px;
+}
+#app-container #map-layers li.level2{
+  border:1px solid #000;
+  width:172px;
+}
+#app-container #map-layers li.level2 li span{
+  width:153px;
+}
+/* opac50 #f5f9f8, opac75 #f5f9f8 */
+#app-container #map-layers .forest.primary.active span {
+  background:#8BCB8B;
+}
+#app-container #map-layers .forest.secondary.active span {
+  background:#85BA85;
+}
+#app-container #map-layers .peatland.p02m.active span {
+  background:#CFAB7A;
+}
+#app-container #map-layers .peatland.p24m.active span {
+  background:#B29062;
+}
+#app-container #map-layers .peatland.p40m.active span {
+  background:#7C735E;
+}
+#app-container #map-layers .habitat.tiger.active span {
+  background:#E2A688;
+}
+#app-container #map-layers .habitat.orangutan.active span {
+  background:#EDD77A;
+}
+#app-container #map-layers .concession.targetted.active span {
+  background:#EA6CAE;
+}
+#app-container #map-layers .concession.acquired.active span {
+  background:#E03845;
+}
+#app-container #map-layers .concession.uncertain.active span {
+  background:#E8626C;
+}
+#app-container #map-layers .spacer {
+  margin-top:15px;
+  border-bottom:2px solid #CCC;
+}
+#app-container #map-layers .spacer span {
+  display:none;
+}
+
+/* callout */
+#app-container .callout {
+  position:absolute;
+  margin-top:-245px;
+  width:250px;
+  margin-left:25px;
+}
+#app-container .callout-content {
+  position:absolute;
+  background:#FFF;
+  border:1px solid #AAA;
+  padding:10px;
+}
+#app-container .callout .arrow {
+  background:transparent url(../images/arrow_bubble.png) 0 bottom no-repeat;
+  width:50px;
+  height:70px;
+  z-index:99;
+  position:absolute;
+  margin-bottom:0;
+  margin-left:-24px;
+  margin-top:200px;
+}
+#app-container .callout h2{
+  font-size: 16px;
+}
+#app-container .callout .date{
+  font-size: 10px;
+  font-weight: bold;
+  padding:10px 0;
+}
+#app-container .callout .copyright,
+#app-container .callout .caption{
+  font-size: 10px;
+}
+#app-container .callout img {
+  padding:10px 0;
+}
+#app-container .callout img.landscape{
+  display: block;
+}
+#app-container .callout img.portrait{
+  float: right;
+  padding-left:10px;
+}
+
+/* content quickfacts */ 
+#app-container .content.quick.facts {
+  padding:0px 0 20px 30px;
+}
+#app-container .content.quick.facts h2,
+#app-container .content.quick.facts h2 span,
+#app-container .content.quick.facts p{
+  padding-left:0;
+  display:block;
+}
+#app-container .content.quick.facts p{
+  padding-left:0;
+}
+#app-container .content.quick.facts li {
+  width:650px;
+}
+#app-container .content.quick.facts .col1{
+  width:650px;
+  float:left;
+}
+#app-container .content.quick.facts .col2 {
+  width:180px;
+  float:left;
+  margin-left:60px;
+}
+#app-container .content.quick.facts ul {
+  width:550px;
+  float:left;
+}
+#app-container .content.quick.facts a.button{
+  width:125px;
+  float:left;
+  padding:5px 15px 5px 5px;
+  margin:0 0 10px 0; 
+  clear:right;
+  text-align:center;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height:25px;
+  font-size:12px;
+  height:auto;
+  line-height:13px;
+  text-style:italic;
+}
+#app-container .content.quick.facts a.button.print {
+  margin-top:0px;
+}
+#app-container .content.quick.facts a.button.pdf {
+}
+#app-container .content.quick.facts a.button.pdf span{
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/pdf.png) 8px center no-repeat;
+}
+#app-container .content.quick.facts a.button.print span {
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/print.png) 8px center no-repeat;
+}
+#app-container .content.quick.facts a.button span{
+  padding:0px 0px 0px 20px;
+  display:block;
+}
+#app-container .content.quick.facts a.button:active {
+  color:#000;
+  background:#e9e6d7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b8b5a9), to(#e9e6d7));
+  background: -moz-linear-gradient(top,#b8b5a9,#e9e6d7);
+  text-decoration:none;
+}
+/* navigation tabs */
+#app-container .nav .tabs {
+  border-bottom:1px solid #CCC;
+  width:900px;
+  margin:10px 16px;
+  padding:8px 10px 7px 10px;
+}
+#app-container .nav .tabs a {
+  border:1px solid #CCC;
+  background:#eae6d6;
+  color:#000;
+  font-size:14px;
+  padding:8px 20px 7px 20px;
+  border-radius:3px 3px 0 0;
+  -moz-border-radius:3px 3px 0 0;
+}
+#app-container .nav .tabs a.active {
+  background:#FFF;
+  border-bottom:1px solid #FFF;
+}
+
+/* content general */
+#app-container .content h2,
+#app-container .content h3,
+#app-container .content h4,
+#app-container .content h5 {
+  font-size:22px;
+  margin-top:5px;
+  padding:10px 25px 5px 25px;
+  clear:both;
+  font-style:italic;
+}
+#app-container .content h4 {
+  font-size:18px;
+}
+#app-container .content h5 {
+  font-size:16px;
+}
+#app-container .content,
+#app-container .slides {
+  font-size:13px;
+}
+#app-container .content p {
+  padding:5px 25px;
+}
+#app-container .content ul li {
+  background:transparent url(http://www.greenpeace.org/international/Global/international/photos/forests/2011/app/map/images/arrow0.png) left 6px no-repeat;
+  padding:2px 5px 0 15px;
+}
+#app-container .content ul.footnotes {
+  font-size:10px;
+  padding:5px 25px;
+}
+#app-container .content .nav ul li,
+#app-container .content ul.footnotes li {
+  background:0;
+  padding-left:0;
+}
+
+/* image frames */
+#app-container .content .image {
+  font-size:10px;
+  background:#F1F1F1;
+  padding:10px;
+}
+#app-container .content .image.left {
+  float:left;
+  margin:10px 25px 10px 25px;
+}
+#app-container .content .image.right {
+  float:right;
+  margin:10px 25px 10px 25px;
+}
+#app-container .content .image .copyright {
+  color:#333;
+  clear:both;
+  display:block;
+}
+#app-container .content .image .caption {
+  font-size:12px;
+  color:#333;
+  clear:both;
+  padding-top:5px;
+  display:block;
+}
+
+/* slideshow */
+#app-container .slide-content {
+  width:740px;
+  float:left;
+  clear:left;
+}
+#app-container .slide-sidebar {
+  width:215px;
+  float:left;
+  margin-top:52px;
+}
+#app-container .content .slide-sidebar h5{
+  padding-left:0;
+}
+/*flickr */
+#flickr-holder {
+  margin: auto;
+  width:920px;
+  background:#000;
+  padding:10px 0;
+}
+#flickr-slideshow {
+  width:740px;
+  margin:auto;
+}
+#flickr-text {
+  padding: 0;
+  width: 180px;
+  width:940px;
+  color:#FFF;
+}
+#flickr-text p {
+  font-size:14px;
+  font-weight:bold;
+  padding:5px;
+  width:700px;
+  margin:auto;
+}
+
+/* tables */
+#chart {
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border: 1px solid #333;
+  color:#111;
+  font-size:12px;
+ }
+#chart .rowa  {
+  background: #AAA;
+  height: 10px;
+}
+#chart .rowb {
+  background: #CCC;
+  height: 10px;
+}
+#chart .cell {
+  padding: 3px;
+  border: none;
+}
+#chart .rowc {
+  background: #111;
+  height: 10px;
+  color:#FFF;
+}
+
+/* misc */
+#app-container .content ul.bodylist {
+  padding:5px 25px;
+}
+#app-container .content ol li {
+  padding:2px 5px 0 5px;
+  margin-left:45px;
+}
+#app-container .quickfacts {
+  color:#ED343A;
+  font-weight:bold;
+}
+#app-container .content .footnotes {
+  font-size:10px;
+  font-weight:normal;
+}
+
+/* home page */
+#app-container.home #app-header {
+  height:45px;
+}
+#app-container.home #title-holder h2 {
+  display:none;
+  }
+#app-container.home  h2 {
+  font-style:italic;
+  color:#ff0000;
+  font-size: 30px;
+  letter-spacing:-1px;
+  padding-top: 10px;
+}
+#app-container.home p {
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 20px;
+}
+#app-container.home .video-holder {
+  width:920px;
+  margin:20px 20px 20px 20px;
+  background:#000;
+}
+#app-container.home .video {
+  padding:20px;
+  margin-left:120px;
+}
+#app-container.home .collumns {
+  width:877px;
+  margin:0 0 0 20px;
+  float:left;
+  padding-left:20px;
+}
+#app-container.home .collumns .collumn{
+  width:282px;
+  float:left;
+  margin:0px;
+}
+#app-container.home .collumns .collumn.col1{
+  margin-right:15px;
+}
+#app-container.home .collumns .collumn.col2{
+  margin-left:0px;
+  margin-right:15px;
+}
+#app-container.home .collumns .collumn.col3{
+  margin:0;
+}
+#app-container.home .collumns .collumn a img{
+  width:282px;
+  border:0;
+}

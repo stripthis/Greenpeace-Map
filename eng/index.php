@@ -55,7 +55,7 @@
 <?php break; ?>
 <?php case('risk'): ?>
       <ul class="level2 page-nav">
-        <li><a href="#plannedloss" class="first" id="plannedloss"><span class="long">Planned loss</span></a></li>
+        <li><a href="#plannedloss" class="first" id="plannedloss"><span>Planned loss</span></a></li>
       </ul>
 <?php break; ?>
 <?php endswitch; ?>
