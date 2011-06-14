@@ -19,6 +19,10 @@ $(function() {
     view: mapConfig[$('#map').attr('class')]
   });
 
+  map.on('error', function(err) {
+    console.log(err.message);
+  });
+
   $('.js_layers')
     .delegate('li.js_layer', 'click', function() {
       var $this = $(this);
