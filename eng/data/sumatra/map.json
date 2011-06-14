@@ -18,6 +18,9 @@
     "APP Mills (BOB)": {
       "hidden_above": 500
     },
+    "APP Mills (ZOOM)": {
+      "hidden_below": 500
+    },
     "Primary (ZOOM)": {
       "hidden_below": 500
     },
