@@ -185,6 +185,11 @@ AvenzaMap.prototype._checkIfLoaded = function() {
     var jsonLayer = this.json.layers[name]
     var layer = this.getLayer(name);
 
+    if (!layer) {
+      this._error(new Error('_checkIfLoaded: layer not found: ' + name));
+      continue;
+    }
+
     layer.hiddenAbove = jsonLayer.hidden_above;
     layer.hiddenBelow = jsonLayer.hidden_below;
   }
