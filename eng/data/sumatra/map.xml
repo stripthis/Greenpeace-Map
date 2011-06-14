@@ -280,9 +280,9 @@ Greenpeace/Donang Wahyu&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&
 
   <layer SWFFile="map_L23.swf" depth="23" name="0-2 metre (BOB)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L24.swf" depth="24" name="Primary (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L24.swf" depth="24" name="Primary (ZOOM)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L25.swf" depth="25" name="Secondary (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L25.swf" depth="25" name="Secondary (ZOOM)" userToggle="true" visible="true"/>
 
   <layer SWFFile="map_L26.swf" depth="26" name="Orangutan (ZOOM)" userToggle="true" visible="false"/>
 
