@@ -24,7 +24,7 @@ $(function() {
   });
 
   $('.js_layers')
-    .delegate('li.js_layer', 'click', function() {
+    .delegate('.js_layer', 'click', function() {
       var $this = $(this);
       var names = [].concat($this.data('layer'));
       var active = $this.is('.active');
@@ -37,8 +37,8 @@ $(function() {
         var layer = map.getLayer(name);
 
         (active)
-          ? layer.hide()
-          : layer.show();
+          ? layer.deactivate()
+          : layer.activate();
       });
     });
 
@@ -72,11 +72,21 @@ $(function() {
     activatePage($place.attr('id'));
   });
 
-  // Enable to auto-zoom to a picture area
-  //map.on('ready', function() {
-    //var study = map.getItem('04e57760-8d42-11e0-91e4-0');
-    //study.panAndZoomTo();
-  //});
+  map.on('ready', function() {
+    $('.js_layers .js_layer').each(function() {
+      var $this = $(this);
+      var active = $this.is('.active');
+      var names = [].concat($this.data('layer'));
+
+      names.forEach(function(name) {
+        var layer = map.getLayer(name);
+
+        (active)
+          ? layer.activate()
+          : layer.deactivate();
+      });
+    });
+  });
 
   /* pages and tabs navigation */
   function activatePage(pageId) {

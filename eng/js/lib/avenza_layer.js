@@ -4,9 +4,9 @@ function AvenzaLayer() {
 
   this.alpha = 100;
   this.name = null;
-  this.visible = null;
+  this.activated = null;
 
-  this.hidden = true;
+  this.hidden = false;
   this.hiddenAbove = null;
   this.hiddenBelow = null;
 
@@ -24,22 +24,21 @@ AvenzaLayer.create = function(options) {
 
 AvenzaLayer.prototype._initialize = function() {
   this.name = $(this.xmlElement).attr('name');
-  this.visible = $(this.xmlElement).attr('visible') === 'true';
+  this.activated = $(this.xmlElement).attr('visible') === 'true';
 };
 
-AvenzaLayer.prototype.hide = function() {
-  this.visible = false;
+AvenzaLayer.prototype.activate = function() {
+  this.activated = true;
   this._updateVisibility();
 };
 
-AvenzaLayer.prototype.show = function() {
-  this.visible = true;
+AvenzaLayer.prototype.deactivate = function() {
+  this.activated = false;
   this._updateVisibility();
-  this.handleZoomChange(this.map.getZoom());
 };
 
 AvenzaLayer.prototype.toggle = function() {
-  this.visible = !this.visible;
+  this.activated = !this.activated;
   this._updateVisibility();
 };
 
@@ -53,22 +52,16 @@ AvenzaLayer.prototype.handleZoomChange = function(zoom) {
     return;
   }
 
-  var hide = (
+  this.hidden = (
     (!!this.hiddenAbove && zoom.zoom > this.hiddenAbove)
     || (!!this.hiddenBelow && zoom.zoom < this.hiddenBelow)
   );
 
-  if (hide && this.visible) {
-    this.hidden = true;
-    this._setVisibility(false);
-  } else if (!hide && this.visible) {
-    this.hidden = false;
-    this._setVisibility(true);
-  }
+  this._updateVisibility();
 };
 
 AvenzaLayer.prototype._updateVisibility = function() {
-  this._setVisibility(this.visible);
+  this._setVisibility(this.activated && !this.hidden);
 };
 
 AvenzaLayer.prototype._setVisibility = function(visibility) {
