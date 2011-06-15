@@ -28,7 +28,7 @@
           <li><h4><a href="#" class="js_toggle open" id="apprelated">APP related</a></h4></li>
           <li class="js_toggle_apprelated">
             <ul>
-              <li data-layer="[&quot;APP Mills (BOB)&quot;,&quot;APP mills (ZOOM)&quot;]" class="mill active js_layer"><span>Mills</span></li>
+              <li data-layer="<?php echo htmlentities(json_encode(array('APP Mills (BOB)', 'APP mills (ZOOM)'))); ?>" class="mill active js_layer"><span>Mills</span></li>
               <li data-layer="Bukit Infrastructure (CS1 ZOOM)" class="road active js_layer"><span>Road</span></li>
             </ul>
           </li>
@@ -37,16 +37,16 @@
       <li>
         <h3><a href="#" class="js_toggle open" id="forest">Forest</a></h3>
         <ul class="js_toggle_forest">
-          <li data-layer="[&quot;Primary (BOB)&quot;,&quot;Primary (ZOOM)&quot;]" class="forest primary active js_layer"><span>Primary</span></li>
-          <li data-layer="[&quot;Secondary (BOB)&quot;,&quot;Secondary (ZOOM)&quot;]" class="forest secondary active js_layer"><span>Secondary</span></li>
+          <li data-layer="<?php echo htmlentities(json_encode(array('Primary (BOB)', 'Primary (ZOOM)'))); ?>" class="forest primary active js_layer"><span>Primary</span></li>
+          <li data-layer="<?php echo htmlentities(json_encode(array('Secondary (BOB)', 'Secondary (ZOOM)'))); ?>" class="forest secondary active js_layer"><span>Secondary</span></li>
         </ul>
       </li>
       <li>
         <h3><a href="#" class="js_toggle open" id="peatland">Peatland</a></h3>
         <ul class="js_toggle_peatland">
-          <li data-layer="[&quot;0-2 metre (BOB)&quot;,&quot;0-2 metre (ZOOM)&quot;]" class="peatland active p02m js_layer"><span>0-2 metre peat</span></li>
-          <li data-layer="[&quot;2-4 metre (BOB)&quot;,&quot; 2-4 metre (ZOOM)&quot;]" class="peatland active p24m js_layer"><span>2-4 metre peat</span></li>
-          <li data-layer="[&quot;> 4 metre (BOB)&quot;,&quot;> 4 metre (ZOOM)&quot;]" class="peatland active p40m js_layer"><span> 4 metre peat</span></li>
+          <li data-layer="<?php echo htmlentities(json_encode(array('0-2 metre (BOB)', '0-2 metre (ZOOM)'))); ?>" class="peatland active p02m js_layer"><span>0-2 metre peat</span></li>
+          <li data-layer="<?php echo htmlentities(json_encode(array('2-4 metre (BOB)', ' 2-4 metre (ZOOM)'))); ?>" class="peatland active p24m js_layer"><span>2-4 metre peat</span></li>
+          <li data-layer="<?php echo htmlentities(json_encode(array('> 4 metre (BOB)', '> 4 metre (ZOOM)'))); ?>" class="peatland active p40m js_layer"><span> 4 metre peat</span></li>
         </ul>
       </li>
       <li>
