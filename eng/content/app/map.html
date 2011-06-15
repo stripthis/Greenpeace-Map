@@ -52,8 +52,8 @@
       <li>
         <h3><a href="#" class="js_toggle closed" id="habitat">Forested Habitat</a></h3></li>
         <ul class="js_toggle_habitat">
-          <li data-layer="Tiger (BOB)" class="habitat tiger js_layer"><span>Tiger</span></li>
-          <li data-layer="Orangutan (BOB)" class="habitat orangutan js_layer"><span>Oran-gutan</span></li>
+          <li data-layer="<?php echo htmlentities(json_encode(array('Tiger (BOB)', 'Tiger (ZOOM)'))); ?>" class="habitat tiger js_layer"><span>Tiger</span></li>
+          <li data-layer="<?php echo htmlentities(json_encode(array('Orangutan (BOB)', 'Orangutan (ZOOM)'))); ?>" class="habitat orangutan js_layer"><span>Oran-gutan</span></li>
         </ul>
       </li>
       <li>
