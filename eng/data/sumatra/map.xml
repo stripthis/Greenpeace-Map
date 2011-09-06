@@ -1,15 +1,12 @@
+
 <map>
 
   <layer SWFFile="map_L1.swf" depth="1" name="map_L1.swf"/>
 
   <layer SWFFile="map_L2.swf" depth="2" hiddenAbove="500" name="labels" userToggle="false" visible="true"/>
 
-  <layer SWFFile="map_L3.swf" depth="3" name="APP Mills (BOB)" userToggle="true" visible="true">
+  <layer SWFFile="map_L3.swf" depth="3" hiddenAbove="500" name="APP Mills (BOB)" userToggle="true" visible="true">
     <feature extH="40.37" extW="67.68" extX="630.11" extY="256.76">
-      <attributes>
-        <col name="Landscape">APP Indah Kiat pulp mill</col>
-        <col name="UUID">04e57760-8d42-77e0-91e4-0</col>
-      </attributes>
       <aggregate ctrX="663.613" ctrY="276.82">
         <polygon direction="cw">
           <coords>630.1,297.1 630.1,256.8 697.8,256.8 697.8,297.1 630.1,297.1 </coords>
@@ -21,10 +18,6 @@
       <webtag autoSize="false" height="300" width="400"/>
     </feature>
     <feature extH="40.17" extW="68.04" extX="569.22" extY="169.67">
-      <attributes>
-        <col name="Landscape">APP Lontar Papyrus pulp mill</col>
-        <col name="UUID">04e57760-8d42-88e0-91e4-0</col>
-      </attributes>
       <aggregate ctrX="602.715" ctrY="189.784">
         <polygon direction="cw">
           <coords>569.2,209.6 569.2,169.7 637.3,169.7 637.3,209.6 569.2,209.6 </coords>
@@ -37,7 +30,7 @@
     </feature>
   </layer>
 
-  <layer SWFFile="map_L4.swf" depth="4" name="APP mills (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L4.swf" depth="4" hiddenBelow="500" name="APP mills (ZOOM)" userToggle="true" visible="false"/>
 
   <layer SWFFile="map_L5.swf" depth="5" hiddenAbove="500" name="Case study boxes (BOB)" userToggle="false" visible="true">
     <feature ctrX="631.038" ctrY="259.981" extH="32.65" extW="44.25" extX="608.90" extY="243.66">
@@ -183,7 +176,7 @@
 
   <layer SWFFile="map_L9.swf" depth="9" hiddenBelow="500" name="Bukit Infrastructure (CS1 ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L10.swf" depth="10"  name="Wildlife ranges (CS1 ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L10.swf" depth="10" hiddenBelow="500" name="Wildlife ranges (CS1 ZOOM)" userToggle="true" visible="false"/>
 
   <layer SWFFile="map_L11.swf" depth="11" hiddenBelow="500" name="Photographs (CS2 ZOOM)" userToggle="true" visible="false">
     <feature ctrX="650.216" ctrY="230.829" extH="1.35" extW="1.78" extX="649.33" extY="230.16">
@@ -256,7 +249,7 @@ Greenpeace/Donang Wahyu&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&
     </feature>
   </layer>
 
-  <layer SWFFile="map_L12.swf" depth="12" name="Deforestation 2009-11 (CS2 ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L12.swf" depth="12" hiddenBelow="500" name="Deforestation 2009-11 (CS2 ZOOM)" userToggle="true" visible="false"/>
 
   <layer SWFFile="map_L13.swf" depth="13" name="Targetted 2007" userToggle="true" visible="true"/>
 
@@ -266,35 +259,26 @@ Greenpeace/Donang Wahyu&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;&lt;div align='center'&
 
   <layer SWFFile="map_L16.swf" depth="16" name="Uncertain status" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L17.swf" depth="17" name="Primary (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L17.swf" depth="17" hiddenAbove="500" name="Primary (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L18.swf" depth="18" name="Secondary (BOB)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L18.swf" depth="18" hiddenAbove="500" name="Secondary (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L19.swf" depth="19" name="Orangutan (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L19.swf" depth="19" hiddenAbove="500" name="> 4 metre (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L20.swf" depth="20" name="Tiger (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L20.swf" depth="20" hiddenAbove="500" name="2-4 metre (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L21.swf" depth="21" name="> 4 metre (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L21.swf" depth="21" hiddenAbove="500" name="0-2 metre (BOB)" userToggle="true" visible="true"/>
 
-  <layer SWFFile="map_L22.swf" depth="22" name="2-4 metre (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L22.swf" depth="22" hiddenBelow="500" name="Primary (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L23.swf" depth="23" name="0-2 metre (BOB)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L23.swf" depth="23" hiddenBelow="500" name="Secondary (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L24.swf" depth="24" name="Primary (ZOOM)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L24.swf" depth="24" hiddenBelow="500" name="> 4 metre (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L25.swf" depth="25" name="Secondary (ZOOM)" userToggle="true" visible="true"/>
+  <layer SWFFile="map_L25.swf" depth="25" hiddenBelow="500" name=" 2-4 metre (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L26.swf" depth="26" name="Orangutan (ZOOM)" userToggle="true" visible="false"/>
+  <layer SWFFile="map_L26.swf" depth="26" hiddenBelow="500" name="0-2 metre (ZOOM)" userToggle="true" visible="false"/>
 
-  <layer SWFFile="map_L27.swf" depth="27" name="Tiger (ZOOM)" userToggle="true" visible="false"/>
-
-  <layer SWFFile="map_L28.swf" depth="28" name="> 4 metre (ZOOM)" userToggle="true" visible="false"/>
-
-  <layer SWFFile="map_L29.swf" depth="29" name=" 2-4 metre (ZOOM)" userToggle="true" visible="false"/>
-
-  <layer SWFFile="map_L30.swf" depth="30" name="0-2 metre (ZOOM)" userToggle="true" visible="false"/>
-
-  <layer SWFFile="map_L31.swf" depth="31" name="map_L31.swf"/>
+  <layer SWFFile="map_L27.swf" depth="27" name="map_L27.swf"/>
 
 </map>
-
